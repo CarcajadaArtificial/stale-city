@@ -1,4 +1,8 @@
-# File saves
+---
+title: File saves in Rust!
+published_at: 2022-10-31T15:00:00.000Z
+snippet: Determining a correct flow of information that includes weather information processing, world creation, world edition, saving progress, and loading a `save.ron` file.
+---
 
 Determining a correct flow of information that includes weather information processing, world creation, world edition, saving progress, and loading a `save.ron` file.
 

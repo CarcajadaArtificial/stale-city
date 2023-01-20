@@ -1,5 +1,6 @@
 # Changelog
 
-## v0.0.4
+## v0.0.5
 
-### Setup Deno Fresh
+### Added a empty blog shell.
+Credits to Andy Jiang (@lambtron) [my-fresh-blog](https://github.com/lambtron/my-fresh-blog).
