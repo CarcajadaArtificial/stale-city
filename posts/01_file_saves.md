@@ -1,6 +1,6 @@
 ---
-title: File saves in Rust!
-published_at: 2022-10-31T15:00:00.000Z
+title: File saves in Rust
+published_at: 2022-10-31
 snippet: Determining a correct flow of information that includes weather information processing, world creation, world edition, saving progress, and loading a `save.ron` file.
 ---
 
@@ -15,3 +15,15 @@ Then I must be able to change any blocks inside the editable space. During the w
 1. Every hour the app must access the `weather.csv` file and look for the row with the next record to be used. The next record to be read must be derived from the global value of total ticks since the start of the simulation. Divided by 60 for minutes and another time for hours.
 2. Before even running the simulation transform the `weather.csv` file to `weather.ron`. This makes the object notation native to rust and must be faster than accessing the CSV. Even though, there must be a similar calculation to store the next record number.
 3. Finally, another way to process the weather information is by creating the `.ron` file and adding its entirety to the app's state. This way all number values will already be set to the correct 4-bit unit and there won't be any processing happening during the simulation.
+
+## Tasks
+
+- The system's interface must start with a _New World_ screen if the file `~/saves/world.save.ron` does not exist. If it does, just display a success state.
+- The system must visually display if there is a file `~/saves/weather.save.ron` that exists and enable the _Create World_ button if it does.
+- When clicking the _Create World_ button, the system must create the `~/saves/world.save.ron` file and display a success state when it does.
+- **Bonus: ** Create a visualizer for the daily or hourly weather.
+
+
+## Next up
+
+- 2D rendering of the world.
