@@ -1,5 +1,5 @@
 ---
-title: File saves in Rust
+title: Myrmex pt. 1 - File saves
 published_at: 2022-10-31
 snippet: Determining a correct flow of information that includes weather information processing, world creation, world edition, saving progress, and loading a `save.ron` file.
 ---
@@ -21,7 +21,7 @@ Then I must be able to change any blocks inside the editable space. During the w
 - The system's interface must start with a _New World_ screen if the file `~/saves/world.save.ron` does not exist. If it does, just display a success state.
 - The system must visually display if there is a file `~/saves/weather.save.ron` that exists and enable the _Create World_ button if it does.
 - When clicking the _Create World_ button, the system must create the `~/saves/world.save.ron` file and display a success state when it does.
-- **Bonus: ** Create a visualizer for the daily or hourly weather.
+- **Bonus:** Create a visualizer for the daily or hourly weather.
 
 
 ## Next up
