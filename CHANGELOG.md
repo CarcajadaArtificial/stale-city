@@ -1,12 +1,9 @@
 # Changelog
 
-## v0.0.9
+## v0.0.10
 
 ### Minor updates
-[`~/.gitignore`](/.gitignore), [`~/routes/_app.tsx`](/routes/_app.tsx), [`~/posts/01_file_saves.md`](/posts/01_file_saves.md), [`~/routes/[slug].tsx`](/routes/[slug].tsx)
-
-### Added a post for testing
-[`~/tests/00_test.md`](/tests/00_test.md)
+[`~/deps.ts`](/deps.ts)
 
 ### Removed syntax highlighting css
 

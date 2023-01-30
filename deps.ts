@@ -11,5 +11,5 @@
 
 // Ana utils
 export * from 'https://deno.land/x/ana_utils@v0.0.5/mod.ts';
-// export * from 'https://deno.land/x/ana_components@v0.0.29/mod.ts';
-export * from '../ana-components/mod.ts';
+export * from 'https://deno.land/x/ana_components@v0.0.33/mod.ts';
+// export * from '../ana-components/mod.ts';
