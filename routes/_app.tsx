@@ -18,7 +18,8 @@ export default function App({ Component }: AppProps) {
         <title>Pixie</title>
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/ana-components@0.0.29/static/styles.css"
+          href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/ana-components@0.0.33/static/styles.css"
+          // href="/styles.css"
         />
       </Head>
       <Component />

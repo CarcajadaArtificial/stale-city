@@ -1,12 +1,14 @@
 # Changelog
 
-## v0.0.8
+## v0.0.9
 
-### Imported ana components
-[`~/deps.ts`](/deps.ts), [`~/routes/_app.tsx`](/routes/_app.tsx)
+### Minor updates
+[`~/.gitignore`](/.gitignore), [`~/routes/_app.tsx`](/routes/_app.tsx), [`~/posts/01_file_saves.md`](/posts/01_file_saves.md), [`~/routes/[slug].tsx`](/routes/[slug].tsx)
 
-### Implemented the components in the following pages
-[`~/routes/[slug].tsx`](/routes/[slug].tsx), [`~/routes/index.tsx`](/routes/index.tsx)
+### Added a post for testing
+[`~/tests/00_test.md`](/tests/00_test.md)
+
+### Removed syntax highlighting css
 
 ## Tasks
 

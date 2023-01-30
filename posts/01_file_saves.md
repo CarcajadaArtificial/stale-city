@@ -16,7 +16,7 @@ Then I must be able to change any blocks inside the editable space. During the w
 2. Before even running the simulation transform the `weather.csv` file to `weather.ron`. This makes the object notation native to rust and must be faster than accessing the CSV. Even though, there must be a similar calculation to store the next record number.
 3. Finally, another way to process the weather information is by creating the `.ron` file and adding its entirety to the app's state. This way all number values will already be set to the correct 4-bit unit and there won't be any processing happening during the simulation.
 
-## Tasks
+### Tasks
 
 - The system's interface must start with a _New World_ screen if the file `~/saves/world.save.ron` does not exist. If it does, just display a success state.
 - The system must visually display if there is a file `~/saves/weather.save.ron` that exists and enable the _Create World_ button if it does.
@@ -24,6 +24,6 @@ Then I must be able to change any blocks inside the editable space. During the w
 - **Bonus:** Create a visualizer for the daily or hourly weather.
 
 
-## Next up
+### Next up
 
 - 2D rendering of the world.

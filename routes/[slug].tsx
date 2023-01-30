@@ -42,8 +42,8 @@ export default function PostPage(props: PageProps<Post>) {
       </Header>
       <Main>
         <Layout type="left">
-          <Text
-            class="mt-8 markdown-body"
+          <div
+            class="mt-8 markdown-prose"
             dangerouslySetInnerHTML={{ __html: render(post.content) }}
           />
         </Layout>
