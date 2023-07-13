@@ -1,8 +1,13 @@
 # Changelog
 
-## v0.0.11
+## v0.0.12
 
-### Removed Ana-Components and Utils.
+### Updated dependencies and added `Lunchbox`
+  - `/import_map.json`
+  - `/fresh.gen.ts`
+
+### Moved posts to the `data` directory
+  - `/data/posts/*`
 
 ## Roadmap
 
