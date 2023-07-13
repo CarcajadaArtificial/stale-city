@@ -1,4 +1,5 @@
 .obsidian
 .DS_Store
+deno.lock
 /static/styles.css
 /static/styles.css.map

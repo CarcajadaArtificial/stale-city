@@ -29,7 +29,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ```javascript
 /**
-sample javascript from xui
+sample javascript
 */
 
 var undefined,
@@ -48,4 +48,31 @@ var undefined,
 window.x$ = window.xui = xui = function(q, context) {
     return new xui.fn.find(q, context);
 };
+```
+```css
+@font-face {
+  font-family: Chunkfive; src: url('Chunkfive.otf');
+}
+
+body, .usertext {
+  color: #F0F0F0; background: #600;
+  font-family: Chunkfive, sans;
+  --heading-1: 30px/32px Helvetica, sans-serif;
+}
+
+@import url(print.css);
+@media print {
+  a[href^=http]::after {
+    content: attr(href)
+  }
+}
+```
+```html
+<!DOCTYPE html>
+<title>Title</title>
+
+<body>
+  <p checked class="title" id='title'>Title</p>
+  <!-- here goes the rest of the page -->
+</body>
 ```

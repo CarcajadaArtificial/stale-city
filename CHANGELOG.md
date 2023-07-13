@@ -1,29 +1,18 @@
 # Changelog
 
-## v0.0.10
+## v0.0.11
 
-### Minor updates
-[`~/deps.ts`](/deps.ts)
+### Removed Ana-Components and Utils.
 
-### Removed syntax highlighting css
+## Roadmap
 
-## Tasks
+### v0.1
 
-### pre v0.1.0
+- [ ] Include latest lunchbox update.
+- [ ] Create a home page with the list of posts.
+- [ ] Create the blog post page.
 
-- [x] Plan file saving
-- [ ] Import ana component library.
-  - [x] Add the ana components to the UI.
-  - [ ] Apply the prototype's architecture.
-  - [ ] Add syntax highlighting override.
-- [ ] Plan 2D rendering
-  - [ ] Environment widget.
-  - [ ] Usage indicator widget.
-- [ ] Plan movement of time.
-  - [ ] Time control widget.
-- [ ] Plan light difussion.
-  - [ ] Property filter widget.
+### v0.2
 
-### post v0.1.0
-
-- [ ] Deno deploy this page.
+- [ ] Create a resume page.
+- [ ] Add a tag system to posts.
