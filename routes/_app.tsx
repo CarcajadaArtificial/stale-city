@@ -1,13 +1,3 @@
-//     _
-//    /_\  _ __ _ __
-//   / _ \| '_ \ '_ \
-//  /_/ \_\ .__/ .__/
-//        |_|  |_|
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-/**
- * @module
- */
-
 import { AppProps } from '$fresh/server.ts';
 import { Head } from '$fresh/runtime.ts';
 
@@ -16,12 +6,16 @@ export default function App({ Component }: AppProps) {
     <>
       <Head>
         <title>Stale City</title>
-        {/* <link
+        <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/ana-components@0.0.52/static/styles.css"
-        /> */}
+          href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox@0.1.13/static/style.css"
+        />
       </Head>
-      <Component />
+      <body class="clr-bg-panel clr-txt-base txt-paragraph">
+        <div class="_screen">
+          <Component />
+        </div>
+      </body>
     </>
   );
 }

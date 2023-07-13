@@ -1,20 +1,23 @@
 # Changelog
 
-## v0.0.12
+## v0.0.13
 
-### Updated dependencies and added `Lunchbox`
+### Updated to Lunchbox components
   - `/import_map.json`
-  - `/fresh.gen.ts`
+  - `/routes/index.tsx`
+  - `/routes/_app.tsx`
 
-### Moved posts to the `data` directory
-  - `/data/posts/*`
+### Moved `[slug].tsx` to the blog directory
+  - `/fresh.gen.ts`
+  - `/routes/blog/[slug].tsx`
+
 
 ## Roadmap
 
 ### v0.1
 
-- [ ] Include latest lunchbox update.
-- [ ] Create a home page with the list of posts.
+- [x] Include latest lunchbox update.
+- [x] Create a home page with the list of posts.
 - [ ] Create the blog post page.
 
 ### v0.2

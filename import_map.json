@@ -10,6 +10,6 @@
     "twind/": "https://esm.sh/twind@0.16.19/",
     "std/": "https://deno.land/std@0.160.0/",
     "gfm": "https://deno.land/x/gfm@0.1.26/mod.ts",
-    "lunchbox": "https://deno.land/x/lunchbox@0.1.12/"
+    "lunchbox": "https://deno.land/x/lunchbox@v0.1.13/mod.ts"
   }
 }

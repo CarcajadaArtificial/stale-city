@@ -1,5 +1,5 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
-import { getPost, Post } from '../utils/posts.ts';
+import { getPost, Post } from '../../utils/posts.ts';
 import { render } from 'gfm';
 
 export const handler: Handlers<Post> = {

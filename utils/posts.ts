@@ -10,7 +10,7 @@ export interface Post {
 }
 
 export async function getPosts(): Promise<Post[]> {
-  const files = Deno.readDir('./posts');
+  const files = Deno.readDir('./data/posts');
   const promises = [];
   for await (const file of files) {
     const slug = file.name.replace('.md', '');
@@ -22,7 +22,7 @@ export async function getPosts(): Promise<Post[]> {
 }
 
 export async function getPost(slug: string): Promise<Post | null> {
-  const text = await Deno.readTextFile(join('./posts', `${slug}.md`));
+  const text = await Deno.readTextFile(join('./data/posts', `${slug}.md`));
   const { attrs, body } = extract<Post>(text);
   return {
     slug,
