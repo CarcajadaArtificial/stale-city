@@ -1,6 +1,7 @@
 ---
 title: File saves in Rust
-published_at: 2022-10-31T16:20:00
+published_at: 2022-10-30
+last_edited_at: 2022-10-30
 snippet: Determining a correct flow of information that includes weather information processing, world creation, world edition, saving progress, and loading a `save.ron` file.
 ---
 

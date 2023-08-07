@@ -1,23 +1,15 @@
 ---
-title: GarliCSS 01 - On Media Queries
-published_at: 2022-10-31T16:20:00
-snippet: Responsiveness.
+title: On Media Queries
+published_at: 2022-10-31
+last_edited_at: 2023-08-06
+snippet: In-depth analysis of UI Libraries and their choices of breakpoints. The effectiveness of every breakpoint system is measured and ranked.
 ---
-# On Media Queries
 
 > All responsive websites are alike, but each unresponsive website is unresponsive in its own way.
 
-![Title banner that reads: "Responsive Web Design part 1: Media Queries"](https://user-images.githubusercontent.com/13631141/227608158-290f6712-513f-4835-a957-67d9f0a8bcf2.jpeg)
-
 But what are responsive websites? I'll take a deep dive into responsive web design and create a media query engine for my SCSS library GarliCSS.  Welcome. 
 
-
-
-In order to define "responsive web design", first let us define "response". According to Google's dictionary, a response is a type of answer or reaction. 
-
-The word response makes total sense when used in loading a server request with JavaScript. In this example, the object is called a "response" because is how the server answers the request.
-
-Now, what about the adjective "responsive"? According to the dictionary, it has a slight positive connotation. What makes something responsive is to answer optimally.
+In order to define "responsive web design", first let us define "response". According to Google's dictionary, a response is a type of answer or reaction.  The word response makes total sense when used in loading a server request with JavaScript. In this example, the object is called a "response" because is how the server answers the request. Now, what about the adjective "responsive"? According to the dictionary, it has a slight positive connotation. What makes something responsive is to answer optimally.
 
 So in the term responsive web design, to whom is web design responding?  Well, in this case, the word "responsive" is misleading. We established the word implies an optimal response to something. As if it was referring to a fast loading time, the server's response time to a request, or the interactivity of the interface. Which it is not, of course. But I digress.
 

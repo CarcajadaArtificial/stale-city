@@ -1,31 +1,25 @@
 # Changelog
 
-## v0.0.16
+## v0.0.17
 
-### Added blog post page
- - `/src/data.ts`
- - `/routes/blog/[slug].tsx`
-
-### Cleaned data blog posts
-  - `/data/posts/*.md`
-
-### Added a test blog post markdown file
-  - `/test/0_test.md`
+### Updated home and post page.
+  - `/src/data.ts`
+  - `/routes/blog/[slug].tsx`
+  - `/routes/index.tsx`
+  - `/components/PostInfo.tsx`
 
 ### Minor updates
-  - `/fresh.gen.ts`
-  - `/routes/_app.tsx`
-  - `/routes/index.tsx`
+  - `/data/posts/*.md`
 
 ## Roadmap
 
 ### v0.1
 
-- [ ] Home
-  - [ ] Short bio
-  - [ ] Project Showcase
-  - [ ] Posts showcase
+- [x] Home
+  - [x] Project Showcase
+  - [x] Posts showcase
 - [ ] Posts page
   - [ ] List of all posts
-- [ ] Post page
+- [x] Post page
 - [ ] Resume page
+  - [ ] Short bio
