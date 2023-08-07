@@ -32,4 +32,3 @@ The unresponsiveness becomes apparent when using another device, let's say a pho
 The website is doing a poor job displaying its interface in this device in particular. The top navigation and the side menu are extremely small and difficult to read. This goes both ways, interfaces that are perfectly displayed in a small vertical resolution but break on a larger and horizontal screen, are unresponsive as well.
 
 ---
-

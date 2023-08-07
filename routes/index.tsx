@@ -13,12 +13,15 @@ export default function Home() {
         <Text class='text-center'>
           <>Hello</>
           <Code>( ´ ω ` )ノﾞ</Code>
-          <>, welcome to my personal page.</>
-          <br />
-          <>My name is Oscar Alfonso Guerrero, but I also go by</>
+          <>
+            , welcome to my personal page. My name is Oscar Alfonso Guerrero,
+            but I also go by
+          </>
+          <>{' '}</>
           <Link href='https://github.com/CarcajadaArtificial'>
-            &nbsp;CarcajadaArtificial&nbsp;
+            CarcajadaArtificial
           </Link>
+          <>{' '}</>
           <>on GitHub.</>
         </Text>
         <Separator />

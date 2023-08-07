@@ -1,16 +1,21 @@
 # Changelog
 
-## v0.0.15
+## v0.0.16
 
-### Added a home page banner header
-  - `/routes/index.tsx`
+### Added blog post page
+ - `/src/data.ts`
+ - `/routes/blog/[slug].tsx`
+
+### Cleaned data blog posts
+  - `/data/posts/*.md`
+
+### Added a test blog post markdown file
+  - `/test/0_test.md`
 
 ### Minor updates
-  - `/routes/_app.tsx`
-  - `/routes/_404.tsx`
-  - `/deno.json`
   - `/fresh.gen.ts`
-  - `/static/style.css`
+  - `/routes/_app.tsx`
+  - `/routes/index.tsx`
 
 ## Roadmap
 

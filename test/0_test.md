@@ -1,7 +1,7 @@
 ---
 title: Test
 published_at: 2022-04-20
-snippet: Test snippet
+snippet: Test snippet Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ---
 
 # Heading 1 - Display
