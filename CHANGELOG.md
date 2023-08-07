@@ -1,26 +1,27 @@
 # Changelog
 
-## v0.0.13
+## v0.0.14
 
-### Updated to Lunchbox components
-  - `/import_map.json`
-  - `/routes/index.tsx`
-  - `/routes/_app.tsx`
-
-### Moved `[slug].tsx` to the blog directory
+### Reset everything to an empty project.
+  - `/README.md`
   - `/fresh.gen.ts`
+  - `/routes/index.tsx`
   - `/routes/blog/[slug].tsx`
+  - `/utils/posts.ts`
 
+### Minor updates
+ - `/import_map.json`
+ - `/.vscode/settings.json`
 
 ## Roadmap
 
 ### v0.1
 
-- [x] Include latest lunchbox update.
-- [x] Create a home page with the list of posts.
-- [ ] Create the blog post page.
-
-### v0.2
-
-- [ ] Create a resume page.
-- [ ] Add a tag system to posts.
+- [ ] Home
+  - [ ] Short bio
+  - [ ] Project Showcase
+  - [ ] Posts showcase
+- [ ] Posts page
+  - [ ] List of all posts
+- [ ] Post page
+- [ ] Resume page
