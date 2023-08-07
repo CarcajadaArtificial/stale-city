@@ -1,49 +1,35 @@
-import { Handlers, PageProps } from "$fresh/server.ts";
+import { Code, Footer, Header, Link, Main, Separator, Text } from 'lunchbox';
 
-export interface Post {
-  slug: string;
-  title: string;
-  published_at: Date;
-  snippet: string;
-  content: string;
-}
-
-/*
-export async function getPosts(): Promise<Post[]> {
-  const files = Deno.readDir('./data/posts');
-  const promises = [];
-  for await (const file of files) {
-    const slug = file.name.replace('.md', '');
-    promises.push(getPost(slug));
-  }
-  const posts = (await Promise.all(promises)) as Post[];
-  posts.sort((a, b) => b.published_at.getTime() - a.published_at.getTime());
-  return posts;
-}
-
-export async function getPost(slug: string): Promise<Post | null> {
-  const text = await Deno.readTextFile(join('./data/posts', `${slug}.md`));
-  const { attrs, body } = extract<Post>(text);
-  return {
-    slug,
-    title: attrs.title,
-    published_at: new Date(attrs.published_at),
-    content: body,
-    snippet: attrs.snippet,
-  };
-}
- */
-
-export const handler: Handlers<Post[]> = {
-  async GET(_req, ctx) {
-    return ctx.render([]);
-  },
-};
-
-export default function BlogIndexPage(props: PageProps<Post[]>) {
-  const posts = props.data;
+export default function Home() {
   return (
     <>
+      <Header gradient_pattern='zigzag' banner layout_type='center'>
+        <Text type='display' class='text-center'>Stale City</Text>
+        <img
+          src='https://raw.githubusercontent.com/CarcajadaArtificial/CarcajadaArtificial/main/images/stalecity.svg'
+          alt='stale city logo'
+          class='mx-auto mb-6 w-48'
+        />
+        <Text class='text-center'>
+          <>Hello</>
+          <Code>( ´ ω ` )ノﾞ</Code>
+          <>, welcome to my personal page.</>
+          <br />
+          <>My name is Oscar Alfonso Guerrero, but I also go by</>
+          <Link href='https://github.com/CarcajadaArtificial'>
+            &nbsp;CarcajadaArtificial&nbsp;
+          </Link>
+          <>on GitHub.</>
+        </Text>
+        <Separator />
+        <Text class='text-center animate-float'>
+          <>Scroll down to see about my work and thoughts.</>
+          <br />
+          <>⌄</>
+        </Text>
+      </Header>
+      <Main layout_type='left'></Main>
+      <Footer gradient_pattern='zigzag' layout_type='left'></Footer>
     </>
   );
 }

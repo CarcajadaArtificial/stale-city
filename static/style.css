@@ -1,0 +1,25 @@
+.comp-header_banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.animate-float {
+  position: relative;
+  top: 0.5rem;
+  animation: float 3s infinite;
+}
+
+@keyframes float {
+  from {
+    top: 0.5rem;
+  }
+
+  50% {
+    top: -0.5rem;
+  }
+
+  to {
+    top: 0.5rem;
+  }
+}

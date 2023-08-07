@@ -1,17 +1,16 @@
 # Changelog
 
-## v0.0.14
+## v0.0.15
 
-### Reset everything to an empty project.
-  - `/README.md`
-  - `/fresh.gen.ts`
+### Added a home page banner header
   - `/routes/index.tsx`
-  - `/routes/blog/[slug].tsx`
-  - `/utils/posts.ts`
 
 ### Minor updates
- - `/import_map.json`
- - `/.vscode/settings.json`
+  - `/routes/_app.tsx`
+  - `/routes/_404.tsx`
+  - `/deno.json`
+  - `/fresh.gen.ts`
+  - `/static/style.css`
 
 ## Roadmap
 
