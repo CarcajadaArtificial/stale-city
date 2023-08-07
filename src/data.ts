@@ -39,3 +39,45 @@ export async function getPost(
     return null;
   }
 }
+
+interface ResumeTimelineEvent {
+  title: string;
+  period: string;
+  role: string;
+  tags: string;
+  summary: string;
+}
+
+export type MdTimeline = MarkdownEssentials<ResumeTimelineEvent>;
+
+export async function getTimelineEvent(
+  slug: string,
+): Promise<MdTimeline | null> {
+  try {
+    const { attrs, content } = await getMarkdown<ResumeTimelineEvent>(
+      './data/docs/resume/timeline',
+      slug,
+    ) as MdTimeline;
+
+    return {
+      slug,
+      content: content,
+      attrs: {
+        title: attrs.title as string | '',
+        period: attrs.period as string | '',
+        role: attrs.role as string | '',
+        tags: attrs.tags as string | '',
+        summary: attrs.summary as string | '',
+      },
+    };
+  } catch {
+    return null;
+  }
+}
+
+export const getTimelineEvents = (): Promise<MdTimeline[]> =>
+  getMarkdowns<ResumeTimelineEvent>(
+    './data/docs/resume/timeline',
+    getTimelineEvent,
+    (a, b) => parseInt(b.slug) - parseInt(a.slug),
+  );

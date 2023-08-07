@@ -23,3 +23,34 @@
     top: 0.5rem;
   }
 }
+
+.isl-timelineEvent {
+  border-left: 1px solid var(--clr-txt-base);
+  position: relative;
+  padding-bottom: var(--s-triple);
+}
+
+.isl-timelineEvent_content {
+  padding-left: var(--s-triple);
+}
+
+.isl-timelineEvent_indicator {
+  width: var(--s-single);
+  height: var(--s-single);
+  left: calc(var(--s-half) * -1);
+  border-radius: var(--s-single);
+  top: var(--s-single);
+
+  border: var(--s-quarter) solid var(--clr-bg-page);
+  outline: var(--s-eighth) solid var(--clr-txt-base);
+  position: absolute;
+  background-color: var(--clr-txt-base);
+}
+
+.isl-timelineEvent_indicator.isl-timelineEvent_major {
+  width: var(--s-one-and-half);
+  height: var(--s-one-and-half);
+  left: calc(var(--s-three-quarters) * -1);
+  border-radius: var(--s-one-and-half);
+  top: var(--s-one-and-half);
+}

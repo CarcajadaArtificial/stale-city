@@ -1,12 +1,15 @@
 import { fetchMarkdown } from '../src/markdown.ts';
+import { getTimelineEvents } from '../src/data.ts';
 import { Footer, Header, Link, Main, Markdown, Text } from 'lunchbox';
+import TimelineEvent from '../islands/TimelineEvent.tsx';
 
 export default async function Resume() {
   const md_bio = await fetchMarkdown('../data/docs/resume/bio.md');
+  const timeline = await getTimelineEvents();
 
   return (
     <>
-      <Header layout_type='left' gradient_pattern='zigzag'>
+      <Header layout_type='center' gradient_pattern='zigzag'>
         <>
           <Text type='display'>Resume</Text>
           <Text class='mb-6'>
@@ -18,7 +21,8 @@ export default async function Resume() {
           <div class='h-6' />
         </>
       </Header>
-      <Main>
+      <Main layout_type='center'>
+        {timeline.map((event) => <TimelineEvent md={event} />)}
       </Main>
       <Footer gradient_pattern='zigzag'>
       </Footer>

@@ -16,7 +16,10 @@ export default function Error404() {
       <Main layout_type='focus'>
         <Text noMargins type='subheading'>Sitemap</Text>
         <Linkmap
-          links={[{ name: 'Home', url: '/' }, { name: 'About', url: '/about' }]}
+          links={[{ name: 'Home', url: '/' }, {
+            name: 'Resume',
+            url: '/resume',
+          }]}
         />
       </Main>
       <Footer gradient_pattern='zigzag'>

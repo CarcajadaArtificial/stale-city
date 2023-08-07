@@ -93,8 +93,8 @@ export default function Home(props: PageProps<BlogPageData>) {
           <>Hello</>
           <Code>( ´ ω ` )ノﾞ</Code>
           <>
-            , welcome to my personal page. My name is Oscar Alfonso Guerrero,
-            but I also go by
+            welcome to my personal page. My name is Oscar Alfonso Guerrero, but
+            I also go by
           </>
           <>{' '}</>
           <Link href='https://github.com/CarcajadaArtificial'>

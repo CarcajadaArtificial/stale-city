@@ -1,13 +1,20 @@
 # Changelog
 
-## v0.0.19
+## v0.0.20
 
-### Refactored getPost and getPosts into the generics getMarkdown and getMarkdowns
-  - `/component/PostInfo.tsx`
-  - `/routes/index.tsx`
+### Added the TimelineEvent island
+  - `/islands/TimelineEvent.tsx`
   - `/routes/resume.tsx`
-  - `/routes/blog/[slug].tsx`
+  - `/fresh.gen.ts`
   - `/src/data.ts`
+  - `/static/style.css`
+
+### Added resume timeline event documents
+  - `/data/docs/resume/timeline/*.md`
+
+### Minor updates
+  - `/routes/_404.tsx`
+  - `/routes/index.tsx`
   - `/src/markdown.ts`
 
 ## Roadmap

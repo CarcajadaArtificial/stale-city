@@ -32,7 +32,7 @@ export async function getMarkdowns<T>(
   getMarkdownCallback: (
     slug: string,
   ) => Promise<MarkdownEssentials<T> | null>,
-  markdownCompareFn: (
+  markdownCompareFn?: (
     a: MarkdownEssentials<T>,
     b: MarkdownEssentials<T>,
   ) => number,
