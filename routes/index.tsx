@@ -103,6 +103,13 @@ export default function Home(props: PageProps<BlogPageData>) {
           <>{' '}</>
           <>on GitHub.</>
         </Text>
+        <Text class='my-3 text-center'>
+          <Link href='./resume'>Resume</Link>
+          <>{' | '}</>
+          <Link href='./blog'>Blog</Link>
+          <>{' | '}</>
+          <Link href='./projects'>Projects</Link>
+        </Text>
         <Separator />
         <Text class='text-center animate-float'>
           <>Scroll down to see about my work and thoughts.</>
