@@ -1,9 +1,8 @@
+import { fetchMarkdown } from '../src/markdown.ts';
 import { Footer, Header, Link, Main, Markdown, Text } from 'lunchbox';
 
 export default async function Resume() {
-  const md_bio =
-    await (await fetch(new URL('../data/docs/resume/bio.md', import.meta.url)))
-      .text();
+  const md_bio = await fetchMarkdown('../data/docs/resume/bio.md');
 
   return (
     <>

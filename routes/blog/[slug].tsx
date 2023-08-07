@@ -1,10 +1,10 @@
 import { Header, Main, Markdown, Text } from 'lunchbox';
 import { Handlers, PageProps } from '$fresh/server.ts';
-import { getPost, Post } from '../../src/data.ts';
+import { getPost, MdPost } from '../../src/data.ts';
 import PostInfo from '../../components/PostInfo.tsx';
 
 interface BlogPostPageData {
-  post: Post;
+  post: MdPost;
 }
 
 export const handler: Handlers<BlogPostPageData> = {

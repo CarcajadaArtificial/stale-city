@@ -1,4 +1,4 @@
-import { getPosts, Post } from '../src/data.ts';
+import { getPosts, MdPost } from '../src/data.ts';
 import { Handlers, PageProps } from '$fresh/server.ts';
 import {
   Card,
@@ -13,7 +13,7 @@ import {
 import PostInfo from '../components/PostInfo.tsx';
 
 interface BlogPageData {
-  posts: Post[];
+  posts: MdPost[];
 }
 
 export const handler: Handlers<BlogPageData> = {

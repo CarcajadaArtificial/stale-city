@@ -1,18 +1,20 @@
-import { Post } from '../src/data.ts';
+import { MdPost } from '../src/data.ts';
 import { Link, Text } from 'lunchbox';
 
 interface iPostInfo {
-  post: Post;
+  post: MdPost;
   display?: boolean;
 }
 
 export default function (props: iPostInfo) {
-  const date = props.post.published_at.toString() !== 'Invalid Date' &&
-    new Date(props.post.published_at).toLocaleDateString('en-US', {
+  const attrs = props.post.attrs;
+
+  const date = attrs.published_at.toString() !== 'Invalid Date' &&
+    new Date(attrs.published_at).toLocaleDateString('en-US', {
       dateStyle: 'long',
     });
-  const edited = props.post.last_edited_at.toString() !== 'Invalid Date' &&
-    new Date(props.post.last_edited_at).toLocaleDateString('en-US', {
+  const edited = attrs.last_edited_at.toString() !== 'Invalid Date' &&
+    new Date(attrs.last_edited_at).toLocaleDateString('en-US', {
       dateStyle: 'long',
     });
 
@@ -34,9 +36,9 @@ export default function (props: iPostInfo) {
         noMargins={!props.display}
         type={props.display ? 'display' : 'subheading'}
       >
-        <Link href={`./blog/${props.post.slug}`}>{props.post.title}</Link>
+        <Link href={`./blog/${props.post.slug}`}>{attrs.title}</Link>
       </Text>
-      <Text>{props.post.snippet}</Text>
+      <Text>{attrs.snippet}</Text>
     </div>
   );
 }

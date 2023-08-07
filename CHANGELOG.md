@@ -1,12 +1,14 @@
 # Changelog
 
-## v0.0.18
+## v0.0.19
 
-### Added resume page
-  - `/fresh.gen.ts`
-  - `/data/docs/resume/bio.md`
+### Refactored getPost and getPosts into the generics getMarkdown and getMarkdowns
+  - `/component/PostInfo.tsx`
   - `/routes/index.tsx`
   - `/routes/resume.tsx`
+  - `/routes/blog/[slug].tsx`
+  - `/src/data.ts`
+  - `/src/markdown.ts`
 
 ## Roadmap
 
