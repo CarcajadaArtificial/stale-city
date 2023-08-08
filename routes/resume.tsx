@@ -21,7 +21,6 @@ export default async function Resume() {
             </Link>
           </Text>
           <Markdown markdown_content={md_bio} />
-          <div class='h-6' />
         </>
       </Header>
       <Main layout_type='center'>

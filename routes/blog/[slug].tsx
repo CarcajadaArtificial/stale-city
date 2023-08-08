@@ -29,7 +29,6 @@ export default function PostPage(props: PageProps<BlogPostPageData>) {
       <Navigation />
       <Header layout_type='center' gradient_pattern='zigzag'>
         <PostInfo display post={post} />
-        <div class='h-12' />
       </Header>
       <Main layout_type='center'>
         <Markdown markdown_content={post.content} />

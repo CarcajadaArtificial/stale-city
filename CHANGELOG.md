@@ -1,18 +1,14 @@
 # Changelog
 
-## v0.0.24
-
-### Added Navigation and Footer components
-  - `/components/Footer.tsx`
-  - `/components/Navigation.tsx`
-  - `/routes/_404.tsx`
-  - `/routes/index.tsx`
-  - `/routes/resume.tsx`
-  - `/routes/blog/[slug].tsx`
-  - `/routes/blog/index.tsx`
+## v0.0.25
 
 ### Minor updates
-  - `/LICENSE`
+  - `/import_map.json`
+  - `/routes/_app.tsx`
+  - `/routes/resume.tsx`
+  - `/routes/blog/[slug].tsx`
+  - `/components/Footer.tsx`
+  - `/static/style.css`
 
 ## Roadmap
 
@@ -37,3 +33,15 @@
   - [x] Navbar
     - [x] Link a home
     - [x] SVG Logo
+  - [x] Fix lunchbox header banner
+  - [x] Fix lunchbox markdowns (list, blockquote, inline code)
+  - [ ] Project images link to repo.
+
+### v0.2
+
+  - [ ] Blog
+    - [ ] Tag system
+    - [ ] Search bar
+  - [ ] Resume
+    - [ ] Extended view control, only major events on load.
+    - [ ] Skills

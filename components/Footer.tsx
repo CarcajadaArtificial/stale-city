@@ -2,7 +2,7 @@ import { Footer, Link, Text } from 'lunchbox';
 
 export default function () {
   return (
-    <Footer gradient_pattern='zigzag' layout_type='left' class='mt-6'>
+    <Footer gradient_pattern='zigzag' layout_type='left'>
       <Text>
         <Link href='./'>stale.city</Link>
         <>{' | '}</>

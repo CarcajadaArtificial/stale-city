@@ -8,7 +8,7 @@ export default function App({ Component }: AppProps) {
         <title>Stale City</title>
         <link
           rel='stylesheet'
-          href='https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox@0.2.3/static/style.css'
+          href='https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox@0.2.4/static/style.css'
         />
         <link rel='stylesheet' href='http://localhost:8000/style.css' />
       </Head>
