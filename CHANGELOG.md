@@ -1,21 +1,12 @@
 # Changelog
 
-## v0.0.20
+## v0.0.21
 
-### Added the TimelineEvent island
-  - `/islands/TimelineEvent.tsx`
-  - `/routes/resume.tsx`
-  - `/fresh.gen.ts`
-  - `/src/data.ts`
-  - `/static/style.css`
-
-### Added resume timeline event documents
+### Updated resume timeline docs
   - `/data/docs/resume/timeline/*.md`
 
 ### Minor updates
-  - `/routes/_404.tsx`
   - `/routes/index.tsx`
-  - `/src/markdown.ts`
 
 ## Roadmap
 
@@ -30,7 +21,8 @@
   - [x] Post page
   - [ ] Resume page
     - [x] Short bio
-    - [ ] Timeline
+    - [x] Timeline
+    - [ ] PDF Links
 - [ ] Minor fixes
   - [ ] Add a footer component
     - [ ] MIT License

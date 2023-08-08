@@ -108,7 +108,7 @@ export default function Home(props: PageProps<BlogPageData>) {
           <>{' | '}</>
           <Link href='./blog'>Blog</Link>
           <>{' | '}</>
-          <Link href='./projects'>Projects</Link>
+          <Link href='https://github.com/CarcajadaArtificial'>Projects</Link>
         </Text>
         <Separator />
         <Text class='text-center animate-float'>
