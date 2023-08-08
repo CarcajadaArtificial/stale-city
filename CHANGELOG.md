@@ -1,14 +1,9 @@
 # Changelog
 
-## v0.0.25
+## v0.0.26
 
 ### Minor updates
-  - `/import_map.json`
   - `/routes/_app.tsx`
-  - `/routes/resume.tsx`
-  - `/routes/blog/[slug].tsx`
-  - `/components/Footer.tsx`
-  - `/static/style.css`
 
 ## Roadmap
 
