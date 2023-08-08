@@ -1,5 +1,4 @@
-import { getPosts, MdPost } from '../src/data.ts';
-import { Handlers, PageProps } from '$fresh/server.ts';
+import { getPosts } from '../src/data.ts';
 import {
   Card,
   Code,
@@ -12,19 +11,9 @@ import {
 } from 'lunchbox';
 import PostInfo from '../components/PostInfo.tsx';
 
-interface BlogPageData {
-  posts: MdPost[];
-}
+export default async function Home() {
+  const posts = await getPosts();
 
-export const handler: Handlers<BlogPageData> = {
-  async GET(_req, ctx) {
-    const posts = await getPosts();
-
-    return ctx.render({ ...ctx.state, posts });
-  },
-};
-
-export default function Home(props: PageProps<BlogPageData>) {
   function RenderProjects() {
     const projects = [
       {
@@ -122,7 +111,7 @@ export default function Home(props: PageProps<BlogPageData>) {
           <Text type='display'>Projects</Text>
           <RenderProjects />
           <Text type='display'>Thoughts</Text>
-          {props.data.posts.map((post) => (
+          {posts.map((post) => (
             <Card>
               <PostInfo post={post} />
             </Card>
