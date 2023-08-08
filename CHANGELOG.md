@@ -1,9 +1,9 @@
 # Changelog
 
-## v0.0.26
+## v0.0.27
 
 ### Minor updates
-  - `/routes/_app.tsx`
+  - `/components/Footer.tsx`
 
 ## Roadmap
 

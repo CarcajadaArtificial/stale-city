@@ -2,7 +2,7 @@ import { Footer, Link, Text } from 'lunchbox';
 
 export default function () {
   return (
-    <Footer gradient_pattern='zigzag' layout_type='left'>
+    <Footer gradient_pattern='zigzag' layout_type='center'>
       <Text>
         <Link href='./'>stale.city</Link>
         <>{' | '}</>
@@ -10,7 +10,7 @@ export default function () {
         <>{' | '}</>
         <Link href='./resume'>Resume</Link>
       </Text>
-      <Text>
+      <Text class='mt-6'>
         <>Powered by</>
         <>{' '}</>
         <Link href='https://github.com/CarcajadaArtificial'>myself</Link>
