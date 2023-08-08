@@ -1,12 +1,10 @@
 # Changelog
 
-## v0.0.21
+## v0.0.22
 
-### Updated resume timeline docs
-  - `/data/docs/resume/timeline/*.md`
-
-### Minor updates
-  - `/routes/index.tsx`
+### Added PDF
+  - `/static/cv_oscar_guerrero.pdf`
+  - `/routes/resume.tsx`
 
 ## Roadmap
 
@@ -28,3 +26,6 @@
     - [ ] MIT License
     - [ ] Link to socials
     - [ ] Link home and main pages
+  - [ ] Navbar
+    - [ ] Link a home
+    - [ ] SVG Logo

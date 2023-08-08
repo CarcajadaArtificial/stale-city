@@ -13,9 +13,9 @@ export default async function Resume() {
         <>
           <Text type='display'>Resume</Text>
           <Text class='mb-6'>
-            <Link>English PDF</Link>
-            <>{' | '}</>
-            <Link>Spanish PDF</Link>
+            <Link href='./cv_oscar_guerrero.pdf'>
+              Download English 1-Page PDF
+            </Link>
           </Text>
           <Markdown markdown_content={md_bio} />
           <div class='h-6' />
