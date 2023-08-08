@@ -1,7 +1,9 @@
 import { fetchMarkdown } from '../../src/markdown.ts';
 import { getPosts } from '../../src/data.ts';
-import { Card, Footer, Header, Main, Markdown, Text } from 'lunchbox';
+import { Card, Header, Main, Markdown, Text } from 'lunchbox';
 import PostInfo from '../../components/PostInfo.tsx';
+import Navigation from '../../components/Navigation.tsx';
+import Footer from '../../components/Footer.tsx';
 
 export default async function BlogIndex() {
   const posts = await getPosts();
@@ -9,6 +11,7 @@ export default async function BlogIndex() {
 
   return (
     <>
+      <Navigation />
       <Header gradient_pattern='zigzag' layout_type='center'>
         <Text type='display'>Blog posts</Text>
         <Markdown markdown_content={intro} />
@@ -20,7 +23,7 @@ export default async function BlogIndex() {
           </Card>
         ))}
       </Main>
-      <Footer gradient_pattern='zigzag' layout_type='left'></Footer>
+      <Footer />
     </>
   );
 }

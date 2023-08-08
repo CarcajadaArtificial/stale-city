@@ -1,14 +1,6 @@
 import { getPosts } from '../src/data.ts';
-import {
-  Card,
-  Code,
-  Footer,
-  Header,
-  Link,
-  Main,
-  Separator,
-  Text,
-} from 'lunchbox';
+import { Card, Code, Header, Link, Main, Separator, Text } from 'lunchbox';
+import Footer from '../components/Footer.tsx';
 import PostInfo from '../components/PostInfo.tsx';
 
 export default async function Home() {
@@ -118,7 +110,7 @@ export default async function Home() {
           ))}
         </>
       </Main>
-      <Footer gradient_pattern='zigzag' layout_type='left'></Footer>
+      <Footer />
     </>
   );
 }

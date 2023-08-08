@@ -1,14 +1,18 @@
 # Changelog
 
-## v0.0.23
+## v0.0.24
 
-### Added Blog index page
+### Added Navigation and Footer components
+  - `/components/Footer.tsx`
+  - `/components/Navigation.tsx`
+  - `/routes/_404.tsx`
+  - `/routes/index.tsx`
+  - `/routes/resume.tsx`
+  - `/routes/blog/[slug].tsx`
   - `/routes/blog/index.tsx`
-  - `/fresh.gen.ts`
-  - `/data/docs/blog/intro.md`
 
 ### Minor updates
-  - `/routes/index.tsx`
+  - `/LICENSE`
 
 ## Roadmap
 
@@ -26,11 +30,10 @@
     - [x] Short bio
     - [x] Timeline
     - [x] PDF Links
-- [ ] Minor fixes
-  - [ ] Add a footer component
-    - [ ] MIT License
-    - [ ] Link to socials
-    - [ ] Link home and main pages
-  - [ ] Navbar
-    - [ ] Link a home
-    - [ ] SVG Logo
+- [x] Minor fixes
+  - [x] Add a footer component
+    - [x] MIT License
+    - [x] Link home and main pages
+  - [x] Navbar
+    - [x] Link a home
+    - [x] SVG Logo

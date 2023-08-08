@@ -2,6 +2,8 @@ import { Header, Main, Markdown, Text } from 'lunchbox';
 import { Handlers, PageProps } from '$fresh/server.ts';
 import { getPost, MdPost } from '../../src/data.ts';
 import PostInfo from '../../components/PostInfo.tsx';
+import Navigation from '../../components/Navigation.tsx';
+import Footer from '../../components/Footer.tsx';
 
 interface BlogPostPageData {
   post: MdPost;
@@ -24,6 +26,7 @@ export default function PostPage(props: PageProps<BlogPostPageData>) {
 
   return (
     <>
+      <Navigation />
       <Header layout_type='center' gradient_pattern='zigzag'>
         <PostInfo display post={post} />
         <div class='h-12' />
@@ -31,6 +34,7 @@ export default function PostPage(props: PageProps<BlogPostPageData>) {
       <Main layout_type='center'>
         <Markdown markdown_content={post.content} />
       </Main>
+      <Footer />
     </>
   );
 }

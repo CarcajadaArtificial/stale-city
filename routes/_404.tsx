@@ -1,4 +1,5 @@
-import { Footer, Header, Linkmap, Main, Markdown, Text } from 'lunchbox';
+import Footer from '../components/Footer.tsx';
+import { Header, Main, Text } from 'lunchbox';
 
 export default function Error404() {
   return (
@@ -13,17 +14,7 @@ export default function Error404() {
           class='mx-auto my-0'
         />
       </Header>
-      <Main layout_type='focus'>
-        <Text noMargins type='subheading'>Sitemap</Text>
-        <Linkmap
-          links={[{ name: 'Home', url: '/' }, {
-            name: 'Resume',
-            url: '/resume',
-          }]}
-        />
-      </Main>
-      <Footer gradient_pattern='zigzag'>
-      </Footer>
+      <Main></Main>
     </>
   );
 }
