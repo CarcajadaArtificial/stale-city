@@ -1,9 +1,9 @@
 # Changelog
 
-## v0.0.27
+## v0.0.28
 
-### Minor updates
-  - `/components/Footer.tsx`
+### Added post
+  - `/data/posts/3_on_notes_pt1.md`
 
 ## Roadmap
 
