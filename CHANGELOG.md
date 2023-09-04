@@ -1,9 +1,9 @@
 # Changelog
 
-## v0.0.28
+## v0.0.29
 
 ### Added post
-  - `/data/posts/3_on_notes_pt1.md`
+  - `/data/posts/4_on_notes_pt2.md`
 
 ## Roadmap
 
