@@ -1,9 +1,8 @@
 # Changelog
 
-## v0.0.29
+## v0.0.30
 
-### Added post
-  - `/data/posts/4_on_notes_pt2.md`
+- Updated CV.
 
 ## Roadmap
 
