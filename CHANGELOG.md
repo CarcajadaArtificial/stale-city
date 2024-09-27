@@ -3,7 +3,7 @@
 ## Roadmap
 
 - [ ] Home
-  - [ ] Links to other pages.
+  - [x] Links to other pages.
   - [ ] Display my main creations.
   - [ ] Something cool.
 
@@ -18,6 +18,13 @@
   - [ ] Add a timeline with the events of my life.
 
 ## History
+
+### v0.0.32
+
+- Added a header to the home page. It contains a hello message and an image. `routes/index.tsx`.
+- Added lunchbox implementation `routes/_app.tsx`, `fresh.config.ts`, `deno.json`.
+- Added the `Footer` component containing the site's version.
+- Removed the `TimelineEvent` island.
 
 ### v0.0.31
 

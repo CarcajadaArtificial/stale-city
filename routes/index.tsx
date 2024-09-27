@@ -1,25 +1,70 @@
-import { useSignal } from "@preact/signals";
-import Counter from "../islands/Counter.tsx";
+import Header from "lunchbox/components/Header/index.tsx";
+import Main from "lunchbox/components/Main/index.tsx";
+import Layout from "lunchbox/components/Layout/index.tsx";
+import Pattern from "lunchbox/components/Pattern/index.tsx";
+import Module from "lunchbox/components/Module/index.tsx";
+import Text from "lunchbox/components/Text/index.tsx";
+import Code from "lunchbox/components/Code/index.tsx";
+import Link from "lunchbox/components/Link/index.tsx";
+import Footer from "@/components/Footer.tsx";
 
-export default function Home() {
-  const count = useSignal(3);
+function HomeHeader() {
   return (
-    <div class="px-4 py-8 mx-auto bg-[#86efac]">
-      <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
-        <img
-          class="my-6"
-          src="/logo.svg"
-          width="128"
-          height="128"
-          alt="the Fresh logo: a sliced lemon dripping with juice"
-        />
-        <h1 class="text-4xl font-bold">Welcome to Fresh</h1>
-        <p class="my-4">
-          Try updating this message in the
-          <code class="mx-2">./routes/index.tsx</code> file, and refresh.
-        </p>
-        <Counter count={count} />
-      </div>
+    <>
+      <Header banner>
+        <Layout whitespace>
+          <Module size="xs" />
+          <Module size="lg">
+            <div class="text-center">
+              <Text type="display">stale.city</Text>
+              <img
+                src="https://raw.githubusercontent.com/CarcajadaArtificial/CarcajadaArtificial/main/images/stalecity.svg"
+                alt="stale city logo"
+                class="mx-auto mb-6 w-48"
+              />
+              <Text>
+                <>Hello</> <Code>( ´ ω ` )ノﾞ</Code>{" "}
+                <>
+                  welcome to my personal page. My name is Oscar Alfonso
+                  Guerrero, but I also go by
+                </>
+                <>{" "}</>
+                <Link href="https://github.com/CarcajadaArtificial">
+                  CarcajadaArtificial
+                </Link>
+                <>{" "}</>
+                <>on GitHub.</>
+              </Text>
+              <Text class="my-3 text-center">
+                <Link href="./resume">Resume</Link>
+                <>{" | "}</>
+                <Link href="./blog">Blog</Link>
+                <>{" | "}</>
+                <Link href="https://github.com/CarcajadaArtificial">
+                  Projects
+                </Link>
+              </Text>
+            </div>
+          </Module>
+        </Layout>
+      </Header>
+      <Pattern type="zigzag" />
+    </>
+  );
+}
+
+export default function () {
+  return (
+    <div>
+      <HomeHeader />
+      <Main>
+        <Layout whitespace>
+          <Module>
+            <Text>Main</Text>
+          </Module>
+        </Layout>
+      </Main>
+      <Footer />
     </div>
   );
 }
