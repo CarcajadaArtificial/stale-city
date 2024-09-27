@@ -1,20 +1,16 @@
-import { AppProps } from '$fresh/server.ts';
-import { Head } from '$fresh/runtime.ts';
-
-export default function App({ Component }: AppProps) {
+import { type PageProps } from "$fresh/server.ts";
+export default function App({ Component }: PageProps) {
   return (
-    <>
-      <Head>
-        <title>Stale City</title>
-        <link
-          rel='stylesheet'
-          href='https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox@0.2.4/static/style.css'
-        />
-        <link rel='stylesheet' href='style.css' />
-      </Head>
-      <body class='clr-bg-panel clr-txt-base txt-paragraph'>
+    <html>
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>stale-city</title>
+        <link rel="stylesheet" href="/styles.css" />
+      </head>
+      <body>
         <Component />
       </body>
-    </>
+    </html>
   );
 }

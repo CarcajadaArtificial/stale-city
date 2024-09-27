@@ -1,41 +1,28 @@
 # Changelog
 
-## v0.0.30
-
-- Updated CV.
-
 ## Roadmap
 
-### v0.1
+- [ ] Home
+  - [ ] Links to other pages.
+  - [ ] Display my main creations.
+  - [ ] Something cool.
 
-- [x] Routes
-  - [x] Home
-    - [x] Project Showcase
-    - [x] Posts showcase
-  - [x] Posts page
-    - [x] Short introduction
-    - [x] List of all posts
-  - [x] Post page
-  - [x] Resume page
-    - [x] Short bio
-    - [x] Timeline
-    - [x] PDF Links
-- [x] Minor fixes
-  - [x] Add a footer component
-    - [x] MIT License
-    - [x] Link home and main pages
-  - [x] Navbar
-    - [x] Link a home
-    - [x] SVG Logo
-  - [x] Fix lunchbox header banner
-  - [x] Fix lunchbox markdowns (list, blockquote, inline code)
-  - [ ] Project images link to repo.
+- [ ] Blog Feed
+  - [ ] Add a view of markdown files inside `data/`.
+  - [ ] Add a generator for a static `rss.xml` for the feed schema.
+  - [ ] Add a RSS link where the blog is referenced.
+  - [ ] Add a search bar for finding posts. (`Algolia`?)
 
-### v0.2
+- [ ] Resume
+  - [ ] Add a downloadable pdf resume.
+  - [ ] Add a timeline with the events of my life.
 
-  - [ ] Blog
-    - [ ] Tag system
-    - [ ] Search bar
-  - [ ] Resume
-    - [ ] Extended view control, only major events on load.
-    - [ ] Skills
+## History
+
+### v0.0.31
+
+- Reset old site into the new Lunchbox and Deno Fresh version.
+
+### v0.0.30
+
+- Updated CV.
