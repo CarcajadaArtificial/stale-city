@@ -8,6 +8,7 @@
   - [ ] Something cool.
 
 - [ ] Blog Feed
+  - [x] Home view for all the posts.
   - [ ] Add a view of markdown files inside `data/`.
   - [ ] Add a generator for a static `rss.xml` for the feed schema.
   - [ ] Add a RSS link where the blog is referenced.
@@ -18,6 +19,14 @@
   - [ ] Add a timeline with the events of my life.
 
 ## History
+
+### v0.0.33
+
+- Added standard naming for posts.
+- Added a view page for the list of all posts. `routes/posts/index.tsx`
+- Added updated external module references `deno.json`, `dev.ts`
+- Added a utility function module. `src/utils.ts`
+- Added minor updates `routes/index.tsx`
 
 ### v0.0.32
 

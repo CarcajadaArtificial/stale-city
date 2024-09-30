@@ -38,7 +38,7 @@ function HomeHeader() {
               <Text class="my-3 text-center">
                 <Link href="./resume">Resume</Link>
                 <>{" | "}</>
-                <Link href="./blog">Blog</Link>
+                <Link href="./posts">Thoughts</Link>
                 <>{" | "}</>
                 <Link href="https://github.com/CarcajadaArtificial">
                   Projects
