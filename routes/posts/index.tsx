@@ -5,10 +5,10 @@ import Main from "lunchbox/components/Main/index.tsx";
 import Layout from "lunchbox/components/Layout/index.tsx";
 import Pattern from "lunchbox/components/Pattern/index.tsx";
 import Module from "lunchbox/components/Module/index.tsx";
+import Markdown from "lunchbox/components/Markdown/index.tsx";
 import Text from "lunchbox/components/Text/index.tsx";
 import Code from "lunchbox/components/Code/index.tsx";
 import Link from "lunchbox/components/Link/index.tsx";
-import Markdown from "lunchbox/components/Markdown/index.tsx";
 import {
   fileArrayFromDirectory,
   getMarkdown,
@@ -49,7 +49,9 @@ export default async function (_req: Request, ctx: RouteContext) {
                     "yyyy/MM/dd",
                   )}
                 </Code>{" "}
-                <Link href={ctx.url.href + extractedFile?.slug}>
+                <Link
+                  href={ctx.url.href + "/" + extractedFile?.slug.slice(0, -3)}
+                >
                   {extractedFile?.attrs.title}
                 </Link>
               </Text>

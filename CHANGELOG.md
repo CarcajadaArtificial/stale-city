@@ -9,7 +9,7 @@
 
 - [ ] Blog Feed
   - [x] Home view for all the posts.
-  - [ ] Add a view of markdown files inside `data/`.
+  - [x] Add a view of markdown files inside `data/`.
   - [ ] Add a generator for a static `rss.xml` for the feed schema.
   - [ ] Add a RSS link where the blog is referenced.
   - [ ] Add a search bar for finding posts. (`Algolia`?)
@@ -19,6 +19,11 @@
   - [ ] Add a timeline with the events of my life.
 
 ## History
+
+### v0.0.34
+
+- Added a view that displays a single markdown file as a post. `routes/posts/[postId].tsx`.
+- Added minor fixes. `data/posts/1.md`, `data/posts/2.md`, `data/posts/3.md`, `data/posts/4.md`
 
 ### v0.0.33
 
