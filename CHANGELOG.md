@@ -10,8 +10,8 @@
 - [ ] Blog Feed
   - [x] Home view for all the posts.
   - [x] Add a view of markdown files inside `data/`.
-  - [ ] Add a generator for a static `rss.xml` for the feed schema.
-  - [ ] Add a RSS link where the blog is referenced.
+  - [x] Add a generator for a static `rss.xml` for the feed schema.
+  - [x] Add a RSS link where the blog is referenced.
   - [ ] Add a search bar for finding posts. (`Algolia`?)
 
 - [ ] Resume
@@ -19,6 +19,12 @@
   - [ ] Add a timeline with the events of my life.
 
 ## History
+
+### v0.0.35
+
+- Added RSS feed generator. `routes/rss.xml.ts`, `deno.json`,
+- Added minor fixes. `main.ts`
+- Added links to the footer component. `components/Footer.tsx`, `routes/posts/[postId].tsx`, `routes/posts/index.tsx`
 
 ### v0.0.34
 

@@ -9,6 +9,7 @@ import Code from "lunchbox/components/Code/index.tsx";
 import { format } from "date-fns";
 import { RouteContext } from "$fresh/server.ts";
 import { getMarkdown, Post } from "@/src/utils.ts";
+import Footer from "@/components/Footer.tsx";
 
 export default async function (_req: Request, ctx: RouteContext) {
   const markdownFile = await getMarkdown<Post>(
@@ -41,6 +42,7 @@ export default async function (_req: Request, ctx: RouteContext) {
           </Module>
         </Layout>
       </Main>
+      <Footer />
     </>
   );
 }

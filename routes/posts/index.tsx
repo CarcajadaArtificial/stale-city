@@ -15,6 +15,7 @@ import {
   mdFetch,
   Post,
 } from "@/src/utils.ts";
+import Footer from "@/components/Footer.tsx";
 
 export default async function (_req: Request, ctx: RouteContext) {
   const path = "data/posts";
@@ -22,8 +23,6 @@ export default async function (_req: Request, ctx: RouteContext) {
   const extractedFiles = await Promise.all(
     fileNames.map(async (fileName) => await getMarkdown<Post>(path, fileName)),
   );
-
-  // console.log(extractedFiles);
 
   return (
     <>
@@ -59,6 +58,7 @@ export default async function (_req: Request, ctx: RouteContext) {
           </Module>
         </Layout>
       </Main>
+      <Footer />
     </>
   );
 }
