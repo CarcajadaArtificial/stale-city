@@ -21,6 +21,12 @@
 
 ## History
 
+### v0.0.37
+
+- Added the attribute `isPrimary` to the timeline event .md's.
+  `data/docs/resume/timeline/*`, `src/utils.ts`.
+- Added updated styles to the TimelineEvent island.
+
 ### v0.0.36
 
 - Updated the timeline event .md's. `data/docs/resume/timeline/*`

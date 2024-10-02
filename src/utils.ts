@@ -54,4 +54,5 @@ export interface MdTimelineEvent {
   role: string;
   summary: string;
   tags: string[];
+  isPrimary: boolean;
 }
