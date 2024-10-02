@@ -15,21 +15,32 @@
   - [ ] Add a search bar for finding posts. (`Algolia`?)
 
 - [ ] Resume
-  - [ ] Add a downloadable pdf resume.
-  - [ ] Add a timeline with the events of my life.
+  - [x] Add a downloadable pdf resume.
+  - [ ] Add a timeline with the events of my life. Include a cool fade in
+        animation for timeline events.
 
 ## History
+
+### v0.0.36
+
+- Updated the timeline event .md's. `data/docs/resume/timeline/*`
+- Added the `/resume` route.
+- Added the TimelineEvent island.
+- Added obsidian to the gitignore file.
 
 ### v0.0.35
 
 - Added RSS feed generator. `routes/rss.xml.ts`, `deno.json`,
 - Added minor fixes. `main.ts`
-- Added links to the footer component. `components/Footer.tsx`, `routes/posts/[postId].tsx`, `routes/posts/index.tsx`
+- Added links to the footer component. `components/Footer.tsx`,
+  `routes/posts/[postId].tsx`, `routes/posts/index.tsx`
 
 ### v0.0.34
 
-- Added a view that displays a single markdown file as a post. `routes/posts/[postId].tsx`.
-- Added minor fixes. `data/posts/1.md`, `data/posts/2.md`, `data/posts/3.md`, `data/posts/4.md`
+- Added a view that displays a single markdown file as a post.
+  `routes/posts/[postId].tsx`.
+- Added minor fixes. `data/posts/1.md`, `data/posts/2.md`, `data/posts/3.md`,
+  `data/posts/4.md`
 
 ### v0.0.33
 
@@ -41,8 +52,10 @@
 
 ### v0.0.32
 
-- Added a header to the home page. It contains a hello message and an image. `routes/index.tsx`.
-- Added lunchbox implementation `routes/_app.tsx`, `fresh.config.ts`, `deno.json`.
+- Added a header to the home page. It contains a hello message and an image.
+  `routes/index.tsx`.
+- Added lunchbox implementation `routes/_app.tsx`, `fresh.config.ts`,
+  `deno.json`.
 - Added the `Footer` component containing the site's version.
 - Removed the `TimelineEvent` island.
 

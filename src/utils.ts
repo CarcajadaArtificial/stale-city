@@ -47,3 +47,11 @@ export interface Post {
   last_edited_at: Date;
   snippet: string;
 }
+
+export interface MdTimelineEvent {
+  title: string;
+  period: string;
+  role: string;
+  summary: string;
+  tags: string[];
+}
