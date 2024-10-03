@@ -21,6 +21,11 @@
 
 ## History
 
+### v0.0.38
+
+- Added an updated resume view. `routes/resume.tsx`, `islands/TimelineEvent.tsx`
+- Added a short period of only the year on the timeline markdowns.
+
 ### v0.0.37
 
 - Added the attribute `isPrimary` to the timeline event .md's.

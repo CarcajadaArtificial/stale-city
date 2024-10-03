@@ -29,8 +29,8 @@ export default async function (_req: Request, ctx: RouteContext) {
     <>
       <Header>
         <Layout whitespace>
-          <Module size="md">
-            <Text type="display">My story</Text>
+          <Module size="xl">
+            <Text type="display">My developer story</Text>
             <Markdown
               markdownContent={await mdFetch("../data/docs/resume/bio.md")}
             />
