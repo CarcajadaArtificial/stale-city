@@ -21,6 +21,11 @@
 
 ## History
 
+### v0.0.39
+
+- Added the `EventContent` island that reveals the timeline event's content on click.
+- Reordered the `2.md` and `4.md` blog posts.
+
 ### v0.0.38
 
 - Added an updated resume view. `routes/resume.tsx`, `islands/TimelineEvent.tsx`

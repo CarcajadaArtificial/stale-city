@@ -9,6 +9,7 @@ import * as $posts_postId_ from "./routes/posts/[postId].tsx";
 import * as $posts_index from "./routes/posts/index.tsx";
 import * as $resume from "./routes/resume.tsx";
 import * as $rss_xml from "./routes/rss.xml.ts";
+import * as $EventContent from "./islands/EventContent.tsx";
 import * as $TimelineEvent from "./islands/TimelineEvent.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
@@ -23,6 +24,7 @@ const manifest = {
     "./routes/rss.xml.ts": $rss_xml,
   },
   islands: {
+    "./islands/EventContent.tsx": $EventContent,
     "./islands/TimelineEvent.tsx": $TimelineEvent,
   },
   baseUrl: import.meta.url,

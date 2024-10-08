@@ -1,29 +1,7 @@
 import { MarkdownEssentials, MdTimelineEvent } from "@/src/utils.ts";
 import Module from "lunchbox/components/Module/index.tsx";
-import Markdown from "lunchbox/components/Markdown/index.tsx";
 import Text from "lunchbox/components/Text/index.tsx";
-import Code from "lunchbox/components/Code/index.tsx";
-
-const ModuleContent = (event: MdTimelineEvent) => (
-  <Module size="md" half="lg">
-    <div class={event.isPrimary ? "my-8" : "my-4"}>
-      <Text type={event.isPrimary ? "heading" : "paragraph"} noMargins>
-        {event.title}
-      </Text>
-      <Text type="small" noMargins>{event.role}</Text>
-      {event.isPrimary
-        ? (
-          <>
-            <Text noMargins>{event.summary}</Text>
-            <Text>
-              {Array.isArray(event.tags) ? event.tags.join(", ") : event.tags}
-            </Text>
-          </>
-        )
-        : null}
-    </div>
-  </Module>
-);
+import EventContent from "@/islands/EventContent.tsx";
 
 const ModulePeriod = (event: MdTimelineEvent) => (
   <Module size="xs" half="xs">
@@ -71,7 +49,7 @@ export default function (
     <>
       <ModulePeriod {...event.attrs} />
       <ModuleLine {...event.attrs} />
-      <ModuleContent {...event.attrs} />
+      <EventContent {...event} />
       <Module size="xs" />
     </>
   );

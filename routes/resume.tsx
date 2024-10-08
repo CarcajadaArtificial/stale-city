@@ -16,7 +16,7 @@ import {
 import Footer from "@/components/Footer.tsx";
 import TimelineEvent from "@/islands/TimelineEvent.tsx";
 
-export default async function (_req: Request, ctx: RouteContext) {
+export default async function (_req: Request, _ctx: RouteContext) {
   const path = "data/docs/resume/timeline";
   const fileNames = fileArrayFromDirectory(path).map((file) => file.name);
   const extractedFiles = (await Promise.all(fileNames.map(

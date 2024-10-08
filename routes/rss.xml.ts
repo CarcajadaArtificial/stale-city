@@ -30,8 +30,8 @@ export default defineRoute(async (_req, ctx) => {
           copyright: `Copyright © ${currentYear} Stale City`,
           item: extractedFiles.map((extractedFile) => ({
             title: extractedFile?.attrs.title,
-            link: `${blogUrl}/posts/${extractedFile?.slug}`,
-            guid: `${blogUrl}/posts/${extractedFile?.slug}`,
+            link: `${blogUrl}/posts/${extractedFile?.slug.slice(0, -3)}`,
+            guid: `${blogUrl}/posts/${extractedFile?.slug.slice(0, -3)}`,
             description: extractedFile?.attrs.snippet,
             pubDate: new Date(String(extractedFile?.attrs.published_at))
               .toUTCString(),
