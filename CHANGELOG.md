@@ -21,6 +21,11 @@
 
 ## History
 
+### v0.0.40
+
+- Added minor fixes to the resume page `islands/EventContent.tsx`, `islands/TimelineEvent.tsx`, `routes/resume.tsx`
+- Added updated text to timeline's `1.md` and `2.md`.
+
 ### v0.0.39
 
 - Added the `EventContent` island that reveals the timeline event's content on click.

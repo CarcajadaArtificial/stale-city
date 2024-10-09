@@ -12,7 +12,7 @@ export default function () {
       <Footer>
         <Layout whitespace>
           <Module size="sm">
-            <Text type="small" noMargins>v0.0.39</Text>
+            <Text type="small" noMargins>v0.0.40</Text>
           </Module>
           <Module size="lg">
             <Text>

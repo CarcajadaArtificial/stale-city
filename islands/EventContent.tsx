@@ -11,7 +11,7 @@ export default function (event: MarkdownEssentials<MdTimelineEvent>) {
   const { attrs, content } = event;
 
   return (
-    <Module size="md" half="lg">
+    <Module size="lg" half="xl">
       <div class={attrs.isPrimary ? "my-8" : "my-4"}>
         <Text type={attrs.isPrimary ? "heading" : "paragraph"} noMargins>
           {attrs.title}

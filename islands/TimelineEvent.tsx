@@ -4,7 +4,7 @@ import Text from "lunchbox/components/Text/index.tsx";
 import EventContent from "@/islands/EventContent.tsx";
 
 const ModulePeriod = (event: MdTimelineEvent) => (
-  <Module size="xs" half="xs">
+  <Module size="xs" half="none">
     <div class={event.isPrimary ? "mt-9" : "mt-5"}>
       <Text class="text-right" noMargins>
         {event.period}
@@ -50,7 +50,6 @@ export default function (
       <ModulePeriod {...event.attrs} />
       <ModuleLine {...event.attrs} />
       <EventContent {...event} />
-      <Module size="xs" />
     </>
   );
 }
