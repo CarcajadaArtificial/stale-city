@@ -21,6 +21,10 @@
 
 ## History
 
+### v0.0.41
+
+- Added updated text to timeline's `1.md`, `2.md`, and `3.md`.
+
 ### v0.0.40
 
 - Added minor fixes to the resume page `islands/EventContent.tsx`, `islands/TimelineEvent.tsx`, `routes/resume.tsx`
