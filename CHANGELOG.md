@@ -6,6 +6,10 @@
 
 ## Version History
 
+### v0.0.45
+
+- Added a social links fix.
+
 ### v0.0.44
 
 - Updated lock file

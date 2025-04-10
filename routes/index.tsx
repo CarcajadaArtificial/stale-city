@@ -33,10 +33,11 @@ export default define.page(async function Home() {
               📡 <Link href="rss.xml">RSS</Link>
             </span>
             <span>
-              🐙 <Link href="github.com/CarcajadaArtificial">GitHub</Link>
+              🐙{" "}
+              <Link href="https://github.com/CarcajadaArtificial">GitHub</Link>
             </span>
             <span>
-              🐘 <Link href="techhub.social/@carcajada">Mastodon</Link>
+              🐘 <Link href="https://techhub.social/@carcajada">Mastodon</Link>
             </span>
           </div>
         </div>
