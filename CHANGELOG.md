@@ -1,8 +1,14 @@
 # Changelog
 
-## Working Un
+## Working On
+
+- Add favicons.
 
 ## Version History
+
+### v0.0.44
+
+- Updated lock file
 
 ### v0.0.43
 
