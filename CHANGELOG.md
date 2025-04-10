@@ -4,6 +4,10 @@
 
 ## Version History
 
+### v0.0.43
+
+- Addded a restoration of the blog functionality.
+
 ### v0.0.42
 
 - Added the updated Lunchbox UI components.

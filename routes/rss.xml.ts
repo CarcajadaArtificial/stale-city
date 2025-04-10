@@ -1,21 +1,15 @@
-import { fileArrayFromDirectory, getMarkdown, Post } from "../src/utils.ts";
 import { stringify } from "@libs/xml/stringify";
-import { define } from "../utils.ts";
+import { define, fetchPosts } from "../utils.ts";
 
 export const handler = define.handlers({
   async GET(ctx) {
     const { origin } = ctx.url;
     const currentYear = new Date().getFullYear();
     const blogUrl = origin;
-    const path = "data/posts";
+    const path = "./data/posts";
 
     try {
-      const fileNames = fileArrayFromDirectory(path).map((file) => file.name);
-      const extractedFiles = await Promise.all(
-        fileNames.map(async (fileName) =>
-          await getMarkdown<Post>(path, fileName)
-        ),
-      );
+      const extractedFiles = await fetchPosts(path);
 
       const rssObject = {
         "@version": "2.0",
@@ -30,11 +24,11 @@ export const handler = define.handlers({
             language: "en-us",
             copyright: `Copyright © ${currentYear} Stale City`,
             item: extractedFiles.map((extractedFile) => ({
-              title: extractedFile?.attrs.title,
-              link: `${blogUrl}/posts/${extractedFile?.slug.slice(0, -3)}`,
-              guid: `${blogUrl}/posts/${extractedFile?.slug.slice(0, -3)}`,
-              description: extractedFile?.attrs.snippet,
-              pubDate: new Date(String(extractedFile?.attrs.published_at))
+              title: extractedFile.title,
+              link: `${blogUrl}/posts/${extractedFile.file_name}`,
+              guid: `${blogUrl}/posts/${extractedFile.file_name}`,
+              description: extractedFile.snippet,
+              pubDate: new Date(String(extractedFile.published_at))
                 .toUTCString(),
             })),
           },
