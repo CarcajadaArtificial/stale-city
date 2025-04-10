@@ -1,25 +1,12 @@
 # Changelog
 
-## Roadmap
+## Working Un
 
-- [ ] Home
-  - [x] Links to other pages.
-  - [ ] Display my main creations.
-  - [ ] Something cool.
+## Version History
 
-- [ ] Blog Feed
-  - [x] Home view for all the posts.
-  - [x] Add a view of markdown files inside `data/`.
-  - [x] Add a generator for a static `rss.xml` for the feed schema.
-  - [x] Add a RSS link where the blog is referenced.
-  - [ ] Add a search bar for finding posts. (`Algolia`?)
+### v0.0.42
 
-- [ ] Resume
-  - [x] Add a downloadable pdf resume.
-  - [ ] Add a timeline with the events of my life. Include a cool fade in
-        animation for timeline events.
-
-## History
+- Added the updated Lunchbox UI components.
 
 ### v0.0.41
 

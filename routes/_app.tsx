@@ -1,16 +1,18 @@
-import { type PageProps } from "$fresh/server.ts";
+import type { PageProps } from "fresh";
+import { Body } from "lunchbox/atoms/Page.tsx";
+
 export default function App({ Component }: PageProps) {
   return (
-    <html class="lunchbox">
+    <html>
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>stale-city</title>
+        <title>init</title>
         <link rel="stylesheet" href="/styles.css" />
       </head>
-      <body id="lunchbox-body">
+      <Body>
         <Component />
-      </body>
+      </Body>
     </html>
   );
 }

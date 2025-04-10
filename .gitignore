@@ -7,8 +7,7 @@
 
 # Fresh build directory
 _fresh/
-# npm dependencies
+# npm + other dependencies
 node_modules/
-
-# Obsidian Config files
-.obsidian
+vendor/
+.DS_Store

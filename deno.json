@@ -1,47 +1,39 @@
 {
-  "lock": false,
   "tasks": {
     "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
-    "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
-    "manifest": "deno task cli manifest $(pwd)",
-    "start": "deno run -A --watch=static/,routes/ dev.ts",
+    "dev": "deno run -A --watch=static/,routes/ dev.ts",
     "build": "deno run -A dev.ts build",
-    "preview": "deno run -A main.ts",
-    "update": "deno run -A -r https://fresh.deno.dev/update ."
+    "start": "deno run -A main.ts",
+    "update": "deno run -A -r jsr:@fresh/update ."
+  },
+  "imports": {
+    "@": "./",
+    "@egamagz/time-ago": "jsr:@egamagz/time-ago@^2025.4.9",
+    "@libs/xml": "jsr:@libs/xml@^6.0.4",
+    "@std/front-matter": "jsr:@std/front-matter@^1.0.9",
+    "@std/path": "jsr:@std/path@^1.0.8",
+    "preact": "npm:preact@^10.25.4",
+    "@preact/signals": "npm:@preact/signals@^2.0.1",
+    "tailwindcss": "npm:tailwindcss@^3.4.3",
+    "fresh": "jsr:@fresh/core@^2.0.0-alpha.29",
+    "@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
+    "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
+    "@vyn/cn": "jsr:@vyn/cn@^0.1.2",
+    "lunchbox/particles/": "./components/lunchbox/particles/",
+    "lunchbox/atoms/": "./components/lunchbox/atoms/",
+    "lunchbox/molecules/": "./components/lunchbox/molecules/",
+    "@lunchbox/ui": "jsr:@lunchbox/ui"
+  },
+  "compilerOptions": {
+    "lib": ["dom", "dom.asynciterable", "dom.iterable", "deno.ns"],
+    "jsx": "precompile",
+    "jsxImportSource": "preact",
+    "jsxPrecompileSkipElements": ["a", "img", "source", "body", "html", "head"]
   },
   "lint": {
     "rules": {
-      "tags": [
-        "fresh",
-        "recommended"
-      ]
+      "tags": ["fresh", "recommended"]
     }
   },
-  "exclude": [
-    "**/_fresh/*"
-  ],
-  "imports": {
-    "@/": "./",
-    "$fresh/": "https://deno.land/x/fresh@1.6.8/",
-    "@libs/xml": "jsr:@libs/xml@^6.0.0",
-    "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
-    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
-    "preact": "https://esm.sh/preact@10.19.6",
-    "preact/": "https://esm.sh/preact@10.19.6/",
-    "@std/dotenv": "jsr:@std/dotenv@^0.225.2",
-    "@std/front-matter": "jsr:@std/front-matter@^1.0.5",
-    "@std/fs": "jsr:@std/fs@^1.0.4",
-    "@std/path": "jsr:@std/path@^1.0.6",
-    "date-fns": "npm:date-fns@^3.6.0",
-    "lunchbox/": "https://deno.land/x/lunchbox@v1.0.1/",
-    "resin": "https://deno.land/x/resin@v0.1.8/",
-    "tailwindcss": "npm:tailwindcss@3.4.1",
-    "tailwindcss/": "npm:/tailwindcss@3.4.1/",
-    "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js"
-  },
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact"
-  },
-  "nodeModulesDir": true
+  "exclude": ["**/_fresh/*"]
 }
