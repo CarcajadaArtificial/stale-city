@@ -2,9 +2,18 @@
 
 ## Working On
 
-- Add favicons.
+- Add all favicons.
+
+### Next up
+
+- Add edit comments to posts.
+- Add measuring to post visits?
 
 ## Version History
+
+### v0.0.46
+
+- Added an english language setting to the html document.
 
 ### v0.0.45
 
