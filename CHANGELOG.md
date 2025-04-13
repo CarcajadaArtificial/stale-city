@@ -11,6 +11,10 @@
 
 ## Version History
 
+### v0.0.47
+
+- Added the `ai-isnt-hard` draft.
+
 ### v0.0.46
 
 - Added an english language setting to the html document.
