@@ -19,22 +19,24 @@ export async function fetchPost(path: string): Promise<iPost> {
   const content = fileData.body;
   const attrs = fileData.attrs;
   const time_ago = timeAgo(new Date(attrs.published_at));
+  const parts = path.split("/");
 
-  return ({
+  return {
     ...attrs,
-    file_name: path.substring(path.lastIndexOf("/") + 1),
+    file_name: parts[parts.length - 2],
     time_ago: time_ago ? time_ago : "Unknown time ago",
     content,
-  });
+  };
 }
 
 export async function fetchPosts(dir: string): Promise<iPost[]> {
-  const postFiles = await Deno.readDir(dir);
+  const postDirs = await Deno.readDir(dir);
   const posts = [];
 
-  for await (const file of postFiles) {
-    if (file.name.endsWith(".md")) {
-      posts.push(await fetchPost(join(dir, file.name)));
+  for await (const entry of postDirs) {
+    if (entry.isDirectory) {
+      const filePath = join(dir, entry.name, "post.md");
+      posts.push(await fetchPost(filePath));
     }
   }
 

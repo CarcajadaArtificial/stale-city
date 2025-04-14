@@ -11,7 +11,9 @@ import clr from "lunchbox/particles/clr.ts";
 import focus from "lunchbox/particles/focus.ts";
 
 export default define.page(async function Post(props) {
-  const post = await fetchPost(join("./data/posts/", props.params.postId!));
+  const post = await fetchPost(
+    join("./data/posts/", props.params.postId!, "post.md"),
+  );
   return (
     <>
       <Nav.Static>
@@ -31,7 +33,7 @@ export default define.page(async function Post(props) {
         </div>
       </Header>
       <Main>
-        <div class="col-span-full md:col-span-8">
+        <div class="col-span-full lg:col-span-8">
           <Markdown content={post.content} />
         </div>
       </Main>

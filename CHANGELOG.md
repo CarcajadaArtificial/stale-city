@@ -11,6 +11,11 @@
 
 ## Version History
 
+### v0.0.48
+
+- Updated the post directory structure form `./data/posts/[[POST_ID]].md` to
+  `./data/posts/[[POST_SLUG]]/post.md`.
+
 ### v0.0.47
 
 - Added the `ai-isnt-hard` draft.
@@ -41,12 +46,14 @@
 
 ### v0.0.40
 
-- Added minor fixes to the resume page `islands/EventContent.tsx`, `islands/TimelineEvent.tsx`, `routes/resume.tsx`
+- Added minor fixes to the resume page `islands/EventContent.tsx`,
+  `islands/TimelineEvent.tsx`, `routes/resume.tsx`
 - Added updated text to timeline's `1.md` and `2.md`.
 
 ### v0.0.39
 
-- Added the `EventContent` island that reveals the timeline event's content on click.
+- Added the `EventContent` island that reveals the timeline event's content on
+  click.
 - Reordered the `2.md` and `4.md` blog posts.
 
 ### v0.0.38
