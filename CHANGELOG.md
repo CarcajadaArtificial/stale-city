@@ -11,6 +11,10 @@
 
 ## Version History
 
+### v0.0.49
+
+- Added comments to posts.
+
 ### v0.0.48
 
 - Updated the post directory structure form `./data/posts/[[POST_ID]].md` to

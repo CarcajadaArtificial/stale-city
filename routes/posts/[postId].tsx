@@ -1,4 +1,4 @@
-import { define, fetchPost } from "utils";
+import { define, fetchPost, iComment } from "utils";
 import { join } from "@std/path";
 import { cn } from "@vyn/cn";
 import { Footer, Header, Main } from "lunchbox/atoms/Page.tsx";
@@ -10,10 +10,22 @@ import { H1 } from "lunchbox/atoms/Heading.tsx";
 import clr from "lunchbox/particles/clr.ts";
 import focus from "lunchbox/particles/focus.ts";
 
+function Comment(props: iComment) {
+  return (
+    <div class={cn("p-1/1 rounded", clr.panel.bg)}>
+      <p class="text-xs mb-1/2" title={props.published_at}>
+        {props.time_ago}
+      </p>
+      <Markdown content={props.content} />
+    </div>
+  );
+}
+
 export default define.page(async function Post(props) {
   const post = await fetchPost(
     join("./data/posts/", props.params.postId!, "post.md"),
   );
+
   return (
     <>
       <Nav.Static>
@@ -35,6 +47,9 @@ export default define.page(async function Post(props) {
       <Main>
         <div class="col-span-full lg:col-span-8">
           <Markdown content={post.content} />
+        </div>
+        <div class="col-span-full lg:col-span-4">
+          {post.comments.map(Comment)}
         </div>
       </Main>
       <Footer>
