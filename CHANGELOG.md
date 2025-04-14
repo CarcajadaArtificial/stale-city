@@ -7,10 +7,16 @@
 ### Next up
 
 - Add a route that exposes the project's CHANGELOG and LICENSE.
+- Add a component that automatically creates a table of contents based on the
+  markdown content.
 - Add basic post search. (npm:minisearch)
 - Add Sentry and Bucket.
 
 ## Version History
+
+### v0.0.51
+
+- Updated the `ai-isnt-hard` post.
 
 ### v0.0.50
 

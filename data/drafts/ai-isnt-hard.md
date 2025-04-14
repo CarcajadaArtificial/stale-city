@@ -1,13 +1,16 @@
 ---
-title: AI isn't hard, it's just poorly packaged.
+title: The Wrapper is the Product
 published_at: 2025-13-04
 snippet:
-  From MVP to mass adoption, the hidden dangers of AI SaaS product design.
+  AI isn't hard, it's just poorly packaged. From MVP to mass adoption, the
+  hidden dangers of AI SaaS product design.
 ---
 
-> TL;DR: AI is powerful, but without good design, it’s stuck in the
-> "command-line" era, accessible only to specialists. To achieve mass adoption,
-> we need to focus on usability, accessibility, and trustworthiness.
+## TL;DR
+
+> AI is powerful, but without good design, it’s stuck in the "command-line" era,
+> accessible only to specialists. To achieve mass adoption, we need to focus on
+> usability, accessibility, and trustworthiness.
 
 ## Why AI Adoption Is Stuck
 
@@ -51,44 +54,103 @@ applause. We need to give it jeans and a t-shirt.
 
 ## Why It’s Still a Specialist’s Game
 
-The need for domain knowledge: Non-specialists can’t interact with AI in
-meaningful ways without extra effort. The usual domain knowledge is called the
-“command-line” phase of AI, it is accessible to specialists, but not ready for
-mass adoption. The gap in the market for AI tools designed with simplicity and
-accessibility in mind for everyday users.
+It's not that non-specialists can’t use AI tools; technically, anyone can prompt
+ChatGPT or fire up a model. The problem is that outside a narrow domain, they
+usually can’t do it well. There’s still an invisible gate around “real” use:
+domain knowledge. Even simple interactions require users to internalize
+unfamiliar mental models, vocabularies, and workflows. It’s like asking people
+to write Bash scripts to check their email. Technically doable. Practically
+useless.
 
-There is a huge market for this specialists, of course, there's silly amount of
-interest from corporations to force their employees to use AI tools to cut back
-costs or boost productivity, but what can also be seen is one of the biggest
-industries in the world investing greatly in these tools, it doesn't matter if
-they requiere domain knowledge because their company and employees are likely
-related to the domains around AI.
+This is what people mean when they say we’re still in the “command-line” phase
+of AI. Tools exist. They’re powerful. They’re even public. But the interface?
+Inscrutable unless you’ve been around the block. The missing layer is usability:
+thoughtful design that abstracts complexity without neutering power. There’s a
+canyon between the power users and everyone else, and most products are still
+shouting across it instead of building a damn bridge.
+
+And look, specialists love this. The market for them is thriving. Enterprise
+buyers don’t blink at complexity if it means cutting headcount or boosting
+margins. Whole industries are being refactored around AI-powered productivity.
+They don’t care if the tool requires a PhD in regex; they’ll train up or hire
+consultants. These tools were never meant to be “easy,” just effective for
+people already deep in the weeds.
+
+So what you end up with is a bifurcated ecosystem: hyper-niche products built
+for the initiated, and mass-market tools that feel like toys because they’re
+designed with no real user in mind. Meanwhile, the actual design challenge,
+building interfaces that make powerful tools legible to normal humans, gets
+sidelined. Not because it’s not important, but because specialists don’t need
+it, and they’re the ones writing the checks right now.
+
+This is the gap. This is the opportunity. Tools that nail this layer of
+abstraction, like Cursor, Perplexity, or even GitHub Copilot, are winning not bc
+their models are better, but because they figured out how to wrap that power in
+workflows that make sense. We need more of that. Not more AI. More good design.
 
 ## Product Design is Trust and Accessibility
 
-Trust isn't just an ethical consideration. Trust starts from silly things like
-backlinks on articles or documentation for the tool. One of the best
-trust-inducing mechanisms is good accessibility, because with it the product
-makes much more users feel seen, thing that psychologically makes them trust the
-product more.
+Trust isn’t some abstract, vibes-based UX virtue. It’s the bedrock of adoption.
+And in the messy world of AI-driven products, trust has to be earned, not
+assumed. You earn it in two ways: by being usable and by being consistent.
 
-Trust also is Trusting that the product will consistently work as expected. Not
-only should the user trust that the product's company isn't doing something
-wrong with their data, for example, but also that the product will work and
-continue working without failure. This is a challenge in deterministic software,
-it's become a problem bigger than every with AI-based non-deterministic
-software.
+Start stupid simple. A legit accessibility effort (actual a11y, yes, but also
+just intuitive workflows and low-friction UX) is one of the most powerful trust
+levers you have. When users feel seen, like the product understands and
+anticipates them, they project reliability onto it. This isn’t just hand-wavy
+psychology; this is baked into how people form trust heuristics with software.
+Good accessibility is empathy in pixels. And empathy builds loyalty.
+
+But trust also needs resilience. It’s not just “Can I use this?” It’s “Can I
+count on this?” AI products fail here constantly, partly because they’re
+non-deterministic, but also because their developers treat uptime and
+consistency like secondary concerns. It’s not enough to have a model that can
+work; the whole experience has to predictably work. If I prompt your product the
+same way twice, will I get the same result? Will I get a result at all? If it
+fails, will it fail gracefully? Does your interface reassure me that you’ve
+thought about the edge cases I haven’t?
+
+Even silly stuff like documentation and backlink hygiene feeds into this. Users
+do notice when your support articles look like a content farm. They notice when
+half your “blog” is SEO bait. Bad backlinks and sketchy SEO aren’t just
+marketing sins. They’re trust-destroyers. They make your product look unserious,
+unreliable, or worse, shady. If Google doesn’t trust you, why should a user?
+
+When you design for accessibility and consistency, trust emerges as a side
+effect. And that’s what turns an AI tool from a prototype into a product.
 
 ## A Product is Still a Product: The MVP Trap
 
-Focusing solely on the MVP can lead to overlooking crucial UX elements that
-ensure future success. A bloated MVP filled with features but poor usability can
-set the product back, making it harder to iterate effectively, and iterating
-should be you're main goal for an MVP.
+There's this recurring fantasy among early-stage AI builders that if you just
+ship an MVP fast enough, success will sort itself out later. Speed is the
+religion, and the MVP is its sacrament. But here's the catch: shipping something
+isn’t the same as shipping something usable. And when you skip usability in
+favor of feature velocity, you’re not iterating, you’re just tripping over your
+own feet faster.
 
-Building a product that solves a real problem with as little complexity as
-possible. Ensuring the right tech stack and solid design principles from the
-start can make scaling easier and more efficient in the long run.
+An MVP bloated with features but starved of good UX isn’t "lean" or "agile" or
+whatever other scrum-adjacent term is in vogue right now. It’s a liability.
+Users bounce not because the AI isn't powerful, but because using it feels like
+a chore. And once people decide your product is annoying, you're in UX debt
+hell; it costs 10 times more to fix that first impression than it would have to
+build it right the first time.
+
+The whole point of an MVP is to get real feedback, but bad usability means bad
+signal. If people can't even get to the value because the product is janky or
+confusing, then what are they even reacting to? Not your idea, not your tech,
+just your bad interface. Congrats, you've successfully validated that no one
+wants to use your mess.
+
+What’s needed instead is intentional minimalism: solve one real problem,
+cleanly. Keep complexity down, not by underbuilding, but by making hard
+decisions early. Choose a tech stack that won’t punch you in the face when you
+try to scale. Bake in sane design principles from the jump: clarity over
+cleverness, trust over tricks.
+
+This isn’t about chasing perfection. It’s about respecting the medium. AI or
+not, a product is still a product. People expect software to feel a certain way:
+snappy, legible, predictable. Even when it’s doing sorcery under the hood.
+Especially then.
 
 ## Conclusion
 
