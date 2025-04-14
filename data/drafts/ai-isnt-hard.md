@@ -29,19 +29,23 @@ wondering why they don’t use Linux.
 Right now, most AI products are stuck in what amounts to the command-line era of
 AI. Powerful, yes. But the mental load required to start using them is
 non-trivial. You need domain knowledge to get value. Which is fine if your users
-are engineers or researchers. But if your goal is mass adoption? lol no.
+are engineers or researchers. But if your goal is mass adoption?
+
+> **"AI adoption won't come from more powerful models or CEO mandates — it will
+> come from thoughtfully designed interfaces that make intelligence accessible
+> to everyone."** _— Nan Yu,
+> [“AI adoption is a UX problem”](https://thenanyu.com/ux.html), Apr 2025_
 
 And yet companies keep pushing these tools into orgs, chasing productivity
 boosts. Which works, for a while, because the users are specialists or at least
 tech-adjacent. But once you hit the edge of that cohort, adoption flatlines. The
 tools don’t invite exploration. They gatekeep via jargon, unclear feedback
-loops, and zero contextual affordances.
-
-This is where the “AI is a UX problem” take hits hard. We’re not lacking
-capability. We’re lacking empathy in the interface. Calling tools like Cursor or
-Perplexity “wrappers” misses the point: they reshape the cognitive cost of
-interaction. They package raw power into something tractable. Same as how early
-computers needed punch cards and then boom: GUI. Mouse. Windows. Mass adoption.
+loops, and zero contextual affordances. This is where the “AI is a UX problem”
+take hits hard. We’re not lacking capability. We’re lacking empathy in the
+interface. Calling tools like Cursor or Perplexity “wrappers” misses the point:
+they reshape the cognitive cost of interaction. They package raw power into
+something tractable. Same as how early computers needed punch cards and then
+boom: GUI. Mouse. Windows. Mass adoption.
 
 The problem isn’t the model. The problem is you have to understand the model to
 use it. The AI itself might be state-of-the-art, but if the product design
@@ -128,6 +132,11 @@ isn’t the same as shipping something usable. And when you skip usability in
 favor of feature velocity, you’re not iterating, you’re just tripping over your
 own feet faster.
 
+> **“Before you write a single line of code, ask yourself: What problem does my
+> product solve?”** _— Alyona Potapova,
+> ["SaaS Product Development: Where to Start and Common Mistakes"](https://instandart.com/blog/bespoke-software-development/saas-product-development-where-to-start-and-common-mistakes/),
+> Apr 2025_
+
 An MVP bloated with features but starved of good UX isn’t "lean" or "agile" or
 whatever other scrum-adjacent term is in vogue right now. It’s a liability.
 Users bounce not because the AI isn't powerful, but because using it feels like
@@ -160,3 +169,11 @@ Especially then.
 > trust accessible to everyone. To truly reach the masses, AI must learn to
 > speak the language of design, just like any other disruptive technology before
 > it.
+
+### References
+
+1. Nan Yu, [“AI adoption is a UX problem”](https://thenanyu.com/ux.html), Apr
+   2025
+2. Alyona Potapova,
+   ["SaaS Product Development: Where to Start and Common Mistakes"](https://instandart.com/blog/bespoke-software-development/saas-product-development-where-to-start-and-common-mistakes/),
+   Apr 2025

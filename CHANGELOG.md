@@ -14,6 +14,10 @@
 
 ## Version History
 
+### v0.0.52
+
+- Added quotes and references to the `ai-isnt-hard` post.
+
 ### v0.0.51
 
 - Updated the `ai-isnt-hard` post.
