@@ -2,14 +2,19 @@
 
 ## Working On
 
-- Add all favicons.
+- Add estimated reading time. (npm:reading-time)
 
 ### Next up
 
-- Add edit comments to posts.
-- Add measuring to post visits?
+- Add a route that exposes the project's CHANGELOG and LICENSE.
+- Add basic post search. (npm:minisearch)
+- Add Sentry and Bucket.
 
 ## Version History
+
+### v0.0.50
+
+- Added favicons.
 
 ### v0.0.49
 
