@@ -2,12 +2,14 @@ import { extractYaml } from "@std/front-matter";
 import { exists } from "jsr:@std/fs/exists";
 import { timeAgo } from "@egamagz/time-ago";
 import { join } from "@std/path";
+import readingTime from "npm:reading-time";
 
 export interface iPost {
   title: string;
   published_at: string;
   time_ago: string;
   snippet: string;
+  readingMinutes: number;
   file_name: string;
   content: string;
   comments: iComment[];
@@ -33,11 +35,10 @@ async function fetchComments(postPath: string): Promise<iComment[]> {
       );
       const content = fileData.body;
       const attrs = fileData.attrs;
-      const tAgo = timeAgo(new Date(attrs.published_at)) || "unknown time ago";
       comments.push({
         ...attrs,
         file_name: entry.name,
-        time_ago: tAgo,
+        time_ago: timeAgo(new Date(attrs.published_at)) || "unknown time ago",
         content,
       });
     }
@@ -53,14 +54,15 @@ export async function fetchPost(path: string): Promise<iPost> {
   );
   const content = fileData.body;
   const attrs = fileData.attrs;
-  const tAgo = timeAgo(new Date(attrs.published_at)) || "unknown time ago";
   const parts = path.split("/");
-  const postDir = parts.slice(0, parts.length - 1).join("/");
-  const comments = await fetchComments(postDir);
+  const comments = await fetchComments(
+    parts.slice(0, parts.length - 1).join("/"),
+  );
   return {
     ...attrs,
     file_name: parts[parts.length - 2],
-    time_ago: tAgo,
+    readingMinutes: readingTime(content).minutes,
+    time_ago: timeAgo(new Date(attrs.published_at)) || "unknown time ago",
     content,
     comments,
   };

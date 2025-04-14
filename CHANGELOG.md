@@ -2,17 +2,21 @@
 
 ## Working On
 
-- Add estimated reading time. (npm:reading-time)
+- Add a route that exposes the project's CHANGELOG and LICENSE.
 
 ### Next up
 
-- Add a route that exposes the project's CHANGELOG and LICENSE.
 - Add a component that automatically creates a table of contents based on the
   markdown content.
 - Add basic post search. (npm:minisearch)
 - Add Sentry and Bucket.
 
 ## Version History
+
+### v0.0.53
+
+- Added the post `wrapper-is-product`.
+- Added the `reading-time` functionality
 
 ### v0.0.52
 

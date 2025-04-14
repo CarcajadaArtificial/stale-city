@@ -11,6 +11,9 @@ function PostIndex(props: iPost) {
       <Link href={`posts/${props.file_name}`}>{props.title}</Link>,{" "}
       <span class="text-xs">
         {props.time_ago}
+      </span>,{" "}
+      <span class="text-xs">
+        {props.readingMinutes.toFixed(0)} minute read
       </span>
     </li>
   );

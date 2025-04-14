@@ -1,6 +1,6 @@
 ---
 title: The Wrapper is the Product
-published_at: 2025-13-04
+published_at: Apr 13, 2025
 snippet:
   AI isn't hard, it's just poorly packaged. From MVP to mass adoption, the
   hidden dangers of AI SaaS product design.
@@ -8,9 +8,9 @@ snippet:
 
 ## TL;DR
 
-> AI is powerful, but without good design, it’s stuck in the "command-line" era,
-> accessible only to specialists. To achieve mass adoption, we need to focus on
-> usability, accessibility, and trustworthiness.
+**AI is powerful, but without good design, it’s stuck in the "command-line" era,
+accessible only to specialists. To achieve mass adoption, we need to focus on
+usability, accessibility, and trustworthiness.**
 
 ## Why AI Adoption Is Stuck
 
@@ -31,10 +31,12 @@ AI. Powerful, yes. But the mental load required to start using them is
 non-trivial. You need domain knowledge to get value. Which is fine if your users
 are engineers or researchers. But if your goal is mass adoption?
 
-> **"AI adoption won't come from more powerful models or CEO mandates — it will
+> AI adoption won't come from more powerful models or CEO mandates — it will
 > come from thoughtfully designed interfaces that make intelligence accessible
-> to everyone."** _— Nan Yu,
-> [“AI adoption is a UX problem”](https://thenanyu.com/ux.html), Apr 2025_
+> to everyone.
+
+_— Nan Yu, [“AI adoption is a UX problem”](https://thenanyu.com/ux.html), Apr
+2025_
 
 And yet companies keep pushing these tools into orgs, chasing productivity
 boosts. Which works, for a while, because the users are specialists or at least
@@ -132,10 +134,11 @@ isn’t the same as shipping something usable. And when you skip usability in
 favor of feature velocity, you’re not iterating, you’re just tripping over your
 own feet faster.
 
-> **“Before you write a single line of code, ask yourself: What problem does my
-> product solve?”** _— Alyona Potapova,
-> ["SaaS Product Development: Where to Start and Common Mistakes"](https://instandart.com/blog/bespoke-software-development/saas-product-development-where-to-start-and-common-mistakes/),
-> Apr 2025_
+> Before you write a single line of code, ask yourself: What problem does my
+> product solve?
+
+_— Alyona Potapova, SaaS Product Development: Where to Start and Common
+Mistakes, Apr 2025_
 
 An MVP bloated with features but starved of good UX isn’t "lean" or "agile" or
 whatever other scrum-adjacent term is in vogue right now. It’s a liability.
@@ -163,12 +166,11 @@ Especially then.
 
 ## Conclusion
 
-> As we look at the future of AI, it’s clear that success isn’t just about the
-> raw power of models, but how easily users can interact with them. The right
-> design can turn an AI tool from a niche product into something that conveys
-> trust accessible to everyone. To truly reach the masses, AI must learn to
-> speak the language of design, just like any other disruptive technology before
-> it.
+**As we look at the future of AI, it’s clear that success isn’t just about the
+raw power of models, but how easily users can interact with them. The right
+design can turn an AI tool from a niche product into something that conveys
+trust accessible to everyone. To truly reach the masses, AI must learn to speak
+the language of design, just like any other disruptive technology before it.**
 
 ### References
 
@@ -177,3 +179,18 @@ Especially then.
 2. Alyona Potapova,
    ["SaaS Product Development: Where to Start and Common Mistakes"](https://instandart.com/blog/bespoke-software-development/saas-product-development-where-to-start-and-common-mistakes/),
    Apr 2025
+3. Dr Maria Panagiotidi,
+   ["Use of AI In UX: Insights from Recent Research"](https://uxpsychology.substack.com/p/use-of-ai-in-ux-insights-from-recent),
+   Mar, 2025
+4. Goran Paun,
+   ["UX Design for AI Products: Merging Innovation with Usability"](https://artversion.com/blog/ux-design-for-ai-products-merging-innovation-with-usability/),
+   May, 2024
+5. The Blue Owls,
+   ["UX: The missing ingredient to AI Adoption"](https://theblueowls.com/business/ux-the-missing-ingredient-to-ai-adoption/),
+   January, 2025
+6. Ken Olewiler,
+   ["Designing Our Relationship with AI"](https://www.uxmatters.com/mt/archives/2024/04/designing-our-relationship-with-ai.php),
+   April, 2024
+7. Jakob Nielsen,
+   ["Accessibility Has Failed: Try Generative UI = Individualized UX"](https://jakobnielsenphd.substack.com/p/accessibility-generative-ui),
+   Feb, 2024

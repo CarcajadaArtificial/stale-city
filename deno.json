@@ -8,6 +8,7 @@
   },
   "imports": {
     "@": "./",
+    "reading-time": "npm:reading-time@^1.5.0",
     "utils": "./utils.ts",
     "@egamagz/time-ago": "jsr:@egamagz/time-ago@^2025.4.9",
     "@libs/xml": "jsr:@libs/xml@^6.0.4",
