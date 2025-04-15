@@ -13,6 +13,10 @@
 
 ## Version History
 
+### v0.0.54
+
+- Migrated my old posts to this site.
+
 ### v0.0.53
 
 - Added the post `wrapper-is-product`.
