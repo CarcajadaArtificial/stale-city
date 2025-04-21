@@ -13,6 +13,11 @@
 
 ## Version History
 
+### v0.0.56
+
+- Fixed the XML feed validator issue.
+- Added the new custom stylesheet.
+
 ### v0.0.55
 
 - Hotfix

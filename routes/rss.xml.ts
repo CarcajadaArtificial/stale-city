@@ -40,7 +40,7 @@ export const handler = define.handlers({
         replace: { entities: true },
       });
 
-      return new Response(`<?xml version="1.0" encoding="UTF-8"?>\n${rssXML}`, {
+      return new Response(rssXML, {
         headers: {
           "Content-Type": "application/rss+xml; charset=utf-8",
         },
