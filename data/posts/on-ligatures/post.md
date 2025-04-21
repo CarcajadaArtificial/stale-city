@@ -1,7 +1,7 @@
 ---
 title: On Ligatures
 published_at: Jul 7, 2017
-snippet: Ideas are not good or bad, but their implementation is.
+snippet: Test
 ---
 
 What exactly does a typographer do? The short answer: they make reading feel

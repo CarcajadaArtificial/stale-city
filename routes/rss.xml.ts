@@ -31,14 +31,22 @@ export const handler = define.handlers({
         copyright: `Copyright © ${new Date().getFullYear()} Stale City`,
       };
 
-      const items: Item[] = extractedFiles.map((extractedFile) => ({
-        title: extractedFile.title,
-        description: extractedFile.snippet,
-        link: `${blogUrl}/posts/${extractedFile.file_name}`,
-        guid: `${blogUrl}/posts/${extractedFile.file_name}`,
-        pubDate: new Date(String(extractedFile.published_at))
-          .toUTCString(),
-      }));
+      const items: Item[] = [];
+      extractedFiles.forEach((extractedFile) => {
+        items.push({
+          title: extractedFile.title,
+          description: extractedFile.snippet,
+          link: `${blogUrl}/posts/${extractedFile.file_name}`,
+          guid: {
+            isPermaLink: true,
+            value: `${blogUrl}/posts/${extractedFile.file_name}`,
+          },
+          pubDate: new Date(String(extractedFile.published_at))
+            .toUTCString(),
+        });
+      });
+
+      console.log(items);
 
       const xml = generateRSS({ channel, items });
       const data = new TextEncoder().encode(xml);
