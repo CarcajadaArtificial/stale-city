@@ -13,6 +13,10 @@
 
 ## Version History
 
+### v0.0.59
+
+- Added sorting by date to the rss feed.
+
 ### v0.0.58
 
 - Fixed the rss feed.

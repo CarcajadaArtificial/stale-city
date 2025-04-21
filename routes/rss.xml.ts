@@ -31,9 +31,12 @@ export const handler = define.handlers({
         copyright: `Copyright © ${new Date().getFullYear()} Stale City`,
       };
 
-      const items: Item[] = [];
-      extractedFiles.forEach((extractedFile) => {
-        items.push({
+      const items: Item[] = extractedFiles
+        .sort((a, b) =>
+          new Date(b.published_at).getTime() -
+          new Date(a.published_at).getTime()
+        )
+        .map((extractedFile) => ({
           title: extractedFile.title,
           description: extractedFile.snippet,
           link: `${blogUrl}/posts/${extractedFile.file_name}`,
@@ -41,12 +44,8 @@ export const handler = define.handlers({
             isPermaLink: true,
             value: `${blogUrl}/posts/${extractedFile.file_name}`,
           },
-          pubDate: new Date(String(extractedFile.published_at))
-            .toUTCString(),
-        });
-      });
-
-      console.log(items);
+          pubDate: new Date(String(extractedFile.published_at)).toUTCString(),
+        }));
 
       const xml = generateRSS({ channel, items });
       const data = new TextEncoder().encode(xml);
