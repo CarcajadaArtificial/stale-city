@@ -13,6 +13,10 @@
 
 ## Version History
 
+### v0.0.57
+
+- Added the `rss-generator` library to make valid rss xml.
+
 ### v0.0.56
 
 - Fixed the XML feed validator issue.
