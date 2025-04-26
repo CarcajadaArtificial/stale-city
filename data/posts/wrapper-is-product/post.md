@@ -2,15 +2,10 @@
 title: The Wrapper is the Product
 published_at: Apr 13, 2025
 snippet:
-  AI isn't hard, it's just poorly packaged. From MVP to mass adoption, the
-  hidden dangers of AI SaaS product design.
+  AI is powerful, but without good design, it’s stuck in the "command-line" era,
+  accessible only to specialists. To achieve mass adoption, we need to focus on
+  usability, accessibility, and trustworthiness.
 ---
-
-## TL;DR
-
-**AI is powerful, but without good design, it’s stuck in the "command-line" era,
-accessible only to specialists. To achieve mass adoption, we need to focus on
-usability, accessibility, and trustworthiness.**
 
 ## Why AI Adoption Is Stuck
 

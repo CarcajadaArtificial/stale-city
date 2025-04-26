@@ -1,14 +1,10 @@
 import { define, fetchPosts, iPost } from "utils";
-import { Header, Main } from "lunchbox/atoms/Page.tsx";
-import { H1, H2 } from "lunchbox/atoms/Heading.tsx";
-import Link from "lunchbox/atoms/Link.tsx";
-import Markdown from "lunchbox/molecules/Markdown.tsx";
-import * as List from "lunchbox/atoms/List.tsx";
+import Markdown from "components/Markdown.tsx";
 
 function PostIndex(props: iPost) {
   return (
     <li>
-      <Link href={`posts/${props.file_name}`}>{props.title}</Link>,{" "}
+      <a href={`posts/${props.file_name}`}>{props.title}</a>,{" "}
       <span class="text-xs">
         {props.time_ago}
       </span>,{" "}
@@ -27,32 +23,35 @@ export default define.page(async function Home() {
   const intro = await Deno.readTextFile("./data/docs/blog/intro.md");
   return (
     <>
-      <Header>
-        <div class="col-span-full">
-          <H1>Stale City</H1>
-          <Markdown content={intro} />
-          <div class="flex mt-2/1 gap-1/1">
-            <span>
-              📡 <Link href="rss.xml">RSS</Link>
-            </span>
-            <span>
-              🐙{" "}
-              <Link href="https://github.com/CarcajadaArtificial">GitHub</Link>
-            </span>
-            <span>
-              🐘 <Link href="https://techhub.social/@carcajada">Mastodon</Link>
-            </span>
+      <header class="grid">
+        <div class="col-md">
+          <div class="card-bg">
+            <div class="card">
+              <h1 class="h0">Stale City</h1>
+              <Markdown content={intro} />
+              <ul>
+                <li>
+                  📡 <a href="rss.xml">RSS</a>
+                </li>
+                <li>
+                  🐙 <a href="https://github.com/CarcajadaArtificial">GitHub</a>
+                </li>
+                <li>
+                  🐘 <a href="https://techhub.social/@carcajada">Mastodon</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </Header>
-      <Main>
-        <div class="col-span-full">
-          <H2>Posts</H2>
-          <List.ul>
+      </header>
+      <main class="grid">
+        <div class="col-md">
+          <ul>
             {posts.map(PostIndex)}
-          </List.ul>
+          </ul>
         </div>
-      </Main>
+      </main>
+      <footer></footer>
     </>
   );
 });

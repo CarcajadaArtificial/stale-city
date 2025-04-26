@@ -1,22 +1,16 @@
 import { define, fetchPost, iComment } from "utils";
 import { join } from "@std/path";
-import { cn } from "@vyn/cn";
-import { Footer, Header, Main } from "lunchbox/atoms/Page.tsx";
-import Markdown from "lunchbox/molecules/Markdown.tsx";
-import * as Nav from "lunchbox/atoms/Nav.tsx";
-import Link from "lunchbox/atoms/Link.tsx";
-import Prose from "lunchbox/atoms/Prose.tsx";
-import { H1 } from "lunchbox/atoms/Heading.tsx";
-import clr from "lunchbox/particles/clr.ts";
-import focus from "lunchbox/particles/focus.ts";
+import Markdown from "components/Markdown.tsx";
 
 function Comment(props: iComment) {
   return (
-    <div class={cn("p-1/1 rounded", clr.panel.bg)}>
-      <p class="text-xs mb-1/2" title={props.published_at}>
-        {props.time_ago}
-      </p>
-      <Markdown content={props.content} />
+    <div class="card-bg">
+      <div class="card">
+        <p title={props.published_at}>
+          {props.time_ago}
+        </p>
+        <Markdown content={props.content} />
+      </div>
     </div>
   );
 }
@@ -28,43 +22,55 @@ export default define.page(async function Post(props) {
 
   return (
     <>
-      <Nav.Static>
-        <div class="col-span-full md:col-span-8">
-          <a href="/" class={cn("font-heading", clr.brand.txt, focus)}>
-            Stale City
-          </a>
+      <nav class="grid">
+        <div class="col-full">
+          <div class="card-bg">
+            <div class="card">
+              <a href="/">Stale City</a>
+            </div>
+          </div>
         </div>
-      </Nav.Static>
-      <Header>
-        <div class="col-span-full">
-          <H1>{post.title}</H1>
-          <Prose>{post.snippet}</Prose>
-          <p class="text-xs mt-1/1" title={post.published_at}>
-            {post.time_ago}
-          </p>
+      </nav>
+      <header class="grid">
+        <div class="col-md">
+          <div class="card-bg">
+            <div class="card">
+              <h1>{post.title}</h1>
+              <div class="prose">{post.snippet}</div>
+              <p class="text-xs mt-1/1" title={post.published_at}>
+                {post.time_ago}
+              </p>
+            </div>
+          </div>
         </div>
-      </Header>
-      <Main>
-        <div class="col-span-full lg:col-span-8">
+      </header>
+      <main class="grid">
+        <div class="col-md">
           <Markdown content={post.content} />
         </div>
-        <div class="col-span-full lg:col-span-4">
+        <div class="col-md">
           {post.comments.map(Comment)}
         </div>
-      </Main>
-      <Footer>
-        <div class="col-span-full flex mt-2/1 gap-1/1">
-          <span>
-            📡 <Link href="rss.xml">RSS</Link>
-          </span>
-          <span>
-            🐙 <Link href="https://github.com/CarcajadaArtificial">GitHub</Link>
-          </span>
-          <span>
-            🐘 <Link href="https://techhub.social/@carcajada">Mastodon</Link>
-          </span>
+      </main>
+      <footer class="grid">
+        <div class="col-full">
+          <div class="card-bg">
+            <div class="card">
+              <ul>
+                <li>
+                  📡 <a href="rss.xml">RSS</a>
+                </li>
+                <li>
+                  🐙 <a href="https://github.com/CarcajadaArtificial">GitHub</a>
+                </li>
+                <li>
+                  🐘 <a href="https://techhub.social/@carcajada">Mastodon</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </Footer>
+      </footer>
     </>
   );
 });

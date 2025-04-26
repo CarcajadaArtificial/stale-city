@@ -1,7 +1,6 @@
-import type { JSX } from 'preact';
-import { render, type RenderOptions } from '@deno/gfm';
-import { apDef } from '@lunchbox/ui';
-import Prose from '../atoms/Prose.tsx';
+import type { JSX } from "preact";
+import { render, type RenderOptions } from "@deno/gfm";
+import { apDef } from "@lunchbox/ui";
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Property interface for the `Markdown` molecule. */
@@ -12,7 +11,7 @@ export interface iMarkdown {
 
 /** Default properties of the `Markdown` molecule. */
 const d: iMarkdown = {
-  content: '',
+  content: "",
   renderOptions: {
     allowIframes: false,
     allowMath: false,
@@ -44,5 +43,6 @@ function setup(props: Partial<iMarkdown>) {
 export default function (props: Partial<iMarkdown>): JSX.Element {
   const p = setup(props);
 
-  return <Prose dangerouslySetInnerHTML={{ __html: p.content }} />;
+  // deno-lint-ignore react-no-danger
+  return <div class="prose" dangerouslySetInnerHTML={{ __html: p.content }} />;
 }

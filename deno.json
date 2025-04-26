@@ -8,6 +8,7 @@
   },
   "imports": {
     "@": "./",
+    "components/": "./components/",
     "@taga3s/rss-generator": "jsr:@taga3s/rss-generator@^0.1.2",
     "reading-time": "npm:reading-time@^1.5.0",
     "utils": "./utils.ts",
@@ -22,9 +23,6 @@
     "@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
     "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
     "@vyn/cn": "jsr:@vyn/cn@^0.1.2",
-    "lunchbox/particles/": "./components/lunchbox/particles/",
-    "lunchbox/atoms/": "./components/lunchbox/atoms/",
-    "lunchbox/molecules/": "./components/lunchbox/molecules/",
     "@lunchbox/ui": "jsr:@lunchbox/ui"
   },
   "compilerOptions": {

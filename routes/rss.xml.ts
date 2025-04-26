@@ -14,7 +14,7 @@ export const handler = define.handlers({
         title: "Stale City",
         link: "https://stalecity.net",
         description: cdata(
-          "These are a collection of my thoughts, here you may find things that I plan, that I dream about, or even things I'm actively working on. Maybe a future project or feature, or maybe it's just a point I'm trying to make. In a way all thoughts are different.",
+          "These are a collection of my thoughts, here you may find things that I plan, that I dream about, or even things I'm actively working on. Maybe a future project or feature, or maybe it's just a point I'm trying to make. In a way all thoughts are different. feedId:137022670373136384+userId:135884541796544512",
         ),
         ttl: 60,
         language: "en",
@@ -38,7 +38,7 @@ export const handler = define.handlers({
         )
         .map((extractedFile) => ({
           title: extractedFile.title,
-          description: extractedFile.snippet,
+          description: extractedFile.content,
           link: `${blogUrl}/posts/${extractedFile.file_name}`,
           guid: {
             isPermaLink: true,

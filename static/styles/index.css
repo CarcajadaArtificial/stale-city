@@ -1,1 +1,3 @@
-:root {}
+@import url("/styles/normalize.css");
+@import url("/styles/particles.css");
+@import url("/styles/atoms.css");

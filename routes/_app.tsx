@@ -1,5 +1,4 @@
 import type { PageProps } from "fresh";
-import { Body } from "lunchbox/atoms/Page.tsx";
 
 export default function App({ Component }: PageProps) {
   return (
@@ -8,7 +7,6 @@ export default function App({ Component }: PageProps) {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>init</title>
-        <link rel="stylesheet" href="/tailwind.css" />
         <link rel="stylesheet" href="/styles/index.css" />
 
         {/* Favicons */}
@@ -28,9 +26,9 @@ export default function App({ Component }: PageProps) {
         <meta name="apple-mobile-web-app-title" content="StaleCity" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
-      <Body>
+      <body>
         <Component />
-      </Body>
+      </body>
     </html>
   );
 }

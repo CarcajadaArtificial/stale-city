@@ -3,6 +3,8 @@
 ## Working On
 
 - Add a route that exposes the project's CHANGELOG and LICENSE.
+- Include post comments in the rss feed.
+  - Comments must have a scrollable url `stalecity.net/slug#comment-1`
 
 ### Next up
 
@@ -10,8 +12,14 @@
   markdown content.
 - Add basic post search. (npm:minisearch)
 - Add Sentry and Bucket.
+- Add OpenTelemetry with Honeycomb IO.
 
 ## Version History
+
+### v0.0.60
+
+- Added new styles from pure css.
+- Added a fix for the wrapper-is-product post.
 
 ### v0.0.59
 
