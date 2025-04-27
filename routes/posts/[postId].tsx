@@ -6,10 +6,10 @@ function Comment(props: iComment) {
   return (
     <div class="card-bg">
       <div class="card">
-        <p title={props.metadata.published_at}>
-          {props.time_ago}
-        </p>
         <Markdown content={props.content} />
+        <p class="text-xs mt-1/1" title={props.metadata.published_at}>
+          Commented {props.time_ago}
+        </p>
       </div>
     </div>
   );
@@ -24,10 +24,8 @@ export default define.page(async function Post(props) {
     <>
       <main class="grid">
         <nav class="col-full">
-          <div class="card-bg">
-            <div class="card">
-              <a href="/">Stale City</a>
-            </div>
+          <div class="card">
+            <a href="/">Stale City</a>
           </div>
         </nav>
         <div class="col-md">
@@ -49,30 +47,28 @@ export default define.page(async function Post(props) {
             </div>
           </header>
           <Markdown content={post.content} />
-        </div>
-        <div class="col-md">
-          {post.comments.map(Comment)}
-        </div>
-      </main>
-      <footer class="grid">
-        <div class="col-full">
-          <div class="card-bg">
-            <div class="card">
-              <ul>
-                <li>
-                  📡 <a href="rss.xml">RSS</a>
-                </li>
-                <li>
-                  🐙 <a href="https://github.com/CarcajadaArtificial">GitHub</a>
-                </li>
-                <li>
-                  🐘 <a href="https://techhub.social/@carcajada">Mastodon</a>
-                </li>
-              </ul>
-            </div>
+          <div class="mt-8">
+            {post.comments.map(Comment)}
           </div>
         </div>
-      </footer>
+        <div class="col-md">
+        </div>
+        <footer class="mt-8 col-full">
+          <div class="card">
+            <ul>
+              <li>
+                📡 <a href="rss.xml">RSS</a>
+              </li>
+              <li>
+                🐙 <a href="https://github.com/CarcajadaArtificial">GitHub</a>
+              </li>
+              <li>
+                🐘 <a href="https://techhub.social/@carcajada">Mastodon</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </main>
     </>
   );
 });

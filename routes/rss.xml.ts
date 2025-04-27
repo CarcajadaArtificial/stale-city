@@ -13,7 +13,9 @@ export const handler = define.handlers({
       const channel: Channel = {
         title: "Stale City",
         link: "https://stalecity.net",
-        description: "feedId:137022670373136384+userId:135884541796544512",
+        description: cdata(
+          "feedId:137022670373136384+userId:135884541796544512",
+        ),
         ttl: 60,
         language: "en",
         category: [
@@ -36,7 +38,7 @@ export const handler = define.handlers({
         )
         .map((extractedFile) => ({
           title: extractedFile.metadata.title,
-          description: extractedFile.content,
+          description: extractedFile.metadata.snippet,
           link: `${blogUrl}/posts/${extractedFile.file_name}`,
           guid: {
             isPermaLink: true,

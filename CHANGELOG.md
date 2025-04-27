@@ -16,6 +16,10 @@
 
 ## Version History
 
+### v0.0.62
+
+- Added a few fixes.
+
 ### v0.0.61
 
 - Refactored the post fetching module.
