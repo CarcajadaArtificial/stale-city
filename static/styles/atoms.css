@@ -47,11 +47,6 @@ h4 {}
 h5 {}
 h6 {}
 
-main {
-  margin-bottom: var(--sp-3-1);
-  margin-top: var(--sp-3-1);
-}
-
 nav ul, nav ol {}
 nav li {}
 nav a {}
@@ -84,6 +79,10 @@ Grid layout system
   width: auto;
   margin-left: 0.425155004rem;
   margin-right: 0.425155004rem;
+}
+
+.grid > * {
+  min-width: 0;
 }
 
 main.grid {
@@ -178,7 +177,7 @@ blockquote {
   background-color: var(--clr-panel);
   border: 1px solid var(--clr-neutral-60);
   padding: 0 var(--sp-1-1);
-  margin: 0;
+  margin: var(--sp-1-1) 0 0 0;
 
   + p {
     padding-left: var(--sp-1-1);
@@ -197,6 +196,7 @@ dd {}
 
 .prose {
   max-width: 75ch;
+  margin-top: var(--sp-1-1);
 
   a.anchor {
     background-color: var(--clr-brand-hc);
@@ -216,6 +216,7 @@ dd {}
   h1, h2, h3, h4, h6, h6 {
     display: flex;
     align-items: center;
+    margin-top: var(--sp-2-1);
   }
 }
 
@@ -280,7 +281,11 @@ ins {}
 Embedded content
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-img {}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 svg {}
 video {}
 canvas {}
@@ -288,6 +293,18 @@ audio {}
 object {}
 
 noscript {}
+
+.vignette {
+  border: 1px solid var(--clr-neutral-60);
+  mix-blend-mode: luminosity;
+  margin: var(--sp-1-1) 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .vignette {
+    mix-blend-mode: difference;
+  }
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Table content

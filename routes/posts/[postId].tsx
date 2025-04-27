@@ -6,7 +6,7 @@ function Comment(props: iComment) {
   return (
     <div class="card-bg">
       <div class="card">
-        <p title={props.published_at}>
+        <p title={props.metadata.published_at}>
           {props.time_ago}
         </p>
         <Markdown content={props.content} />
@@ -22,30 +22,32 @@ export default define.page(async function Post(props) {
 
   return (
     <>
-      <nav class="grid">
-        <div class="col-full">
+      <main class="grid">
+        <nav class="col-full">
           <div class="card-bg">
             <div class="card">
               <a href="/">Stale City</a>
             </div>
           </div>
-        </div>
-      </nav>
-      <header class="grid">
+        </nav>
         <div class="col-md">
-          <div class="card-bg">
+          <header class="card-bg">
             <div class="card">
-              <h1>{post.title}</h1>
-              <div class="prose">{post.snippet}</div>
-              <p class="text-xs mt-1/1" title={post.published_at}>
-                {post.time_ago}
+              <h1>{post.metadata.title}</h1>
+              <div class="prose">{post.metadata.snippet}</div>
+              {post.metadata.vignette
+                ? (
+                  <img
+                    class="vignette"
+                    src={`/images/${post.metadata.vignette}.png`}
+                  />
+                )
+                : null}
+              <p class="text-xs mt-1/1" title={post.metadata.published_at}>
+                Published {post.time_ago}
               </p>
             </div>
-          </div>
-        </div>
-      </header>
-      <main class="grid">
-        <div class="col-md">
+          </header>
           <Markdown content={post.content} />
         </div>
         <div class="col-md">

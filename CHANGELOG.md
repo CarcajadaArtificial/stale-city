@@ -16,6 +16,12 @@
 
 ## Version History
 
+### v0.0.61
+
+- Refactored the post fetching module.
+- Updated the `wrapper-is-product` post.
+- Added more styles for vignettes and fixed a few style issues.
+
 ### v0.0.60
 
 - Added new styles from pure css.

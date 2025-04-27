@@ -23,7 +23,8 @@
     "@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
     "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
     "@vyn/cn": "jsr:@vyn/cn@^0.1.2",
-    "@lunchbox/ui": "jsr:@lunchbox/ui"
+    "@lunchbox/ui": "jsr:@lunchbox/ui",
+    "zod": "npm:zod@^3.24.3"
   },
   "compilerOptions": {
     "lib": ["dom", "dom.asynciterable", "dom.iterable", "deno.ns"],

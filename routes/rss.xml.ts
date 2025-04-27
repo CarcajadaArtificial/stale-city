@@ -13,9 +13,7 @@ export const handler = define.handlers({
       const channel: Channel = {
         title: "Stale City",
         link: "https://stalecity.net",
-        description: cdata(
-          "These are a collection of my thoughts, here you may find things that I plan, that I dream about, or even things I'm actively working on. Maybe a future project or feature, or maybe it's just a point I'm trying to make. In a way all thoughts are different. feedId:137022670373136384+userId:135884541796544512",
-        ),
+        description: "feedId:137022670373136384+userId:135884541796544512",
         ttl: 60,
         language: "en",
         category: [
@@ -33,18 +31,19 @@ export const handler = define.handlers({
 
       const items: Item[] = extractedFiles
         .sort((a, b) =>
-          new Date(b.published_at).getTime() -
-          new Date(a.published_at).getTime()
+          new Date(b.metadata.published_at).getTime() -
+          new Date(a.metadata.published_at).getTime()
         )
         .map((extractedFile) => ({
-          title: extractedFile.title,
+          title: extractedFile.metadata.title,
           description: extractedFile.content,
           link: `${blogUrl}/posts/${extractedFile.file_name}`,
           guid: {
             isPermaLink: true,
             value: `${blogUrl}/posts/${extractedFile.file_name}`,
           },
-          pubDate: new Date(String(extractedFile.published_at)).toUTCString(),
+          pubDate: new Date(String(extractedFile.metadata.published_at))
+            .toUTCString(),
         }));
 
       const xml = generateRSS({ channel, items });

@@ -6,7 +6,7 @@ snippet:
   lacks.
 ---
 
-Me praying:
+## Introduction
 
 > Hello? God? It's me. I had that dream again, I cannot seem to take this idea
 > out of my head. You know, it's been bugging me for a long time now. I believe
@@ -14,7 +14,7 @@ Me praying:
 > Please help me find confidence in my tools so I can finally do it. Please,
 > help me find the way. Amen.
 
-## Introduction
+_— Me, praying._
 
 It's not an exaggeration, I've been dreaming of this thing for years now. I was
 afraid that when making it I would suddenly hate the foundations with what it

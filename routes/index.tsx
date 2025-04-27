@@ -4,7 +4,7 @@ import Markdown from "components/Markdown.tsx";
 function PostIndex(props: iPost) {
   return (
     <li>
-      <a href={`posts/${props.file_name}`}>{props.title}</a>,{" "}
+      <a href={`posts/${props.file_name}`}>{props.metadata.title}</a>,{" "}
       <span class="text-xs">
         {props.time_ago}
       </span>,{" "}
@@ -18,7 +18,8 @@ function PostIndex(props: iPost) {
 export default define.page(async function Home() {
   const posts = await fetchPosts("./data/posts");
   posts.sort((a, b) =>
-    new Date(b.published_at).getTime() - new Date(a.published_at).getTime()
+    new Date(b.metadata.published_at).getTime() -
+    new Date(a.metadata.published_at).getTime()
   );
   const intro = await Deno.readTextFile("./data/docs/blog/intro.md");
   return (
