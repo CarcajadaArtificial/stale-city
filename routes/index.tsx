@@ -40,6 +40,12 @@ export default define.page(async function Home() {
                 <li>
                   🐘 <a href="https://techhub.social/@carcajada">Mastodon</a>
                 </li>
+                <li>
+                  🗞️{" "}
+                  <a href="https://app.follow.is/share/feeds/137022670373136384">
+                    Folo
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

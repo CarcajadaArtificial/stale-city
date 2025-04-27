@@ -9,7 +9,7 @@
   "imports": {
     "@": "./",
     "components/": "./components/",
-    "@taga3s/rss-generator": "jsr:@taga3s/rss-generator@^0.1.2",
+    "@taga3s/rss-generator": "jsr:@taga3s/rss-generator@^0.1.3",
     "reading-time": "npm:reading-time@^1.5.0",
     "utils": "./utils.ts",
     "@egamagz/time-ago": "jsr:@egamagz/time-ago@^2025.4.9",

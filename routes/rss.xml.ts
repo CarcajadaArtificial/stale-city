@@ -17,7 +17,7 @@ export const handler = define.handlers({
           "feedId:137022670373136384+userId:135884541796544512",
         ),
         ttl: 60,
-        language: "en",
+        language: "en-us",
         category: [
           "technology",
           "programming",
@@ -28,6 +28,15 @@ export const handler = define.handlers({
           "blog",
           "newsletter",
         ],
+        docs: "https://www.rssboard.org/rss-specification",
+        image: {
+          url: "https://stalecity.net/favicon/web-app-manifest-512x512.png",
+          title: "Stale City",
+          link: "https://stalecity.net",
+        },
+        managingEditor: "https://github.com/CarcajadaArtificial (Poncho)",
+        webMaster: "https://github.com/CarcajadaArtificial (Poncho)",
+        generator: "Deno Fresh Lunchbox",
         copyright: `Copyright © ${new Date().getFullYear()} Stale City`,
       };
 
@@ -38,12 +47,18 @@ export const handler = define.handlers({
         )
         .map((extractedFile) => ({
           title: extractedFile.metadata.title,
-          description: extractedFile.metadata.snippet,
+          description: cdata(extractedFile.metadata.snippet),
           link: `${blogUrl}/posts/${extractedFile.file_name}`,
           guid: {
             isPermaLink: true,
             value: `${blogUrl}/posts/${extractedFile.file_name}`,
           },
+          enclousure: extractedFile.metadata.vignette
+            ? {
+              url: `${blogUrl}/images/${extractedFile.metadata.vignette}.png`,
+              type: "image/png",
+            }
+            : undefined,
           pubDate: new Date(String(extractedFile.metadata.published_at))
             .toUTCString(),
         }));
