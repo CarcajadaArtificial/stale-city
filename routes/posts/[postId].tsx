@@ -1,6 +1,7 @@
 import { define, fetchPost, iComment } from "utils";
 import { join } from "@std/path";
 import Markdown from "components/Markdown.tsx";
+import Footer from "components/Footer.tsx";
 
 function Comment(props: iComment) {
   return (
@@ -32,6 +33,9 @@ export default define.page(async function Post(props) {
           <header class="card-bg">
             <div class="card">
               <h1>{post.metadata.title}</h1>
+              <span class="text-xs">
+                {post.readingMinutes.toFixed(0)} minute read
+              </span>
               <div class="prose">{post.metadata.snippet}</div>
               {post.metadata.vignette
                 ? (
@@ -41,33 +45,28 @@ export default define.page(async function Post(props) {
                   />
                 )
                 : null}
-              <p class="text-xs mt-1/1" title={post.metadata.published_at}>
+              <p class="text-xs mt-1/1 mb-0" title={post.metadata.published_at}>
                 Published {post.time_ago}
               </p>
+              {post.comments.length === 0 ? null : (
+                <p class="text-xs m-0">
+                  Last edited {post.comments[post.comments.length - 1].time_ago}
+                </p>
+              )}
             </div>
           </header>
+        </div>
+        <div class="col-md" />
+        <div class="col-md">
           <Markdown content={post.content} />
           <div class="mt-8">
             {post.comments.map(Comment)}
           </div>
         </div>
         <div class="col-md">
+          {/* TOC */}
         </div>
-        <footer class="mt-8 col-full">
-          <div class="card">
-            <ul>
-              <li>
-                📡 <a href="rss.xml">RSS</a>
-              </li>
-              <li>
-                🐙 <a href="https://github.com/CarcajadaArtificial">GitHub</a>
-              </li>
-              <li>
-                🐘 <a href="https://techhub.social/@carcajada">Mastodon</a>
-              </li>
-            </ul>
-          </div>
-        </footer>
+        <Footer />
       </main>
     </>
   );

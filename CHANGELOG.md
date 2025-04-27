@@ -16,6 +16,12 @@
 
 ## Version History
 
+### v0.0.64
+
+- Added the common footer component.
+- Added visual fixes.
+- Included "Last Edited" time_ago to the post profile page.
+
 ### v0.0.63
 
 - Added a few fixes.

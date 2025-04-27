@@ -1,5 +1,6 @@
 import { define, fetchPosts, iPost } from "utils";
 import Markdown from "components/Markdown.tsx";
+import Footer from "components/Footer.tsx";
 
 function PostIndex(props: iPost) {
   return (
@@ -24,41 +25,23 @@ export default define.page(async function Home() {
   const intro = await Deno.readTextFile("./data/docs/blog/intro.md");
   return (
     <>
-      <header class="grid">
+      <main class="grid">
         <div class="col-md">
-          <div class="card-bg">
+          <header class="card-bg">
             <div class="card">
               <h1 class="h0">Stale City</h1>
               <Markdown content={intro} />
-              <ul>
-                <li>
-                  📡 <a href="rss.xml">RSS</a>
-                </li>
-                <li>
-                  🐙 <a href="https://github.com/CarcajadaArtificial">GitHub</a>
-                </li>
-                <li>
-                  🐘 <a href="https://techhub.social/@carcajada">Mastodon</a>
-                </li>
-                <li>
-                  🗞️{" "}
-                  <a href="https://app.follow.is/share/feeds/137022670373136384">
-                    Folo
-                  </a>
-                </li>
-              </ul>
             </div>
-          </div>
-        </div>
-      </header>
-      <main class="grid">
-        <div class="col-md">
-          <ul>
+          </header>
+          <ul class="mt-12">
             {posts.map(PostIndex)}
           </ul>
         </div>
+        <div>
+          {/* Cool image or something */}
+        </div>
+        <Footer />
       </main>
-      <footer></footer>
     </>
   );
 });
