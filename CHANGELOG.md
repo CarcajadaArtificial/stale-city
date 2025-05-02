@@ -12,8 +12,16 @@
   markdown content.
 - Add basic post search. (npm:minisearch)
 - Add feature flags using Bucket.
+- Add a share button to posts.
+- Add a link to the post edit history.
 
 ## Version History
+
+### v0.0.67
+
+- Added a "comments" heading with an id for in-page targetting.
+- Added individual url to each comment `...#comment-1`.
+- Added markdown content parsed as html to the content:encoded rss property.
 
 ### v0.0.66
 

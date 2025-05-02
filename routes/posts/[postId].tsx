@@ -3,9 +3,9 @@ import { join } from "@std/path";
 import Markdown from "components/Markdown.tsx";
 import Footer from "components/Footer.tsx";
 
-function Comment(props: iComment) {
+function Comment(props: iComment, index: number) {
   return (
-    <div class="card-bg">
+    <div class="card-bg" id={`comment-${index + 1}`}>
       <div class="card">
         <Markdown content={props.content} />
         <p class="text-xs mt-1/1" title={props.metadata.published_at}>
@@ -50,7 +50,7 @@ export default define.page(async function Post(props) {
               </p>
               {post.comments.length === 0 ? null : (
                 <p class="text-xs m-0">
-                  Last edited {post.comments[post.comments.length - 1].time_ago}
+                  Updated {post.comments[post.comments.length - 1].time_ago}
                 </p>
               )}
             </div>

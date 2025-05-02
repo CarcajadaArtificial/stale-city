@@ -214,3 +214,5 @@ This is my dream note-taking app in a nutshell, and now, the future looks
 bright, right? Yes. Right. I'm super pumped for these features. I love to just
 dump my mind in posts like these. I feel like the path forward is somewhat
 blurry but visible, and that must be something good. Thank you for reading.
+
+## Comments

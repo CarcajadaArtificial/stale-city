@@ -1,4 +1,5 @@
 import { cdata, Channel, generateRSS, Item } from "@taga3s/rss-generator";
+import { render } from "@deno/gfm";
 import { define, fetchPosts, iPost } from "../utils.ts";
 
 const blogUrl = "https://stalecity.net";
@@ -48,8 +49,9 @@ const postsToRssItems = (posts: iPost[]): Item[] =>
         value: `${blogUrl}/posts/${post.file_name}`,
       },
       content: {
-        encoded: cdata(post.content),
+        encoded: cdata(render(post.content)),
       },
+      comments: `${blogUrl}/posts/${post.file_name}#comments`,
       enclousure: post.metadata.vignette
         ? {
           url: `${blogUrl}/images/${post.metadata.vignette}.png`,
