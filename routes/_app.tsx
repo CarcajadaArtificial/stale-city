@@ -1,4 +1,5 @@
 import type { PageProps } from "fresh";
+import InitSentry from "islands/InitSentry.tsx";
 
 export default function App({ Component }: PageProps) {
   return (
@@ -29,6 +30,10 @@ export default function App({ Component }: PageProps) {
       </head>
       <body>
         <Component />
+        <InitSentry
+          dsn={Deno.env.get("SENTRY_DSN")!}
+          env={Deno.env.get("ENV")!}
+        />
       </body>
     </html>
   );

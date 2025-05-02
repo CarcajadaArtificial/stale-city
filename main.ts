@@ -1,26 +1,41 @@
-import { App, fsRoutes, staticFiles } from 'fresh';
-import { define, type State } from './utils.ts';
+import { App, fsRoutes, staticFiles } from "fresh";
+import * as Sentry from "npm:@sentry/deno";
 
-export const app = new App<State>();
-app.use(staticFiles());
-
-// this is the same as the /api/:name route defined via a file. feel free to delete this!
-app.get('/api2/:name', (ctx) => {
-  const name = ctx.params.name;
-  return new Response(
-    `Hello, ${name.charAt(0).toUpperCase() + name.slice(1)}!`,
-  );
+Sentry.init({
+  dsn: Deno.env.get("SENTRY_DSN"),
+  environment: Deno.env.get("ENV"),
+  sendDefaultPii: true,
+  tracesSampleRate: Deno.env.get("ENV") === "development" ? 1.0 : 0.2,
 });
 
-// this can also be defined via a file. feel free to delete this!
-const exampleLoggerMiddleware = define.middleware((ctx) => {
-  console.log(`${ctx.req.method} ${ctx.req.url}`);
-  return ctx.next();
-});
-app.use(exampleLoggerMiddleware);
+export const app = new App()
+  .use(staticFiles())
+  .use((ctx) => {
+    console.log(`${ctx.req.method} ${ctx.req.url}`);
+    return ctx.next();
+  })
+  .use(async (ctx) => {
+    const { req } = ctx;
+    const name = `${req.method} ${new URL(req.url).pathname}`;
+
+    const span = Sentry.startInactiveSpan({
+      name,
+      op: "http.server",
+      forceTransaction: true,
+    });
+
+    try {
+      return await ctx.next();
+    } catch (err) {
+      Sentry.captureException(err);
+      throw err;
+    } finally {
+      span.end();
+    }
+  });
 
 await fsRoutes(app, {
-  dir: './',
+  dir: "./",
   loadIsland: (path) => import(`./islands/${path}`),
   loadRoute: (path) => import(`./routes/${path}`),
 });

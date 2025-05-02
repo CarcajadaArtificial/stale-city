@@ -16,6 +16,12 @@
 
 ## Version History
 
+### v0.0.65
+
+- Added Snetry to the back and front ends.
+- Added environment variables.
+- Added a draft.
+
 ### v0.0.64
 
 - Added the common footer component.
