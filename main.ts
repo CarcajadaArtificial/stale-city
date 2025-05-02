@@ -4,6 +4,9 @@ import * as Sentry from "npm:@sentry/deno";
 Sentry.init({
   dsn: Deno.env.get("SENTRY_DSN"),
   environment: Deno.env.get("ENV"),
+  integrations: [
+    Sentry.getDefaultIntegrations,
+  ],
   sendDefaultPii: true,
   tracesSampleRate: Deno.env.get("ENV") === "development" ? 1.0 : 0.2,
 });

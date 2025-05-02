@@ -1,67 +1,71 @@
 import { cdata, Channel, generateRSS, Item } from "@taga3s/rss-generator";
-import { define, fetchPosts } from "../utils.ts";
+import { define, fetchPosts, iPost } from "../utils.ts";
+
+const blogUrl = "https://stalecity.net";
+
+const channel: Channel = {
+  title: "Stale City",
+  link: blogUrl,
+  description: cdata(
+    "feedId:137022670373136384+userId:135884541796544512",
+  ),
+  ttl: 60,
+  language: "en-us",
+  category: [
+    "technology",
+    "programming",
+    "development",
+    "frontend",
+    "design",
+    "uiux",
+    "blog",
+    "newsletter",
+  ],
+  docs: "https://www.rssboard.org/rss-specification",
+  image: {
+    url: `${blogUrl}/favicon/web-app-manifest-512x512.png`,
+    title: "Stale City",
+    link: blogUrl,
+  },
+  managingEditor: "https://github.com/CarcajadaArtificial (Poncho)",
+  webMaster: "https://github.com/CarcajadaArtificial (Poncho)",
+  generator: "Deno Fresh Lunchbox",
+  copyright: `Copyright © ${new Date().getFullYear()} Stale City`,
+};
+
+const postsToRssItems = (posts: iPost[]): Item[] =>
+  posts
+    .sort((a, b) =>
+      new Date(b.metadata.published_at).getTime() -
+      new Date(a.metadata.published_at).getTime()
+    )
+    .map((post) => ({
+      title: post.metadata.title,
+      description: cdata(post.metadata.snippet),
+      link: `${blogUrl}/posts/${post.file_name}`,
+      guid: {
+        isPermaLink: true,
+        value: `${blogUrl}/posts/${post.file_name}`,
+      },
+      content: {
+        encoded: cdata(post.content),
+      },
+      enclousure: post.metadata.vignette
+        ? {
+          url: `${blogUrl}/images/${post.metadata.vignette}.png`,
+          type: "image/png",
+        }
+        : undefined,
+      pubDate: new Date(String(post.metadata.published_at))
+        .toUTCString(),
+    }));
 
 export const handler = define.handlers({
-  async GET(ctx) {
-    const { origin } = ctx.url;
-    const blogUrl = origin;
+  async GET() {
     const path = "./data/posts";
 
     try {
-      const extractedFiles = await fetchPosts(path);
-
-      const channel: Channel = {
-        title: "Stale City",
-        link: "https://stalecity.net",
-        description: cdata(
-          "feedId:137022670373136384+userId:135884541796544512",
-        ),
-        ttl: 60,
-        language: "en-us",
-        category: [
-          "technology",
-          "programming",
-          "development",
-          "frontend",
-          "design",
-          "uiux",
-          "blog",
-          "newsletter",
-        ],
-        docs: "https://www.rssboard.org/rss-specification",
-        image: {
-          url: "https://stalecity.net/favicon/web-app-manifest-512x512.png",
-          title: "Stale City",
-          link: "https://stalecity.net",
-        },
-        managingEditor: "https://github.com/CarcajadaArtificial (Poncho)",
-        webMaster: "https://github.com/CarcajadaArtificial (Poncho)",
-        generator: "Deno Fresh Lunchbox",
-        copyright: `Copyright © ${new Date().getFullYear()} Stale City`,
-      };
-
-      const items: Item[] = extractedFiles
-        .sort((a, b) =>
-          new Date(b.metadata.published_at).getTime() -
-          new Date(a.metadata.published_at).getTime()
-        )
-        .map((extractedFile) => ({
-          title: extractedFile.metadata.title,
-          description: cdata(extractedFile.metadata.snippet),
-          link: `${blogUrl}/posts/${extractedFile.file_name}`,
-          guid: {
-            isPermaLink: true,
-            value: `${blogUrl}/posts/${extractedFile.file_name}`,
-          },
-          enclousure: extractedFile.metadata.vignette
-            ? {
-              url: `${blogUrl}/images/${extractedFile.metadata.vignette}.png`,
-              type: "image/png",
-            }
-            : undefined,
-          pubDate: new Date(String(extractedFile.metadata.published_at))
-            .toUTCString(),
-        }));
+      const items = postsToRssItems(await fetchPosts(path));
 
       const xml = generateRSS({ channel, items });
       const data = new TextEncoder().encode(xml);

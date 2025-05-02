@@ -11,10 +11,14 @@
 - Add a component that automatically creates a table of contents based on the
   markdown content.
 - Add basic post search. (npm:minisearch)
-- Add Sentry and Bucket.
-- Add OpenTelemetry with Honeycomb IO.
+- Add feature flags using Bucket.
 
 ## Version History
+
+### v0.0.66
+
+- Added content:encoded to the RSS feed.
+- Added the remaining Sentry integrations.
 
 ### v0.0.65
 
