@@ -18,12 +18,12 @@ Content sectioning
   margin: 0;
 }
 
-.h0, h1, h2, h3, h4 {
+.h0, h1, h2, h3 {
   font-family: var(--font-serif);
   color: var(--clr-brand-hc);
 }
 
-h5, h6 {
+h4, h5, h6 {
   font-family: var(--font-sans);
 }
 
@@ -41,7 +41,7 @@ h2 {
 }
 h3 {
   font-size: 1.5625rem;
-  line-height: 3rem;
+  line-height: 2rem;
 }
 h4 {}
 h5 {}
@@ -76,7 +76,7 @@ Grid layout system
 .grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 0 0.8503100088rem;
+  gap: 0.8503100088rem;
   width: auto;
   margin-left: 0.425155004rem;
   margin-right: 0.425155004rem;
@@ -94,11 +94,8 @@ main.grid {
 .col-full, .col-xl, .col-lg, .col-md {
   grid-column: span 6 / span 6;
 }
-.col-sm {
-  grid-column: span 2 / span 2;
-}
-.col-xs {
-  grid-column: span 1 / span 1;
+.col-sm, .col-xs {
+  grid-column: span 3 / span 3;
 }
 
 @media (min-width: 40em) {
@@ -128,7 +125,7 @@ main.grid {
     grid-column: span 6 / span 6;
   }
   .col-sm {
-    grid-column: span 4 / span 4;
+    grid-column: span 3 / span;
   }
   .col-xs {
     grid-column: span 2 / span 2;
@@ -136,8 +133,8 @@ main.grid {
 }
 
 .card {
-  background-color: var(--clr-panel);
-  border: 1px solid var(--clr-neutral-60);
+  background-color: var(--clr-panel-90);
+  border: 1px solid var(--clr-neutral-30);
   padding: var(--sp-1-1);
 }
 
@@ -224,6 +221,12 @@ dd {}
   }
 }
 
+.prose.no-margins {
+  * {
+    margin: 0;
+  }
+}
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Inline text semantics
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -301,7 +304,7 @@ noscript {}
 .vignette {
   border: 1px solid var(--clr-neutral-60);
   mix-blend-mode: luminosity;
-  margin: var(--sp-1-1) 0;
+  margin-top: var(--sp-1-1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -442,5 +445,17 @@ as follows:
 :focus {}
 :focus:not(:focus-visible) {}
 :focus-visible {}
+
+:focus {
+  background: var(--grad-dotted);
+  outline: 0;
+}
+
+:focus .card, a:hover .card {
+  background: var(--grad-dotted);
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.02)
+    translate(calc(var(--sp-5-8) * -2), calc(var(--sp-5-8) * -2));
+}
 
 [inert], [inert] * {}

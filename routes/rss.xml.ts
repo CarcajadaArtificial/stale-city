@@ -49,7 +49,10 @@ const postsToRssItems = (posts: iPost[]): Item[] =>
         value: `${blogUrl}/posts/${post.file_name}`,
       },
       content: {
-        encoded: cdata(render(post.content)),
+        encoded: cdata(render([
+          post.content,
+          ...post.comments.map((comment) => +comment.content),
+        ].join("\n"))),
       },
       comments: `${blogUrl}/posts/${post.file_name}#comments`,
       enclousure: post.metadata.vignette

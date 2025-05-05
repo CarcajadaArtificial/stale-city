@@ -17,6 +17,14 @@
 
 ## Version History
 
+### v0.0.68
+
+- Included author comments content inside the content:encoded rss property.
+- Added updated styles.
+- Added the Footer about content.
+- Added the obsidian config files.
+- Added the lunchbox draft.
+
 ### v0.0.67
 
 - Added a "comments" heading with an id for in-page targetting.

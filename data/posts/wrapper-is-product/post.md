@@ -191,4 +191,4 @@ the language of design, just like any other disruptive technology before it.**
    ["Accessibility Has Failed: Try Generative UI = Individualized UX"](https://jakobnielsenphd.substack.com/p/accessibility-generative-ui),
    Feb, 2024
 
-## Comments
+## Author Comments

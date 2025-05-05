@@ -1,16 +1,19 @@
 import type { JSX } from "preact";
 import { render, type RenderOptions } from "@deno/gfm";
 import { apDef } from "@lunchbox/ui";
+import { cn } from "@vyn/cn";
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Property interface for the `Markdown` molecule. */
 export interface iMarkdown {
+  className: string;
   content: string;
   renderOptions: RenderOptions;
 }
 
 /** Default properties of the `Markdown` molecule. */
 const d: iMarkdown = {
+  className: "",
   content: "",
   renderOptions: {
     allowIframes: false,
@@ -44,5 +47,10 @@ export default function (props: Partial<iMarkdown>): JSX.Element {
   const p = setup(props);
 
   // deno-lint-ignore react-no-danger
-  return <div class="prose" dangerouslySetInnerHTML={{ __html: p.content }} />;
+  return (
+    <div
+      class={cn("prose", p.className)}
+      dangerouslySetInnerHTML={{ __html: p.content }}
+    />
+  );
 }

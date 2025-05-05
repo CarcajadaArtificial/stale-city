@@ -1,18 +1,27 @@
 import { define, fetchPosts, iPost } from "utils";
 import Markdown from "components/Markdown.tsx";
-import Footer from "components/Footer.tsx";
+import Gradient from "components/Gradient.tsx";
 
 function PostIndex(props: iPost) {
   return (
-    <li>
-      <a href={`posts/${props.file_name}`}>{props.metadata.title}</a>,{" "}
-      <span class="text-xs">
-        {props.time_ago}
-      </span>,{" "}
-      <span class="text-xs">
-        {props.readingMinutes.toFixed(0)} minute read
-      </span>
-    </li>
+    <a href={`posts/${props.file_name}`} class="no-underline">
+      <div class="card-bg">
+        <div class="card">
+          <h4>{props.metadata.title}</h4>
+          <div class="prose mt-2">
+            {props.metadata.snippet}
+          </div>
+          <ul class="mt-2 mb-0 pl-4">
+            <li class="text-xs">
+              {props.readingMinutes.toFixed(0)} minute read
+            </li>
+            <li class="text-xs">
+              Published {props.time_ago}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </a>
   );
 }
 
@@ -25,22 +34,23 @@ export default define.page(async function Home() {
   const intro = await Deno.readTextFile("./data/docs/blog/intro.md");
   return (
     <>
+      <Gradient>
+        <header class="py-8 grid">
+          <div class="col-md">
+            <div class="card">
+              <h1>Stale City</h1>
+              <Markdown className="no-margins" content={intro} />
+            </div>
+          </div>
+        </header>
+      </Gradient>
       <main class="grid">
         <div class="col-md">
-          <header class="card-bg">
-            <div class="card">
-              <h1 class="h0">Stale City</h1>
-              <Markdown content={intro} />
-            </div>
-          </header>
-          <ul class="mt-12">
-            {posts.map(PostIndex)}
-          </ul>
+          {posts.map(PostIndex)}
         </div>
         <div>
           {/* Cool image or something */}
         </div>
-        <Footer />
       </main>
     </>
   );

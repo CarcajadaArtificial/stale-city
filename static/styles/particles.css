@@ -27,28 +27,36 @@
     45deg,
     var(--clr-panel),
     var(--clr-panel) var(--sp-1-2),
-    var(--clr-page) var(--sp-1-2),
-    var(--clr-page) var(--sp-1-1)
+    var(--clr-brand-lc) var(--sp-1-2),
+    var(--clr-brand-lc) var(--sp-1-1)
   );
+
+  --grad-dotted: repeating-conic-gradient(
+    var(--clr-brand-lc) 0% 25%,
+    var(--clr-page) 0% 100%
+  ) 2px 1px / 4px 4px;
 }
 
 :root {
   --clr-neutral: #3d3640;
   --clr-neutral-60: rgba(61, 54, 64, 0.6);
-  --clr-brand: #c8d9db;
-  --clr-brand-lc: #089969;
+  --clr-neutral-30: rgba(61, 54, 64, 0.3);
+  --clr-brand: #089969;
+  --clr-brand-lc: #c8d9db;
   --clr-brand-hc: #00806a;
   --clr-error-lc: #dbc4c5;
   --clr-error-hc: #66050d;
   --clr-page: #d5ced9;
-  --clr-page-60: #d5ced999;
+  --clr-page-60: rgba(213, 206, 217, 0.6);
   --clr-panel: #efe7f3;
+  --clr-panel-90: rgba(239, 231, 243, 0.9);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --clr-neutral: #eee6f2;
     --clr-neutral-60: rgba(238, 230, 242, 0.6);
+    --clr-neutral-30: rgba(238, 230, 242, 0.3);
     --clr-brand-lc: #344747;
     --clr-brand-hc: #9eed77;
     --clr-error-lc: #573c4d;
@@ -56,5 +64,6 @@
     --clr-page: #3d3640;
     --clr-page-60: rgba(61, 54, 64, 0.6);
     --clr-panel: #241f26;
+    --clr-panel-90: rgba(36, 31, 38, 0.9);
   }
 }

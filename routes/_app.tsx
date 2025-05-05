@@ -1,7 +1,8 @@
-import type { PageProps } from "fresh";
 import InitSentry from "islands/InitSentry.tsx";
+import type { PageProps } from "fresh";
+import Footer from "components/Footer.tsx";
 
-export default function App({ Component }: PageProps) {
+export default async function App({ Component }: PageProps) {
   return (
     <html lang="en">
       <head>
@@ -30,6 +31,9 @@ export default function App({ Component }: PageProps) {
       </head>
       <body>
         <Component />
+        <Footer
+          footerContent={await Deno.readTextFile("./data/docs/blog/footer.md")}
+        />
         <InitSentry
           dsn={Deno.env.get("SENTRY_DSN")!}
           env={Deno.env.get("ENV")!}

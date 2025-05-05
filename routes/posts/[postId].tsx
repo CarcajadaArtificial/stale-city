@@ -1,7 +1,6 @@
 import { define, fetchPost, iComment } from "utils";
 import { join } from "@std/path";
 import Markdown from "components/Markdown.tsx";
-import Footer from "components/Footer.tsx";
 
 function Comment(props: iComment, index: number) {
   return (
@@ -33,10 +32,23 @@ export default define.page(async function Post(props) {
           <header class="card-bg">
             <div class="card">
               <h1>{post.metadata.title}</h1>
-              <span class="text-xs">
-                {post.readingMinutes.toFixed(0)} minute read
-              </span>
-              <div class="prose">{post.metadata.snippet}</div>
+              <Markdown
+                className="no-margins mt-2"
+                content={post.metadata.snippet}
+              />
+              <ul class="mt-2 mb-0 pl-4">
+                <li class="text-xs">
+                  {post.readingMinutes.toFixed(0)} minute read
+                </li>
+                <li class="text-xs" title={post.metadata.published_at}>
+                  Published {post.time_ago}
+                </li>
+                {post.comments.length === 0 ? null : (
+                  <li class="text-xs">
+                    Updated {post.comments[post.comments.length - 1].time_ago}
+                  </li>
+                )}
+              </ul>
               {post.metadata.vignette
                 ? (
                   <img
@@ -45,14 +57,6 @@ export default define.page(async function Post(props) {
                   />
                 )
                 : null}
-              <p class="text-xs mt-1/1 mb-0" title={post.metadata.published_at}>
-                Published {post.time_ago}
-              </p>
-              {post.comments.length === 0 ? null : (
-                <p class="text-xs m-0">
-                  Updated {post.comments[post.comments.length - 1].time_ago}
-                </p>
-              )}
             </div>
           </header>
         </div>
@@ -66,7 +70,6 @@ export default define.page(async function Post(props) {
         <div class="col-md">
           {/* TOC */}
         </div>
-        <Footer />
       </main>
     </>
   );
