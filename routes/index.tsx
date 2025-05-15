@@ -18,6 +18,11 @@ function PostIndex(props: iPost) {
             <li class="text-xs">
               Published {props.time_ago}
             </li>
+            {props.comments.length === 0 ? null : (
+              <li class="text-xs">
+                Updated {props.comments[props.comments.length - 1].time_ago}
+              </li>
+            )}
           </ul>
         </div>
       </div>

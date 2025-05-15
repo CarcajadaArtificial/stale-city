@@ -23,7 +23,12 @@
   --sp-15-1: 15em;
   --sp-banner: 90dvh;
 
-  --gradient: repeating-linear-gradient(
+  --gradient: repeating-conic-gradient(
+    var(--clr-panel) 0% 25%,
+    transparent 0% 100%
+  ) 2px 1px / 4px 4px;
+
+  --gradient-linear: repeating-linear-gradient(
     45deg,
     var(--clr-panel),
     var(--clr-panel) var(--sp-1-2),
@@ -65,5 +70,16 @@
     --clr-page-60: rgba(61, 54, 64, 0.6);
     --clr-panel: #241f26;
     --clr-panel-90: rgba(36, 31, 38, 0.9);
+  }
+}
+
+@keyframes flicker {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50%,
+  100% {
+    opacity: 1;
   }
 }

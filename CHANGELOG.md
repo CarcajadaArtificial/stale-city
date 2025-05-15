@@ -17,6 +17,11 @@
 
 ## Version History
 
+### v0.0.69
+
+- Changed the main gradient from stripes to pixel pattern.
+- Added the "updated" data to the post list in the home page.
+
 ### v0.0.68
 
 - Included author comments content inside the content:encoded rss property.
