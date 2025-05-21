@@ -1,6 +1,7 @@
 import { define, fetchPost, iComment } from "utils";
 import { join } from "@std/path";
 import Markdown from "components/Markdown.tsx";
+import PostActions from "../../components/PostActions.tsx";
 
 function Comment(props: iComment, index: number) {
   return (
@@ -59,6 +60,11 @@ export default define.page(async function Post(props) {
                 : null}
             </div>
           </header>
+          <PostActions
+            postFileName={props.params.postId!}
+            postTitle={post.metadata.title}
+            postUrl={props.url.href}
+          />
         </div>
         <div class="col-md" />
         <div class="col-md">
