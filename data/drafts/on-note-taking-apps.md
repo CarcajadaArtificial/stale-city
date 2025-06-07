@@ -54,7 +54,6 @@ But I don't believe this problems are caused by the application themselves, or
 even the workflow. The step I took to avoid this kinds of dynamics was to
 realize that many of these things don't need to be deeply connected.
 
-
 ### Apple Notes
 
 ### Obsidian

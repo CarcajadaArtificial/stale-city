@@ -1,5 +1,5 @@
 ---
-title: Lunchbox - UI stack made for Deno Fresh
+title: The Story Behind Lunchbox
 published_at: 
 snippet: Here is where I will document my general thoughts around this library.
 ---
@@ -7,7 +7,7 @@ snippet: Here is where I will document my general thoughts around this library.
 
 Have you every seen the European guy that spent a few years around 2016 building a new musical instrument from scratch? He would wind it up after feeding it thousands of metal marbles, each with a clear travel across the inner pathways of the machine, ending with a collapse with a sound-making material. He called it the "Marble Machine". It represents one side of the duality of how I feel about this project.
 
-It was an interesting project to se him build, and even his most recent development of a new version "Marble Machine X" is cool enough. Sometimes a piece of the machine would break and would need to be replaced with a new one exactly alike, but more frequently than that he would find them to be insufficient. A part could perform deceivingly good only to fail under harsher circumstances requiring a slight redesign of that part. It was something that made it worthwhile to watch his progress videos, he was constantly fixing things, solving problems, making mistakes, redesigning, etc.
+It was an interesting project to se him build, and even his most recent development of a new version "Marble Machine 3" is cool enough. Sometimes a piece of the machine would break and would need to be replaced with a new one exactly alike, but more frequently than that he would find them to be insufficient. A part could perform deceivingly good only to fail under harsher circumstances requiring a slight redesign of that part. It was something that made it worthwhile to watch his progress videos, he was constantly fixing things, solving problems, making mistakes, redesigning, etc.
 
 I've recently felt that this project and I have a similar dynamic. It has taught me so much about about the pure technologies that make up the web to the frameworks that create abstractions of them. But, if this Marble Machine with an infinite backlog of redesigning parts is one side of the spectrum, what is the other side?
 
@@ -15,9 +15,9 @@ Do you remember the early Malcolm in the Middle? There's an episode where Hal (M
 
 Now, Hal's subplot is incredibly relatable to me, as soon as he stopped working on his 9-to-5 he stopped being miserable as well. Breakfast tasted like never before, his children went to him with questions and he gave them satisfactory advice, his relationship with Lois gets more passionate, and he looks and feels happier. Hal is shown constantly layering paint on top of paint (exclusively basic colors by the way)
 
-But this isn't TV from the 80's, he quickly began spending the family's savings to buy canned paint. 
+But this isn't TV from the 80's, he quickly began spending the family's savings to buy canned paint and starts to live a negative arc where he slowly becomes miserable again. He grows bitter of not being able of recreate the painting inside his mind.
 
-- How is this related to Willem de Kooning's painting style?
+At the end of the episode, at the peak of his despair, Hal screams the same complaint he made when he worked in his 9-5, as if the misery would come out of any full time daily activity regardless of the level of passion, artistry or significance of the work done. The rest of the family tries to comfort Hal when he gets a sudden _eureka moment_ and _understands_ exactly wat's missing from the painting. The family watches in awe as he comically paints a single quick point with the brush. They instantly _got it_, everyone admired the painting in their own individual way. At the hight of the episode, when the family gets together and everything is good, the painting comes down falling on top of Hal after showing us the girth of the painting after countless of layer of paint placed on top of each other.
 ### History of Lunchbox Versions
 - Why I started developing Lunchbox?
 - How before Lunchbox, it was: AnaJS Monorepo -> AnaJS Components -> GarliCSS -> Lunchbox.

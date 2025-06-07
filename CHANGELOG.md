@@ -17,6 +17,11 @@
 
 ## Version History
 
+### v0.0.74
+
+- Added more content to the `lunchbox` and `on-note-taking-apps` drafts.
+- Added an update to the `on-telling-stories` post.
+
 ### v0.0.73
 
 - Added an author credit to every post.
