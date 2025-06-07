@@ -17,6 +17,12 @@
 
 ## Version History
 
+### v0.0.75
+
+- Added the `mind_set` image to the `on-telling-stories` post.
+- Added a spelling/syntax editing update to the content of the
+  `on-telling-stories` post.
+
 ### v0.0.74
 
 - Added more content to the `lunchbox` and `on-note-taking-apps` drafts.
