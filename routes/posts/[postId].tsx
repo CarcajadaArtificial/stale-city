@@ -21,6 +21,12 @@ export default define.page(async function Post(props) {
   return (
     <main class="layout pt-3-1">
       <header class="col-span-full prose">
+        <span>
+          ←{" "}
+          <a tabindex={0} href="/" class="link inline-block mb-2-1">
+            Return home
+          </a>
+        </span>
         <h1 autofocus tabindex={0} class="mb-1-4">{post.metadata.title}</h1>
         <p tabindex={0}>{post.metadata.snippet}</p>
         <ul class="mt-2 mb-0 pl-4">
@@ -36,6 +42,7 @@ export default define.page(async function Post(props) {
             </li>
           )}
         </ul>
+        <span>Poncho</span>
         {post.metadata.vignette
           ? (
             <img

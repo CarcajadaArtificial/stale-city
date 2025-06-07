@@ -17,6 +17,11 @@
 
 ## Version History
 
+### v0.0.72
+
+- Added comment as feed items.
+- Added a "back home" link.
+
 ### v0.0.71
 
 - Added a fix for Sentry.

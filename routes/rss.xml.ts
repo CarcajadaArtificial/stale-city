@@ -28,18 +28,14 @@ const channel: Channel = {
     title: "Stale City",
     link: blogUrl,
   },
-  managingEditor: "https://github.com/CarcajadaArtificial (Poncho)",
-  webMaster: "https://github.com/CarcajadaArtificial (Poncho)",
+  managingEditor: "blog@stalecity.net (Poncho)",
+  webMaster: "blog@stalecity.net (Poncho)",
   generator: "Deno Fresh Lunchbox",
   copyright: `Copyright © ${new Date().getFullYear()} Stale City`,
 };
 
-const postsToRssItems = (posts: iPost[]): Item[] =>
-  posts
-    .sort((a, b) =>
-      new Date(b.metadata.published_at).getTime() -
-      new Date(a.metadata.published_at).getTime()
-    )
+const postsToRssItems = (posts: iPost[]): Item[] => {
+  const postItems = posts
     .map((post) => ({
       title: post.metadata.title,
       description: cdata(post.metadata.snippet),
@@ -64,6 +60,29 @@ const postsToRssItems = (posts: iPost[]): Item[] =>
       pubDate: new Date(String(post.metadata.published_at))
         .toUTCString(),
     }));
+
+  const commentItems = posts.map((post) =>
+    post.comments.map((comment) => ({ comment: comment, post: post }))
+  ).flat().map((comment) => ({
+    title: `Update: ${comment.post.metadata.title}`,
+    description: cdata(comment.comment.content),
+    link: `${blogUrl}/posts/${comment.post.file_name}#${
+      comment.comment.file_name.replace(/\.md$/, "")
+    }`,
+    guid: {
+      isPermaLink: true,
+      value: `${blogUrl}/posts/${comment.post.file_name}#${
+        comment.comment.file_name.replace(/\.md$/, "")
+      }`,
+    },
+    pubDate: new Date(String(comment.comment.metadata.published_at))
+      .toUTCString(),
+  }));
+
+  return [...postItems, ...commentItems].sort(
+    (a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime(),
+  );
+};
 
 export const handler = define.handlers({
   async GET() {
