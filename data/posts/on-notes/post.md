@@ -1,6 +1,7 @@
 ---
 title: On Notes
 published_at: Jul 26, 2023
+vignette: zettelkasten_cranes
 snippet:
   My thoughts on note-taking application, their general philosophy, and what it
   lacks.

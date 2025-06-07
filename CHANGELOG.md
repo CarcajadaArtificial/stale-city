@@ -17,6 +17,11 @@
 
 ## Version History
 
+### v0.0.73
+
+- Added an author credit to every post.
+- Added the `zettelkasten_cranes` vignette for the `on_notes` article.
+
 ### v0.0.72
 
 - Added comment as feed items.

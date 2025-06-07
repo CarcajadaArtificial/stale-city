@@ -28,26 +28,21 @@ export default define.page(async function Post(props) {
           </a>
         </span>
         <h1 autofocus tabindex={0} class="mb-1-4">{post.metadata.title}</h1>
+        <span class="text-xs" tabindex={0}>
+          This {post.readingMinutes.toFixed(0)}{" "}
+          minute read was written by Poncho, published {post.time_ago}
+          {post.comments.length === 0
+            ? "."
+            : `, and updated ${
+              post.comments[post.comments.length - 1].time_ago
+            }.`}
+        </span>
         <p tabindex={0}>{post.metadata.snippet}</p>
-        <ul class="mt-2 mb-0 pl-4">
-          <li tabindex={0} class="text-xs">
-            {post.readingMinutes.toFixed(0)} minute read
-          </li>
-          <li tabindex={0} class="text-xs" title={post.metadata.published_at}>
-            Published {post.time_ago}
-          </li>
-          {post.comments.length === 0 ? null : (
-            <li tabindex={0} class="text-xs">
-              Updated {post.comments[post.comments.length - 1].time_ago}
-            </li>
-          )}
-        </ul>
-        <span>Poncho</span>
         {post.metadata.vignette
           ? (
             <img
               tabIndex={0}
-              class="vignette my-1-4"
+              class="vignette mt-3-2 mb-1-1 rounded border-1 border-base-300"
               src={`/images/${post.metadata.vignette}.png`}
             />
           )
