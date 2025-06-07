@@ -4,13 +4,11 @@ import Markdown from "components/Markdown.tsx";
 
 function Comment(props: iComment, index: number) {
   return (
-    <div class="card-bg" id={`comment-${index + 1}`}>
-      <div class="card">
-        <Markdown content={props.content} />
-        <p class="text-xs mt-1/1" title={props.metadata.published_at}>
-          Commented {props.time_ago}
-        </p>
-      </div>
+    <div tabindex={0} class="prose" id={`comment-${index + 1}`}>
+      <p class="text-xs mb-1-4" title={props.metadata.published_at}>
+        Commented {props.time_ago}
+      </p>
+      <p class="mt-0 bg-base-200 noise">{props.content}</p>
     </div>
   );
 }
@@ -21,56 +19,42 @@ export default define.page(async function Post(props) {
   );
 
   return (
-    <>
-      <main class="grid">
-        <nav class="col-full">
-          <div class="card">
-            <a href="/">Stale City</a>
-          </div>
-        </nav>
-        <div class="col-md">
-          <header class="card-bg">
-            <div class="card">
-              <h1>{post.metadata.title}</h1>
-              <Markdown
-                className="no-margins mt-2"
-                content={post.metadata.snippet}
-              />
-              <ul class="mt-2 mb-0 pl-4">
-                <li class="text-xs">
-                  {post.readingMinutes.toFixed(0)} minute read
-                </li>
-                <li class="text-xs" title={post.metadata.published_at}>
-                  Published {post.time_ago}
-                </li>
-                {post.comments.length === 0 ? null : (
-                  <li class="text-xs">
-                    Updated {post.comments[post.comments.length - 1].time_ago}
-                  </li>
-                )}
-              </ul>
-              {post.metadata.vignette
-                ? (
-                  <img
-                    class="vignette"
-                    src={`/images/${post.metadata.vignette}.png`}
-                  />
-                )
-                : null}
-            </div>
-          </header>
+    <main class="layout pt-3-1">
+      <header class="col-span-full prose">
+        <h1 autofocus tabindex={0} class="mb-1-4">{post.metadata.title}</h1>
+        <p tabindex={0}>{post.metadata.snippet}</p>
+        <ul class="mt-2 mb-0 pl-4">
+          <li tabindex={0} class="text-xs">
+            {post.readingMinutes.toFixed(0)} minute read
+          </li>
+          <li tabindex={0} class="text-xs" title={post.metadata.published_at}>
+            Published {post.time_ago}
+          </li>
+          {post.comments.length === 0 ? null : (
+            <li tabindex={0} class="text-xs">
+              Updated {post.comments[post.comments.length - 1].time_ago}
+            </li>
+          )}
+        </ul>
+        {post.metadata.vignette
+          ? (
+            <img
+              tabIndex={0}
+              class="vignette my-1-4"
+              src={`/images/${post.metadata.vignette}.png`}
+            />
+          )
+          : null}
+      </header>
+      <div class="col-span-full">
+        <Markdown content={post.content} />
+        <div class="mt-8">
+          {post.comments.map(Comment)}
         </div>
-        <div class="col-md" />
-        <div class="col-md">
-          <Markdown content={post.content} />
-          <div class="mt-8">
-            {post.comments.map(Comment)}
-          </div>
-        </div>
-        <div class="col-md">
-          {/* TOC */}
-        </div>
-      </main>
-    </>
+      </div>
+      <div class="col-md">
+        {/* TOC */}
+      </div>
+    </main>
   );
 });

@@ -1,4 +1,5 @@
 import InitSentry from "islands/InitSentry.tsx";
+import Keynav from "islands/Keynav.tsx";
 import type { PageProps } from "fresh";
 import Footer from "components/Footer.tsx";
 
@@ -9,8 +10,7 @@ export default async function App({ Component }: PageProps) {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Stale City</title>
-        <link rel="stylesheet" href="/styles/index.css" />
-        <link rel="stylesheet" href="/tailwind.css" />
+        <link rel="stylesheet" href="/styles.css" />
 
         {/* Favicons */}
         <link
@@ -34,6 +34,7 @@ export default async function App({ Component }: PageProps) {
         <Footer
           footerContent={await Deno.readTextFile("./data/docs/blog/footer.md")}
         />
+        <Keynav padding={100} />
         <InitSentry
           dsn={Deno.env.get("SENTRY_DSN")!}
           env={Deno.env.get("ENV")!}

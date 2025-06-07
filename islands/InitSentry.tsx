@@ -15,6 +15,8 @@ export default function SentryInit(
       ],
       tracesSampleRate: props.env === "development" ? 1.0 : 0.2,
       sendDefaultPii: true,
+      replaysSessionSampleRate: 0.1,
+      replaysOnErrorSampleRate: 1.0,
     });
   }, []);
   return null;

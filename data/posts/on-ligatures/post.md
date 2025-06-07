@@ -1,7 +1,7 @@
 ---
 title: On Ligatures
 published_at: Jul 7, 2017
-snippet: Test
+snippet: Ligatures are my favorite glyphs and I think they're pretty cool.
 ---
 
 What exactly does a typographer do? The short answer: they make reading feel

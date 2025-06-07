@@ -1,56 +1,37 @@
 import type { JSX } from "preact";
-import { render, type RenderOptions } from "@deno/gfm";
-import { apDef } from "@lunchbox/ui";
+import { md } from "@lunchbox/ui";
 import { cn } from "@vyn/cn";
+import { DOMParser, Element } from "jsr:@b-fuze/deno-dom";
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/** Property interface for the `Markdown` molecule. */
-export interface iMarkdown {
-  className: string;
+export default function (p: {
   content: string;
-  renderOptions: RenderOptions;
-}
-
-/** Default properties of the `Markdown` molecule. */
-const d: iMarkdown = {
-  className: "",
-  content: "",
-  renderOptions: {
-    allowIframes: false,
-    allowMath: false,
-  },
-};
-
-/** Setup function of the `Markdown` molecule. */
-function setup(props: Partial<iMarkdown>) {
-  const p = apDef<iMarkdown>(d, props);
-  p.content = render(p.content, p.renderOptions);
-  return p;
-}
-
-// =====================================================================================================
-/**
- * The `Markdown` component renders markdown content as HTML using the specified render options. It allows for customization of rendering behavior through the `renderOptions` property. This component is useful for displaying formatted text, such as documentation or articles, that is written in markdown syntax. It leverages the `@deno/gfm` library for rendering.
- *
- * @todo [DEV] Add the KatexStyles atom to the page's head when the allowMath option is true.
- *
- * @example
- * ```ts
- * import { Markdown } from 'lunchbox/molecules';
- *
- * const markdownContent = '# Hello World\nThis is a markdown example.';
- *
- * <Markdown content={markdownContent} />
- * ```
- */
-export default function (props: Partial<iMarkdown>): JSX.Element {
-  const p = setup(props);
-
-  // deno-lint-ignore react-no-danger
+  className?: string;
+  removeChildAfter?: number;
+}): JSX.Element {
   return (
     <div
-      class={cn("prose", p.className)}
-      dangerouslySetInnerHTML={{ __html: p.content }}
+      class={cn("prose", p.className ?? "")}
+      {...md({
+        content: p.content,
+        transform: (content: string) => {
+          const doc = new DOMParser().parseFromString(content, "text/html");
+          const body = doc.body;
+          Array.from(body.children).forEach((el, i) => {
+            if (!(el instanceof Element)) return;
+            else if (p.removeChildAfter && i > p.removeChildAfter) {
+              body.removeChild(el);
+            } else if (
+              el.tagName.toLowerCase() === "details" &&
+              el.querySelector("summary") instanceof Element
+            ) {
+              el.querySelector("summary")!.setAttribute("tabindex", "0");
+            } else {
+              el.setAttribute("tabindex", "0");
+            }
+          });
+          return body.innerHTML;
+        },
+      })}
     />
   );
 }

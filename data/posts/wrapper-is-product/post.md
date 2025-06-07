@@ -1,7 +1,7 @@
 ---
 title: The Wrapper is the Product
 published_at: Apr 13, 2025
-vignette: next_painting_represents
+vignette: endless_thread
 snippet:
   AI is powerful, but without good design, it’s stuck in the "command-line" era,
   accessible only to specialists. To achieve mass adoption, we need to focus on

@@ -17,6 +17,12 @@
 
 ## Version History
 
+### v0.0.70
+
+- Added `robots.txt`.
+- Added updated libraries for `@lunchbox/ui`, `daisyui`, `tailwindcss`.
+- Added the `<Keynav/>` island.
+
 ### v0.0.69
 
 - Changed the main gradient from stripes to pixel pattern.

@@ -1,3 +1,5 @@
+#### About
+
 This site is completely open source. The posts are live and being updated as
 naturally as new ones are being posted. I planned it to be like this, comments
 help previous readers understand why suddenly they would feel slight changes in
