@@ -1,5 +1,5 @@
 import { useEffect } from "preact/hooks";
-import * as Sentry from "npm:@sentry/browser";
+import * as Sentry from "npm:@sentry/react";
 
 export default function SentryInit(
   props: { dsn: string; env: string },

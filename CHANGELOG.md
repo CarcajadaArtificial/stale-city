@@ -17,6 +17,11 @@
 
 ## Version History
 
+### v0.0.71
+
+- Added a fix for Sentry.
+- Added the `/archive` route.
+
 ### v0.0.70
 
 - Added `robots.txt`.
