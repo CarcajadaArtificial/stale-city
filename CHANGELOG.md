@@ -10,9 +10,13 @@
 - Add a share button to posts.
 - Add a link to the post edit history.
 - Add an error 404 page.
-- Add a gallery page with all images.
+- Add a project version mention in the footer.
 
 ## Version History
+
+### v0.0.81
+
+- Added the `gallery` link to the footer.
 
 ### v0.0.80
 

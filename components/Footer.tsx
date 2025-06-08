@@ -67,6 +67,9 @@ const SiteLinks = () => (
     <Markdown className="mb-1-2" content="#### On this site" />
     <a class="link block" tabindex={0} href="/rss.xml">RSS</a>
     <a class="link block" tabindex={0} href="/drafts">Drafts</a>
+    <a class="link block" tabindex={0} href="/gallery">
+      Gallery
+    </a>
     <a class="link block" tabindex={0} href="/license">
       License
     </a>
