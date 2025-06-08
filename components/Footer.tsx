@@ -1,10 +1,12 @@
 import Markdown from "components/Markdown.tsx";
+import FollowitForm from "components/FollowitForm.tsx";
 
 export default function (props: { footerContent: string }) {
   return (
     <footer class="layout mt-3-1">
       <div class="col-span-6 lg:col-span-8">
         <Markdown className="no-margins mt-2" content={props.footerContent} />
+        <FollowitForm />
       </div>
       <Socials />
       <SiteLinks />
@@ -39,6 +41,15 @@ const Socials = () => (
           href="https://github.com/CarcajadaArtificial"
         >
           GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          class="link inline-block"
+          tabindex={0}
+          href="https://follow.it/stale-city?pub"
+        >
+          follow.it
         </a>
       </li>
       <li>

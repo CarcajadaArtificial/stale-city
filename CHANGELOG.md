@@ -14,6 +14,10 @@
 
 ## Version History
 
+### v0.0.78
+
+- Added an email subscription follow.it form.
+
 ### v0.0.77
 
 - Added `/changelog` and `/license` routes.

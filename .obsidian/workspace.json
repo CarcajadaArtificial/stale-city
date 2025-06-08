@@ -170,6 +170,9 @@
   },
   "active": "514847612ed1bac7",
   "lastOpenFiles": [
+    "components/FollowitForm.tsx",
+    "components/FollowitForm.html",
+    "components/x.html",
     "routes/changelog.tsx",
     "routes/license copy.tsx",
     "routes/license.tsx",
