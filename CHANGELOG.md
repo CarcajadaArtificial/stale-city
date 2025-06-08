@@ -2,8 +2,6 @@
 
 ## Working On
 
-- Add a route that exposes the project's CHANGELOG and LICENSE.
-
 ### Next up
 
 - Add a component that automatically creates a table of contents based on the
@@ -15,6 +13,11 @@
 - Add a gallery page with all images.
 
 ## Version History
+
+### v0.0.77
+
+- Added `/changelog` and `/license` routes.
+- Added follow.it metadata.
 
 ### v0.0.76
 

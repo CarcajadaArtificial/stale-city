@@ -21,7 +21,7 @@ export default function (props: { footerContent: string }) {
 
 const Socials = () => (
   <div class="col-span-3 md:col-span-2 lg:col-span-4">
-    <Markdown content="### Socials" />
+    <Markdown content="#### Socials" />
     <ul class="list-none p-0 mt-3 mb-0">
       <li>
         <a
@@ -65,14 +65,24 @@ const Socials = () => (
 
 const SiteLinks = () => (
   <div class="col-span-3 md:col-span-2 lg:col-span-4 lg:order-last">
-    <Markdown content="### On this site" />
+    <Markdown content="#### On this site" />
     <ul class="list-none p-0 mt-3 mb-0">
       <li>
         <a class="link inline-block" tabindex={0} href="/rss.xml">RSS</a>
       </li>
       <li>
+        <a class="link inline-block" tabindex={0} href="/license">
+          License
+        </a>
+      </li>
+      <li>
         <a class="link inline-block" tabindex={0} href="/archive">
           All posts
+        </a>
+      </li>
+      <li>
+        <a class="link inline-block" tabindex={0} href="/changelog">
+          Changelog
         </a>
       </li>
     </ul>

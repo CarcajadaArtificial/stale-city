@@ -9,6 +9,10 @@ export default async function App({ Component }: PageProps) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="follow.it-verification-code"
+          content="1JMgJkN2gsvDAHC02H1H"
+        />
         <title>Stale City</title>
         <link rel="stylesheet" href="/styles.css" />
 
