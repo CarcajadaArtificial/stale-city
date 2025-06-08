@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "data/posts/on-telling-stories/post.md",
+                "file": "data/drafts/lunchbox.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "post"
+              "title": "lunchbox"
             }
           }
         ]
@@ -170,13 +170,16 @@
   },
   "active": "514847612ed1bac7",
   "lastOpenFiles": [
+    "static/assets/stale_city.png",
+    "static/assets/[t×6s]_[570c89eb-7deb-4fb7-8778-453d1f87c4aa]_2025-06-07_21-02-46.png",
+    "static/assets",
+    "data/drafts/on-note-taking-apps.md",
+    "data/posts/on-telling-stories/post.md",
     "static/images/mind_set.png",
     "static/images/[t×6s]_[58af784b-4f7a-4328-9b49-c1a7e1a43f38]_2025-06-07_17-35-20.png",
     "data/posts/on-telling-stories/comments/1.md",
-    "data/posts/on-telling-stories/post.md",
     "data/posts/on-telling-stories/comments",
     "data/drafts/lunchbox.md",
-    "data/drafts/on-note-taking-apps.md",
     "data/drafts/inbox zero.md",
     "Clippings/Stale City.md",
     "Clippings",

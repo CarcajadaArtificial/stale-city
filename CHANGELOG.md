@@ -3,19 +3,24 @@
 ## Working On
 
 - Add a route that exposes the project's CHANGELOG and LICENSE.
-- Include post comments in the rss feed.
-  - Comments must have a scrollable url `stalecity.net/slug#comment-1`
 
 ### Next up
 
 - Add a component that automatically creates a table of contents based on the
   markdown content.
 - Add basic post search. (npm:minisearch)
-- Add feature flags using Bucket.
 - Add a share button to posts.
 - Add a link to the post edit history.
+- Add an error 404 page.
+- Add a gallery page with all images.
 
 ## Version History
+
+### v0.0.76
+
+- Added an updated layout to the footer component.
+- Added the stale_city asset image.
+- Added a 404 error on missing post.
 
 ### v0.0.75
 

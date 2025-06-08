@@ -22,3 +22,7 @@
     mix-blend-mode: exclusion;
   }
 }
+
+.dark\:invert:focus, .invert:focus {
+  filter: invert(0);
+}

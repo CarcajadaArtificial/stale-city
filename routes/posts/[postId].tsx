@@ -18,6 +18,8 @@ export default define.page(async function Post(props) {
     join("./data/posts/", props.params.postId!, "post.md"),
   );
 
+  if (!post) return new Response(null, { status: 404 });
+
   return (
     <main class="layout pt-3-1">
       <header class="col-span-full prose">

@@ -19,6 +19,7 @@ But this isn't TV from the 80's, he quickly began spending the family's savings 
 
 At the end of the episode, at the peak of his despair, Hal screams the same complaint he made when he worked in his 9-5, as if the misery would come out of any full time daily activity regardless of the level of passion, artistry or significance of the work done. The rest of the family tries to comfort Hal when he gets a sudden _eureka moment_ and _understands_ exactly wat's missing from the painting. The family watches in awe as he comically paints a single quick point with the brush. They instantly _got it_, everyone admired the painting in their own individual way. At the hight of the episode, when the family gets together and everything is good, the painting comes down falling on top of Hal after showing us the girth of the painting after countless of layer of paint placed on top of each other.
 ### History of Lunchbox Versions
+
 - Why I started developing Lunchbox?
 - How before Lunchbox, it was: AnaJS Monorepo -> AnaJS Components -> GarliCSS -> Lunchbox.
 #### Pre v1.0

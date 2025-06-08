@@ -59,12 +59,12 @@ async function fetchComments(postPath: string): Promise<iComment[]> {
   return comments;
 }
 
-export async function fetchPost(path: string): Promise<iPost> {
+export async function fetchPost(path: string): Promise<iPost | null> {
   if (!await exists(path)) {
     console.error(
       `post.md not found at ${path} (maybe misnamed like poost.md), skipping.`,
     );
-    throw new Error(`missing post file at ${path}`);
+    return null;
   }
   try {
     const fileData = extractYaml<iPostMetadata>(
@@ -87,7 +87,7 @@ export async function fetchPost(path: string): Promise<iPost> {
     };
   } catch (err) {
     console.error(`error parsing post at ${path}:`, err);
-    throw err;
+    return null;
   }
 }
 
@@ -106,7 +106,7 @@ export async function fetchPosts(dir: string): Promise<iPost[]> {
     }
     try {
       const post = await fetchPost(filePath);
-      posts.push(post);
+      if (post) posts.push(post);
     } catch (err) {
       console.error(`skipping broken post ${entry.name}:`, err);
     }
