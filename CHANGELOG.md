@@ -14,6 +14,11 @@
 
 ## Version History
 
+### v0.0.79
+
+- Added the correct form action for the FollowitForm component.
+- Added a layout fix in the footer.
+
 ### v0.0.78
 
 - Added an email subscription follow.it form.

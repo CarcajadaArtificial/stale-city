@@ -2,7 +2,7 @@ export default function () {
   return (
     <div attr-a attr-b attr-c attr-d attr-e attr-f>
       <form
-        action="https://api.follow.it/subscription-form/null/null"
+        action="https://api.follow.it/subscription-form/bndKZTFxQTkvcFVLLzRvM1BsYmpXNFRkWVoxQXh3RWRLK3lFWkFTZXh5TzJBem50My9mb2JKam0xaUtMaThqZTNjM0RIbWMrZ3NKQXBuTGwwTWJGK3ZFNmRtNGQ0UVd6SVZ3V3BHV0JocmRKSndVOGxIWXJHMFNSd3NTMjE5R0Z8Vk5hRzFwNnBmK1BUUHprT01lWVJZN0hMUlNzNXFjUHdNcmptV0plZTdCOD0=/8"
         method="post"
         class="join mt-1-1"
       >
@@ -12,8 +12,9 @@ export default function () {
           name="email"
           required
           placeholder="your@email.com"
+          tabIndex={0}
         />
-        <button class="join-item btn" type="submit">
+        <button tabIndex={0} class="join-item btn" type="submit">
           Subscribe
         </button>
       </form>
