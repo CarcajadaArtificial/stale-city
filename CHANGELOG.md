@@ -14,6 +14,11 @@
 
 ## Version History
 
+### v0.0.80
+
+- Added a `drafts` route to showcase the work in progress.
+- Added a `gallery` route to showcase the images inside the blog.
+
 ### v0.0.79
 
 - Added the correct form action for the FollowitForm component.

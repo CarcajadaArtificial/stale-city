@@ -1,6 +1,6 @@
 import { define, fetchPosts } from "utils";
 
-export default define.page(async function Home() {
+export default define.page(async function () {
   const posts = await fetchPosts("./data/posts");
   posts.sort((a, b) =>
     new Date(b.metadata.published_at).getTime() -

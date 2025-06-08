@@ -13,7 +13,7 @@ function Comment(props: iComment, index: number) {
   );
 }
 
-export default define.page(async function Post(props) {
+export default define.page(async function (props) {
   const post = await fetchPost(
     join("./data/posts/", props.params.postId!, "post.md"),
   );

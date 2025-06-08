@@ -9,6 +9,7 @@
   "imports": {
     "@b-fuze/deno-dom": "jsr:@b-fuze/deno-dom@^0.1.49",
     "@pakornv/fresh-plugin-tailwindcss": "jsr:@pakornv/fresh-plugin-tailwindcss@2.0.0-alpha.1",
+    "@std/fs": "jsr:@std/fs@^1.0.18",
     "@tailwindcss/typography": "npm:@tailwindcss/typography@^0.5.16",
     "components/": "./components/",
     "daisyui": "npm:daisyui@^5.0.43",

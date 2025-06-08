@@ -66,10 +66,11 @@ const SiteLinks = () => (
   <div class="col-span-3 md:col-span-2 lg:col-span-4 lg:order-last flex flex-col gap-1-8">
     <Markdown className="mb-1-2" content="#### On this site" />
     <a class="link block" tabindex={0} href="/rss.xml">RSS</a>
+    <a class="link block" tabindex={0} href="/drafts">Drafts</a>
     <a class="link block" tabindex={0} href="/license">
       License
     </a>
-    <a class="link block" tabindex={0} href="/archive">
+    <a class="link block" tabindex={0} href="/posts">
       All posts
     </a>
     <a class="link block" tabindex={0} href="/changelog">

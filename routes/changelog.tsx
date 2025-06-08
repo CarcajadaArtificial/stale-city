@@ -1,7 +1,7 @@
 import { define } from "utils";
 import Markdown from "components/Markdown.tsx";
 
-export default define.page(async function Home() {
+export default define.page(async function () {
   return (
     <main class="layout my-2-1">
       <div class="col-span-full prose">

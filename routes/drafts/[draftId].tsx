@@ -1,7 +1,14 @@
 import { define } from "utils";
 import Markdown from "components/Markdown.tsx";
+import { exists } from "@std/fs";
 
-export default define.page(async function () {
+export default define.page(async function (props) {
+  const path = `./data/drafts/${props.params.draftId!}.md`;
+
+  if (!exists(path)) {
+    return new Response(null, { status: 404 });
+  }
+
   return (
     <main class="layout my-2-1">
       <div class="col-span-full prose">
@@ -11,8 +18,7 @@ export default define.page(async function () {
             Return home
           </a>
         </span>
-        <h1 tabIndex={0}>License</h1>
-        <Markdown content={await Deno.readTextFile("./LICENSE")} />
+        <Markdown content={await Deno.readTextFile(path)} />
       </div>
     </main>
   );
