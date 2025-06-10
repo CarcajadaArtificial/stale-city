@@ -1,3 +1,6 @@
+---
+stage: Ideation
+---
 Thoughts:
 
 - "Inbox Zero"? What about "Everything Zero"?

@@ -14,6 +14,10 @@
 
 ## Version History
 
+### v0.0.82
+
+- Added updated drafts.
+
 ### v0.0.81
 
 - Added the `gallery` link to the footer.

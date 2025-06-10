@@ -1,3 +1,6 @@
+---
+stage: Drafting
+---
 ## Document-centered note-taking applications
 
 For me to explain what my ideal second-brain app would look like, I must first

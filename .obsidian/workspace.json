@@ -11,10 +11,14 @@
             "id": "6b60359d6f2ccf8c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "data/drafts/lunchbox.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "lunchbox"
             }
           }
         ]
@@ -147,12 +151,12 @@
               "title": "Outline of lunchbox"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -164,8 +168,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "56d3b84274e4e6b2",
+  "active": "6b60359d6f2ccf8c",
   "lastOpenFiles": [
+    "data/drafts/on-note-taking-apps.md",
+    "data/drafts/lunchbox.md",
+    "data/drafts/inbox zero.md",
+    "data/drafts/dev.md",
     "routes/gallery.tsx",
     "routes/index copy.tsx",
     "routes/drafts/[draftId].tsx",
@@ -174,13 +182,8 @@
     "routes/posts/index.tsx",
     "routes/drafts.tsx",
     "routes/license copy.tsx",
-    "data/drafts/inbox zero.md",
-    "data/drafts/lunchbox.md",
-    "data/drafts/on-note-taking-apps.md",
-    "data/drafts/dev.md",
     "components/FollowitForm.tsx",
     "components/FollowitForm.html",
-    "components/x.html",
     "static/assets/stale_city.png",
     "static/assets/[t×6s]_[570c89eb-7deb-4fb7-8778-453d1f87c4aa]_2025-06-07_21-02-46.png",
     "data/posts/on-telling-stories/post.md",
