@@ -98,7 +98,7 @@ function Input(props: iComponent<HTMLInputElement>) {
 
 This is just a simple example of how the component implementation philosophy worked in this stage of the project. At this point there was pure HTML and CSS being render using Preact's element creator functions. Finally, without entering into much detail, `styles.ts` had a simple implementation; nevertheless, there's a hidden feature that I'd like to expose.
 
-At this time I was a deep follower of the Atomic Design framework. I would then adapt this idea to the design patterns of my components. An "Atom" would have the intrinsic characteristic of being a component made up of _only_ one HTML element. For example, the `<Button/>` atom was made out of exclusively a single `<button/>` element with custom properties, styles, and default attribute values that made it follow good practices.
+At this time I was a deep follower of the Atomic Design framework. I would then adapt this idea to the design patterns of my components. An "Atom" would have the intrinsic characteristic of being a component made up of _only_ one HTML element. For example, the `<Button/>` atom was made out of exclusively a single `<button/>` element with custom properties, styles, and default attribute values that made it follow good practices. Molecules were components made out of multiple HTML Elements and/or other atoms. The fictitious `<Input/>` component I've been using as an example would be a Molecule component.
 
 ```ts
 // components/Input/styles.ts
@@ -113,7 +113,7 @@ const inputStyles = {
 // components/Input/index.tsx
 
 function Input(props: Partial<iInput>) {
-	const { label, ...p} = setup(props);
+	const { label, ...p} = setup(d, props);
 	return (
 		<label class={cn("input_label", styles.label)}>
 			{label}
@@ -122,9 +122,98 @@ function Input(props: Partial<iInput>) {
 	)
 }
 ```
+
+And that's how the first major version of Lunchbox was created. Unfortunately there was something I completely missed when testing; the CSS-in-JS library worked in the client, not the server. People with "no script" settings or browsers would see a website without any styles at all. And how did I find out? Months later thanks to a snarking comment from a Redditor, classic.
 ### v1.0
-- Published for the first time to jsr.
-- Realized that Resin's implementation was client-side so with disabled-js browsers, it rendered no styles. Changed to pure Tailwind styles.
+
+It was late September 2024, I had been on-and-off playing with Lunchbox for months. But to call wat was just released a major version would be a huge overstatement. It simply didn't work and I had to fix it quickly. Thankfully I didn't have a single star on GitHub yet so I had more uncertainty than pressure.
+
+The goal at this moment was to forget about deno.land and start to release to JSR. Add a GitHub action, and a few other quality-of-life improvements. What's the probelm? JSR didn't support `.tsx` modules at the time. This was obviously a big issue given that most of my code were these types of modules (like I needed another reason to hate JSX).
+
+Another big change coming for the second major version was using TailwindCSS for styles. Replaced all of the CSS-in-JS with tailwind classes, a change that would take much less effort than I imagined, `component/styles.ts` modules stopped being needed and were deprecated. But things started to get more _atomic_ that I would ever imagine. First, particles were officially born. These were a set of TailwindCSS class groups and looked something like this:
+
+```ts
+// ui/particles.ts
+
+export const clr = {
+	neutral: {
+		txt: 'text-neutral dark:text-d-neutral',
+		bg: 'bg-neutral dark:bg-d-neutral',
+	}
+	/* ... */
+};
+
+export const txt = {
+	title: 'text-[3.0517578125rem]/[4.5rem]',
+	/* ... */
+}
+
+/* ... */
+```
+
+Atoms, still being single HTML element components shed out the need for a setup function. They would simply correctly manage a single HTML Element. The amount of Atoms tripled from the start of version 1.0 to this point, but were grouped by common purposes. For example, the Input atom group contained twelve atoms. These looked something like this:
+
+```tsx
+// ui/atoms/Input.tsx
+
+// <Input.Field />
+export const Field = (p: HTMLInputElement) => (
+  <input
+    {...p}
+    class={cn(
+      clr.neutral.bg,
+      'rounded',
+      'px-2 py-px',
+      p.class,
+    )}
+  />
+);
+
+// <Input.Label />
+export const Label = (p: HTMLLabelElement) => (
+  <label
+    {...p}
+	class={cn(
+	    'w-full flex',
+	    p.class
+    )}
+  />
+);
+
+/* ... */
+```
+
+Molecules were now entirely made up of Atoms, it was as if I was coating HTML with a thin film of default states that carried with them my opinions on what a good practices and looks were.
+
+```tsx
+// ui/molecules/InputField.tsx
+
+export interface iInputField {
+  label: string;
+}
+
+const d: iInputField = {
+  label: '',
+};
+
+function InputField(props: Partial<iInputField>) {
+	const { label, ...p} = setup(d, props);
+	return (
+		<Input.Label class={cn("input_label", styles.label)}>
+			{label}
+			<Input.Field class={cn("input", styles.input)} ...p />
+		</Input.Label>
+	)
+}
+```
+
+Good enough, but how was I to distribute it, when JSR didn't support `.tsx` modules at the time? I got inspired by a little new UI library called shadcn/ui. With that package you could run a command on the CLI and import directly to your repository TailwindCSS React components ready to go. So I added the `@lunchbox/init` module outside the main `@lunchbox/ui`. These would initialize a new project with all the particles, atoms, molecules, and imports you could need to start a project using Lunchbox.
+
+```
+deno run -A jsr:@lunchbox/ui/init
+```
+
+Right at this moment is when 
 ### v2.0
 - Added an initialization function that generated the library's components similarly to Deno Fresh init and shadcn/ui component imports.
 - Here I questioned Lunchbox's purpose in relationship with its alternatives. Why should I develop another shardcn or DaisyUI? It should be built on top of one of these.
