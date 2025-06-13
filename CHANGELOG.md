@@ -14,6 +14,12 @@
 
 ## Version History
 
+### v0.0.84
+
+- Added updates for the `lunchbox` draft.
+- Added `.obsidian` to the `.gitignore` file because it was having constant
+  irrelevant changes.
+
 ### v0.0.83
 
 - Added updates for the `lunchbox` draft.
