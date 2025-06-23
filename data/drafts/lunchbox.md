@@ -4,131 +4,127 @@ stage: Drafting
 
 # The story behind Lunchbox
 
-Have you every seen the European guy that spent a few years around 2016 building
-a new musical instrument from scratch? His artist name is Wintergatan, and he
-would wind it up after feeding it thousands of metal marbles, each with a clear
-travel across the inner pathways of the machine, ending with a collapse with a
-sound-making material. He called it the "Marble Machine". It represents one side
+Have you ever seen the European guy who spent a few years around 2016 building a
+new musical instrument from scratch? His artist name is Wintergatan, and he
+would wind it up after feeding it thousands of metal marbles. Each marble would
+travel along the inner pathways of the machine, eventually collapsing onto a
+sound-making material. He called it the "Marble Machine." It represents one side
 of the duality of how I feel about this project.
 
-It was an interesting project to se him build, and even his most recent
-development of a new version "Marble Machine 3" is cool enough. Sometimes a
-piece of the machine would break and would need to be replaced with a new one
-exactly alike, but more frequently than that he would find them to be
-insufficient. A part could perform deceivingly good only to fail under harsher
-circumstances requiring a slight redesign of that part. It was something that
-made it worthwhile to watch his progress videos, he was constantly fixing
-things, solving problems, making mistakes, redesigning, etc.
+It was an interesting project to watch him build, and even his most recent
+development, the "Marble Machine 3," is cool enough. Sometimes a piece of the
+machine would break and need replacing with an identical part, but more often,
+he found the replacements insufficient. A part could perform deceptively well
+only to fail under harsher circumstances, requiring a slight redesign. Watching
+his progress videos was always worthwhile; he was constantly fixing things,
+solving problems, making mistakes, and redesigning.
 
-I've recently felt that this project and I have a similar dynamic. It has taught
-me so much about about the pure technologies that make up the web to the
-frameworks that create abstractions of them. But, if this Marble Machine with an
-infinite backlog of redesigning parts is one side of the spectrum, what is the
-other side?
+Recently, I've felt that this project and I share a similar dynamic. It has
+taught me so much—from the raw technologies that make up the web to the
+frameworks that abstract them. But if the Marble Machine, with its endless
+backlog of redesigns, represents one side of the spectrum, what is the other
+side?
 
-Do you remember the early Malcolm in the Middle? There's an episode where Hal
-(Malcolm's dad) has a midlife work crisis after being questioned by kids in his
-son's school about his boring job, he takes a leave of absence from work by
-lying about a kidney problem, and dedicates the following weeks to create a
-mysterious painting inside the family garage. The whole episode revolves around
-the concept of employment. There is Hal's crisis as the main plot, Lois forces
-Francis to do unfulfilling work at the Lucky Aid market, and Malcolm struggles
-to take a decision on what he would like his future career to be.
+Do you remember the early _Malcolm in the Middle_? There's an episode where Hal
+(Malcolm's dad) faces a midlife work crisis after being questioned by kids at
+his son's school about his boring job. He takes a leave of absence from work by
+lying about a kidney problem and spends the following weeks creating a
+mysterious painting in the family garage. The entire episode revolves around the
+concept of employment. Hal's crisis is the main plot, but Lois forces Francis to
+do unfulfilling work at the Lucky Aid market, and Malcolm struggles with
+choosing his future career path.
 
-Now, Hal's subplot is incredibly relatable to me, as soon as he stopped working
-on his 9-to-5 he stopped being miserable as well. Breakfast tasted like never
-before, his children went to him with questions and he gave them satisfactory
-advice, his relationship with Lois gets more passionate, and he looks and feels
-happier. Hal is shown constantly layering paint on top of paint (exclusively
-basic colors by the way).
+Hal's subplot is incredibly relatable to me. As soon as he stopped working his
+9-to-5, he stopped being miserable. Breakfast tasted better than ever, his
+children came to him with questions and left with satisfactory answers, his
+relationship with Lois grew more passionate, and he looked and felt happier. Hal
+is shown constantly layering paint on top of paint (exclusively using basic
+colors, by the way).
 
-But this isn't TV from the 80's, he quickly began spending the family's savings
-to buy canned paint and starts to live a negative arc where he slowly becomes
-miserable again. He grows bitter of not being able of recreate the painting
-inside his mind.
+But this isn't TV from the '80s. He quickly began spending the family's savings
+on canned paint and spiraled into a negative arc where he became miserable
+again. He grew frustrated with his inability to recreate the painting in his
+mind.
 
-At the end of the episode, at the peak of his despair, Hal screams the same
-complaint he made when he worked in his 9-5, as if the misery would come out of
-any full time daily activity regardless of the level of passion, artistry or
-significance of the work done. The rest of the family tries to comfort Hal when
-he gets a sudden _eureka moment_ and _understands_ exactly wat's missing from
-the painting. The family watches in awe as he paints, until reaching the end
-when he comically paints a single quick point with the brush. They instantly
-_got it_, everyone admired the painting in their own individual way. At the
-hight of the episode, when the family gets together and everything is good, the
-painting comes down falling on top of Hal after showing us the sheer girth after
-countless of layer of paint placed on top of each other.
+At the peak of his despair, Hal screams the same complaint he made when working
+his 9-to-5—as if misery stems from any full-time daily activity, regardless of
+the passion, artistry, or significance of the work. The rest of the family tries
+to comfort Hal when he suddenly has an _eureka moment_ and understands exactly
+what's missing from the painting. The family watches in awe as he paints, only
+to reveal, at the end, that he had comically added a single quick dot with his
+brush. They immediately _got it_, each admiring the painting in their own way.
+In the height of the episode, as the family gathers and everything feels right,
+the painting falls from the wall and lands on Hal, showing the sheer weight of
+countless layers of paint placed on top of one another.
 
 ## Pre v1.0
 
-When did I decide I wanted to build a component library? Well, everything
-started when I wanted to reinvent the wheel (React.js). You've probably heard
-about developers trying their luck with a "new JavaScript front-end framework".
-Cut me some slack, you'd hear that only millions of times back then. I'll not go
-into details about it right now, but with hindsight knowledge, that project's
-goal is a JSX alternative. Because XML/HTML-like code deeply sucks because it's
-as unreadable as code gets.
+When did I decide to build a component library? Well, it all began when I set
+out to reinvent the wheel (React.js). You've probably heard developers talk
+about trying their luck with a "new JavaScript front-end framework." Cut me some
+slack; you heard that millions of times back then. I won’t go into detail right
+now, but with hindsight, I can see that the project’s goal was to create a JSX
+alternative. Because let’s face it—XML/HTML-like code is incredibly unreadable.
 
-From there, a design system started to protude. At the beginning I called it
-"Juicebox" and it was a mere color palette. I would name them based on juice
-flavor, but it was an awkward naming system so I ended up dropping it along with
-the name.
+From there, a design system started to emerge. At first, I called it "Juicebox,"
+and it was merely a color palette. I named them after juice flavors, but the
+naming system was awkward, so I eventually dropped both the names and the
+concept.
 
-At this time, my current obsession was vanilla JavaScript. I seriously believed
-that it was the best way to create and manage interfaces. Libraries that altered
-the syntax too much were considered forbidden. Then I found out about Deno and I
-chose it over Node with Vite (which I still consider to be the best way to
-develop web applications in Node). Then, betraying my previously imposed ideals,
-I was pulled to the dreadful `.tsx` when the Fresh framework came out. Their
-philosophy for SSR and web standardization rang with me.
+At that time, I was obsessed with vanilla JavaScript. I truly believed it was
+the best way to create and manage interfaces. I considered libraries that
+altered the syntax too much to be off-limits. Then, I discovered Deno and chose
+it over Node with Vite (which, by the way, I still think is the best way to
+develop web applications in Node). But then, I betrayed my former ideals and
+embraced the dreaded `.tsx` when the Fresh framework was released. Their
+philosophy on SSR and web standardization resonated with me.
 
 ## v1.0
 
-It started to play around with pre-released versions of Deno and Fresh, and felt
-that in these technologies I could thrive. I feel like the usage of this
-technology has a popularity-niche balance that I like, and I'm lucky enough to
-be an early adopter of it. That's the perfect opportunity to make a name for
-myself in a relatively small community. Then I thought about reviving Juicebox
-but with a new goal and name. It was going to be a new component library.
+It began with experimenting with pre-released versions of Deno and Fresh, and I
+quickly realized these technologies were where I could thrive. I felt that the
+balance between their popularity and niche appeal was perfect, and I was
+fortunate to become an early adopter. This presented an ideal opportunity to
+carve out a name for myself in a relatively small community. Then, I considered
+reviving Juicebox, but with a fresh goal and a new name. It would become a new
+component library.
 
-The main disagreements I have with the component libraries at that time, was
-their grid system and their responsiveness breakpoints. I also hated how they
-always ran some type of non-standard client-side function for random components
-to work. I preferred using native HTML features with components built with
-best-practices in mind so you could simply not worry about it.
+At the time, my main issues with existing component libraries were their grid
+systems and responsiveness breakpoints. I also disliked how many of them ran
+non-standard client-side functions just to make random components work. I
+preferred to use native HTML features with components designed around best
+practices, so I wouldn't have to worry about those quirks.
 
-This is a rundown of how this stage of the project worked. It all starts with
-the types `iComponent` and `iElement`. Both of these would help with extending a
-component's arguments to include the ones of a HTMLElement that would work as
-the main element of the component. For example, the `<Input/>` component's
-properties would be of type `iComponent<HTMLInputElement>`. This type would give
-Partial attributes, aria mixins, and event listeners for type safety components.
+Here's a breakdown of how this stage of the project unfolded. It all began with
+the `iComponent` and `iElement` types. These types would extend a component's
+arguments to include those of an HTMLElement, which would act as the component's
+main element. For instance, the `<Input/>` component's properties would be of
+type `iComponent<HTMLInputElement>`. This approach would provide partial
+attributes, ARIA mixins, and event listeners for type-safe components.
 
 ```tsx
 // components/Input/index.tsx
 
 function Input(props: iComponent<HTMLInputElement>) {
-	return <input ...props />
+  return <input {...props} />;
 }
 ```
 
-A component would have three distinct parts, all of them in their own file. The
-`index.tsx` file would contain all the rendering logic. As a strict practice,
-this file would contain almost only JSX file, in order to isolate it so that
-rarely would it need to be read or debugged. The `styles.scss` which then became
-`styles.ts` after I replaced SCSS for a CSS-in-JS library in deno.land called
-Resin; this file would obviously contain the component styles. Finally
-`setup.ts` file would make sure consistent properties are always passed to the
-component.
+A component consists of three distinct parts, each in its own file. The
+`index.tsx` file holds all the rendering logic. As a strict practice, this file
+contains almost exclusively JSX to isolate it, ensuring it rarely needs to be
+read or debugged. The `styles.scss` file, which later became `styles.ts` after I
+replaced SCSS with a CSS-in-JS library called Resin from deno.land, contains the
+component's styles. Finally, the `setup.ts` file ensures that consistent
+properties are always passed to the component.
 
-The setup function would also be composed of three distinct parts. First it was
-the component's property object interface. It would extend the `iComponent` type
-and include component-level properties. For example a `label` property for the
-`<Input/>` component. This string value should render a `<label/>` element with
-the best practices in mind. Then it would have a render function where you could
-process and transform the property values of the component and return the final
-version of them. For example, you could capitalize the Input label before
-rendering it.
+The setup function is also divided into three distinct parts. First, it includes
+the component's property object interface, which extends the `iComponent` type
+and adds component-specific properties. For example, a `label` property for the
+`<Input/>` component. This string value renders a `<label/>` element, adhering
+to best practices. Next, the setup function includes a render function where you
+can process and transform the component's property values before rendering them.
+For example, you could capitalize the Input label before displaying it.
 
 ```ts
 // components/Input/setup.ts
@@ -143,19 +139,19 @@ export function setup(props: Partial<iInput>): iInput {
 }
 ```
 
-But wait didn't you say there were three distinct parts to a component's setup?
-I sure did, the remaining part solves an issue present in the previous
-codeblock. The problem is that I cannot render an `<Input/>` component without a
-label. What's the solution, to make the properties Partial (`Partial<iInput>`)?
-I don't think so, because then every property value could be undefined and it's
-a hassle to manage all the undefined values all the time. The ideal scenario is
-to have the properties be partial when calling the render function but not be so
-during the setup.
+But wait, didn't you say there are three distinct parts to a component's setup?
+I sure did. The remaining part addresses an issue in the previous code block.
+The problem is that I can't render an `<Input />` component without a label.
+What's the solution? Should I make the properties `Partial<iInput>`? I don't
+think so. If I did that, every property value could end up being `undefined`,
+and managing all those undefined values would be a hassle. The ideal scenario is
+to make the properties partial when calling the render function, but not during
+the setup.
 
-My solution was to create an object with the default values of all of the
-component properties. That way the input could always be Partial while letting
-me have a controlled flow of values. I made a utility function called
-`applyDefaults()`. The implementation of it is so simple I can showcase it next.
+My solution was to create an object with default values for all the component
+properties. That way, the input could remain `Partial`, but I could still
+maintain control over the flow of values. I wrote a utility function called
+`applyDefaults()`. Its implementation is so simple that I can showcase it next.
 
 ```ts
 // src/utils.ts
@@ -187,25 +183,26 @@ export function setup(props: Partial<iInput>): iInput {
 // components/Input/index.tsx
 
 function Input(props: iComponent<HTMLInputElement>) {
-	const p = setup()
-	return <input ...props />
+  const p = setup(props);
+  return <input {...props} />;
 }
 ```
 
 This is just a simple example of how the component implementation philosophy
-worked in this stage of the project. At this point there was pure HTML and CSS
-being render using Preact's element creator functions. Finally, without entering
-into much detail, `styles.ts` had a simple implementation; nevertheless, there's
-a hidden feature that I'd like to expose.
+worked during this stage of the project. At this point, we were rendering pure
+HTML and CSS using Preact's element creator functions. Finally, without delving
+into too much detail, `styles.ts` had a straightforward implementation. However,
+there’s a hidden feature that I’d like to highlight.
 
-At this time I was a deep follower of the Atomic Design framework. I would then
-adapt this idea to the design patterns of my components. An "Atom" would have
-the intrinsic characteristic of being a component made up of _only_ one HTML
-element. For example, the `<Button/>` atom was made out of exclusively a single
-`<button/>` element with custom properties, styles, and default attribute values
-that made it follow good practices. Molecules were components made out of
-multiple HTML Elements and/or other atoms. The fictitious `<Input/>` component
-I've been using as an example would be a Molecule component.
+At this time, I was a passionate follower of the Atomic Design framework. I then
+adapted this concept to the design patterns of my components. An "Atom" would
+have the defining characteristic of being a component composed of _only_ one
+HTML element. For example, the `<Button/>` atom consisted solely of a single
+`<button/>` element, with custom properties, styles, and default attribute
+values that ensured it adhered to best practices. Molecules were components made
+up of multiple HTML elements and/or other atoms. The fictitious `<Input/>`
+component I’ve been using as an example would be considered a Molecule
+component.
 
 ```ts
 // components/Input/styles.ts
@@ -220,41 +217,43 @@ const inputStyles = {
 // components/Input/index.tsx
 
 function Input(props: Partial<iInput>) {
-	const { label, ...p} = setup(d, props);
-	return (
-		<label class={cn("input_label", styles.label)}>
-			{label}
-			<input class={cn("input", styles.input)} ...p />
-		</label>
-	)
+  const { label, ...p } = setup(d, props);
+  return (
+    <label class={cn("input_label", styles.label)}>
+      {label}
+      <input class={cn("input", styles.input)} {...p} />
+    </label>
+  );
 }
 ```
 
-And that's how the first major version of Lunchbox was created. Unfortunately
-there was something I completely missed when testing; the CSS-in-JS library
-worked in the client, not the server. People with "no script" settings or
-browsers would see a website without any styles at all. And how did I find out?
-Months later thanks to a snarking comment from a Redditor, classic.
+And that's how I created the first major version of Lunchbox. Unfortunately, I
+missed something crucial during testing: the CSS-in-JS library worked on the
+client side but not on the server. People with "no script" settings or browsers
+saw a website with no styles at all. How did I find out? Months later, thanks to
+a snarky comment from a Redditor. Classic.
 
 ## v2.0
 
-It was late September 2024, I had been on-and-off playing with Lunchbox for
-months. But to call wat was just released a major version would be a huge
-overstatement. It simply didn't work and I had to fix it quickly. Thankfully I
-didn't have a single star on GitHub yet so I had more uncertainty than pressure.
+It was late September 2024, and I had been working on Lunchbox on and off for
+months. But calling what had just been released a "major version" would have
+been a huge overstatement. It simply didn’t work, and I had to fix it quickly.
+Thankfully, I hadn’t received a single star on GitHub yet, so I had more
+uncertainty than pressure.
 
-The goal at this moment was to forget about deno.land and start to release to
-JSR. Add a GitHub action, and a few other quality-of-life improvements. What's
-the probelm? JSR didn't support `.tsx` modules at the time. This was obviously a
-big issue given that most of my code were these types of modules (like I needed
-another reason to hate JSX).
+At that moment, my goal was to forget about deno.land and start releasing to
+JSR. I added a GitHub action and a few other quality-of-life improvements. What
+was the problem? JSR didn’t support `.tsx` modules at the time. This was a big
+issue since most of my code relied on those modules (as if I needed another
+reason to dislike JSX).
 
-Another big change coming for the second major version was using TailwindCSS for
-styles. Replaced all of the CSS-in-JS with tailwind classes, a change that would
-take much less effort than I imagined, `component/styles.ts` modules stopped
-being needed and were deprecated. But things started to get more _atomic_ that I
-would ever imagine. First, particles were officially born. These were a set of
-TailwindCSS class groups and looked something like this:
+Another big change for the second major version was using TailwindCSS for
+styles. I replaced all of the CSS-in-JS with Tailwind classes, a change that
+turned out to require much less effort than I had imagined.
+`component/styles.ts` modules were no longer necessary and were deprecated. But
+things began to get more _atomic_ than I had ever imagined. First, particles
+were officially born. These were sets of TailwindCSS class groups, and they
+looked something like this:
 
 ```ts
 // ui/particles.ts
@@ -275,11 +274,11 @@ export const txt = {
 /* ... */
 ```
 
-Atoms, still being single HTML element components shed out the need for a setup
-function. They would simply correctly manage a single HTML Element. The amount
-of Atoms tripled from the start of version 1.0 to this point, but were grouped
-by common purposes. For example, the Input atom group contained twelve atoms.
-These looked something like this:
+Atoms, once just single HTML element components, no longer require a setup
+function. They simply manage a single HTML element correctly. The number of
+Atoms has tripled from version 1.0 to the present, but they are grouped by
+common purposes. For example, the Input atom group now contains twelve atoms.
+Here's what they looked like:
 
 ```tsx
 // ui/atoms/Input.tsx
@@ -311,9 +310,9 @@ export const Label = (p: HTMLLabelElement) => (
 /* ... */
 ```
 
-Molecules were now entirely made up of Atoms, it was as if I was coating HTML
-with a thin film of default states that carried with them my opinions on what a
-good practices and looks were.
+Molecules were now entirely made up of atoms. It felt like I was coating HTML
+with a thin layer of default states, each carrying my opinions on what
+constituted good practices and aesthetics.
 
 ```tsx
 // ui/molecules/InputField.tsx
@@ -323,186 +322,180 @@ export interface iInputField {
 }
 
 const d: iInputField = {
-  label: '',
+  label: "",
 };
 
 function InputField(props: Partial<iInputField>) {
-	const { label, ...p} = setup(d, props);
-	return (
-		<Input.Label class={cn("input_label", styles.label)}>
-			{label}
-			<Input.Field class={cn("input", styles.input)} ...p />
-		</Input.Label>
-	)
+  const { label, ...p } = setup(d, props);
+  return (
+    <Input.Label class={cn("input_label", styles.label)}>
+      {label}
+      <Input.Field class={cn("input", styles.input)} {...p} />
+    </Input.Label>
+  );
 }
 ```
 
-Good enough, but how was I to distribute it, when JSR didn't support `.tsx`
-modules at the time? I got inspired by a little new UI library called shadcn/ui.
-With that package you could run a command on the CLI and import directly to your
-repository TailwindCSS React components ready to go. So I added the
-`@lunchbox/init` module outside the main `@lunchbox/ui`. These would initialize
-a new project with all the particles, atoms, molecules, and imports you could
-need to start a project using Lunchbox.
+Good enough, but how was I supposed to distribute it when JSR didn’t support
+`.tsx` modules at the time? I got inspired by a small UI library called
+`shadcn/ui`. With that package, you could run a command in the CLI and directly
+import TailwindCSS React components into your repository, ready to go. So, I
+added the `@lunchbox/init` module outside the main `@lunchbox/ui`. These modules
+would initialize a new project with all the particles, atoms, molecules, and
+imports you need to start a project using Lunchbox.
 
 ```
 deno run -A jsr:@lunchbox/ui/init
 ```
 
-At this moment, the Malcolm in the Middle episode I mentioned resurfaces again.
-I can only imagine what Hal felt when he realized his fulfilling painting
-project transformed into his dreaded 9-to-5 office job. Still, as human as Hal
-may appear, let's not forget he isn't a real human being, he is a character in a
-show with a group of talented artists behind its design. What relates to me the
-least is the perfectly gradual descent Hal has from fulfillment to dread. If I
-were to write the character to show how I felt then Hal would have constant ups
-and downs; the highs really high and the lows really low. He would have Eureka
-moments in the middle of eating his breakfast or taking a shower and interrupt
-these to quickly run to the garage; having spilled coffee on his shirt or
-dripping while wearing a towel just to add that thing that just came to his
-mind. Only for him to be to change his mind after a few days.
+AAt this moment, the "Malcolm in the Middle" episode I mentioned resurfaces. I
+can only imagine what Hal felt when he realized his fulfilling painting project
+had transformed into his dreaded 9-to-5 office job. Still, as human as Hal may
+seem, let's not forget he isn't a real person. He's a character in a show
+created by a talented team of artists. What resonates with me the least is the
+perfectly gradual descent Hal experiences from fulfillment to dread. If I were
+writing the character to reflect how I felt, Hal would experience constant ups
+and downs—highs that would soar and lows that would plummet. He would have
+Eureka moments in the middle of eating breakfast or taking a shower, only to
+interrupt himself and rush to the garage, spilling coffee on his shirt or
+dripping water while wearing a towel, just to act on the idea that suddenly came
+to him. He would eventually change his mind after a few days.
 
-I would write his family reacting to his painting as a piece, not only to his
-feelings or state of mind towards it. They could say things like "What even is
-this?", "Why don't you just add X?", "Ohhh I get it (doesn't get it)", and he
-would react differently to this comments. He might agree entirely and change it,
-or he might disagree and defends his ideas with aggressive emotionality, or he
-would agree just for him to suffer writer's (painter's) block immediately after.
-Well, at this point I was about to call it quits, sell my soul to the devil and
-just use complete and complex UI Framework what would reign the frontend stack.
+I would write his family reacting to his painting as a piece of work, not just
+commenting on his feelings or state of mind toward it. They might say things
+like, "What is this?", "Why don't you just add X?", or "Ohhh, I get it (but
+doesn't really get it)," and he would react differently to each comment. He
+might agree entirely and make changes, or he might disagree and defensively
+defend his ideas with passionate emotionality. Alternatively, he could agree
+just to suffer from painter’s block immediately afterward. At this point, I was
+ready to quit, sell my soul to the devil, and embrace a complete and complex UI
+framework that would dominate the frontend stack.
 
 ## v3.0
 
-Fortunately, real life is not a TV show and I can decide to just do things? Who
-knew. Let's start by doing a sort of _postmortem_. What had happened in the past
-few years? Immediately after questioning that I felt gratitude towards the
-events that lead me here. For example, I did the jump to seniority as a
-developer, and I have much to thank this project for that. It has also helped me
-refine my taste, it made me curious as to how things are done in the "real"
-world by the pros. After that, I started questioning this Lunchbox's purpose and
-objective. Before I was strictly fooling around, but now I really wanted to give
-this library a purpose.
+Fortunately, real life isn't a TV show, and I have the freedom to decide what I
+want to do. Who knew? Let's begin with a sort of _postmortem_. What had happened
+over the past few years? As soon as I asked myself that, I felt gratitude for
+the events that led me here. For example, I made the jump to senior developer,
+and I owe a lot of that to this project. It also helped me refine my taste and
+piqued my curiosity about how professionals in the "real" world do things.
+Afterward, I began questioning the purpose and objectives of this Lunchbox
+project. Previously, I had been toying around, but now I wanted to give this
+library real purpose.
 
-After a few rounds of meditations, I concluded that the only thing I really need
-Lunchbox to do is to provide me with the tools and their settings I need for the
-interfaces of all of most of my projects. Okay, so what are these tools and
-their settings?
+After some thoughtful reflection, I concluded that the only thing I really
+needed Lunchbox to do was provide me with the tools and their settings for the
+interfaces in most of my projects. Okay, so what are these tools and their
+settings?
 
-- **Deno and Fresh v2** These have been the foundation almost since the
-  beginning. I chose these tools for the server because their aligned with the
-  ideas of the rest of the stack. Just a quick recap of my ramblings of
-  developing Lunchbox v1. I like Deno because it's convenient, fast, standard
-  oriented, opinionated (I agree with most of their opinions), and it's a small
-  community on the rise, trying their luck; that's something I value and
-  respect.
+- **Deno and Fresh v2**: These have been the foundation almost from the
+  beginning. I chose these tools for the server because they align with the
+  ideas of the rest of the stack. Just a quick recap of my musings on developing
+  Lunchbox v1. I like Deno because it's convenient, fast, standard-oriented,
+  opinionated (I agree with most of their opinions), and it's a growing
+  community trying to make a name for itself. That's something I respect.
 
-  The whole deal of Fresh is to render everything on the server before sending
-  it to the browser. It creates a clear distinction of what code is run in the
-  client and only ships JavaScript code when it's explicitly needed. Routing is
-  comfy and convenient _a-la-nextjs_.
+  Fresh’s whole concept is to render everything on the server before sending it
+  to the browser. This creates a clear distinction between what code runs on the
+  client and only ships JavaScript when it's explicitly needed. Routing is
+  simple and convenient, much like Next.js.
 
-- **TailwindCSS v4 and DaisyUI v5** I don't adore tailwind, honestly. The main
-  thing I dislike about it is its profound unreadability. Is as if you wanted to
-  create the least readable CSS syntax. It can be mitigated with good practices
-  and order and tolerated thanks to the `@vyn/cn` package that makes it slightly
-  more readable. The second thing I dislike about Tailwind is their color
-  palette and naming system. Almost nobody is going to properly and creatively
-  choose from so many colors, it's called the paradox of choice, after all. On
-  top of that I need to constantly keep track of the colors I've selected from
-  the palette. "What was the color for borders, was it `slate-200` or
-  `slate-300`?"
+- **TailwindCSS v4 and DaisyUI v5**: I don’t adore Tailwind, to be honest. The
+  main thing I dislike about it is its extreme unreadability. It feels as if you
+  were trying to create the least readable CSS syntax possible. This can be
+  mitigated with good practices and order, and it's somewhat tolerable thanks to
+  the `@vyn/cn` package, which makes it slightly more readable. The second thing
+  I dislike about Tailwind is its color palette and naming system. Few people
+  will creatively and correctly choose from such a vast selection of colors—this
+  is the paradox of choice. Plus, I constantly need to keep track of the colors
+  I’ve selected from the palette. “What was the color for borders again? Was it
+  `slate-200` or `slate-300`?”
 
-  That doesn't happen with DaisyUI, they outdid themselves with that package.
-  It's built purely with CSS and limits the color palette to a functional one on
-  top of their theming system. You could use JavaScript for complex
-  interactivity but it is not required at all. The configurability of these
-  technologies is fantastic and it wasn't hard to reduce my codebase about 80%
-  since adopting these without a single aesthetic sacrifice.
+  DaisyUI, however, excels in this area. It's built entirely with CSS and limits
+  the color palette to a functional one with a theming system. You can use
+  JavaScript for complex interactivity, but it's not required at all. The
+  configurability of these technologies is fantastic, and it wasn’t difficult to
+  reduce my codebase by about 80% without sacrificing any aesthetics.
 
-This was akin to the moment the thick painting was too large to remain on the
-wall and fell over Hal. This project gained too much girth after layers and
-layers of paint (code). It came falling down on top of me. But again, real life
-isn't a TV Show. What happened after I could crawl out of the huge block of
-paint on top of me? What was left behind on the garage wall? An almost clean
-slate, of course, with a few spots of paint remaining on the wall. A perfect
-canvas to start anew. I thought about this exact blog and what kinds of things I
-would like for Lunchbox to do for making it better.
+This moment felt akin to the time when the thick painting became too large to
+stay on the wall and eventually collapsed onto Hal. The project gained too much
+substance after layers of paint (or code). It all came crashing down on top of
+me. But once again, real life isn't a TV show. After crawling out from under the
+massive heap of paint, what remained on the wall? An almost blank canvas, of
+course, with just a few spots of paint left. A perfect starting point for a
+fresh beginning. I reflected on this very blog and thought about what I would
+like Lunchbox to do to improve it.
 
-- **Column Layout Grid System** One of my oldest's quirks when thinking about
-  information architecture is to always think in terms of a grid. Not to strict
-  but a predefined guidelines that help me think less about placing
-  pixel-perfect components. Along with this custom `.layout` utility class, I
-  added a few others.
+- **Column Layout Grid System**: One of my oldest habits when thinking about
+  information architecture is to always think in terms of a grid. Not too
+  strictly, but with predefined guidelines that help me avoid worrying about
+  placing pixel-perfect components. Along with this custom `.layout` utility
+  class, I added a few others.
 
-- **Markdown Rendering** The first thing I thought about was the page's content.
-  There's `@deno/gfm` out there, that parses markdown content to HTML and
-  sanitizes it, then you would "dangerously set it as inner HTML" of some
-  component. It's okay that it is "dangerous" because it has already been
-  sanitized.
+- **Markdown Rendering**: The first thing I considered was the page’s content.
+  There’s `@deno/gfm`, which parses markdown to HTML and sanitizes it. Then, you
+  "dangerously" set it as inner HTML of a component. It's okay because it has
+  already been sanitized.
 
-  The problem is that `@deno/gfm` doesn't count with much stylization features.
-  Thankfully the `@tailwindcss/typography` plugin is made for this exact
-  scenario. By simply adding the `.prose` CSS class to the content container,
-  everything will be rendered according to the system's styles.
+  The problem is that `@deno/gfm` lacks much in the way of styling features.
+  Thankfully, the `@tailwindcss/typography` plugin solves this exact issue. By
+  simply adding the `.prose` class to the content container, everything renders
+  according to the system’s styles.
 
-- **Keyboard Interactivity** I love to use the keyboard, not as much as those
-  vim-goblins yet. I dislike how the arrow-keys make sites scroll, it's slow and
-  frequently unresponsive. I'm looking for something snappier, that still works
-  by focusing elements. Where tab order doesn't matter as much as visual
-  proximity. Without removing the traditional tab navigation, of course.
+- **Keyboard Interactivity**: I love using the keyboard—though not as much as
+  those vim enthusiasts. I dislike how arrow keys make sites scroll slowly and
+  often unresponsively. I’m looking for something snappier that still works by
+  focusing elements, where tab order doesn’t matter as much as visual proximity.
+  Of course, this won’t remove the traditional tab navigation.
 
 ## Projects by Consequence
 
-Are you really making another Malcolm in the Middle reference? It's the last
-one, I promise. All episodes start with a quick 1 minute sketch before the
-opening credits. In this one, Hal (again, shocker) is coming home from work. He
-turns tries to turn on the light but finds the lightbulb to be burned-out. He
-goes to the cupboard and notices one of the shelves is loose, so he decides to
-go for a screwdriver to fix it. Goes to the drawer that started to screech as it
-was being opened. He goes to the garage for some W-40, but the can is empty.
-Gets in his Then he gets in his car so he could go to the store to buy more but
-the engine won't work. But when Lois gets home, looks at him fixing his car, and
-asks "Hey could you change the lightbulb in the kitchen?" only for him to answer
-angrily "What do you think I'm doing?!".
+Are you really making another Malcolm in the Middle reference? Okay, this is the
+last one, I promise. Every episode begins with a quick one-minute sketch before
+the opening credits. In this one, Hal (again, shocker) is coming home from work.
+He tries to turn on the light but finds the bulb burned out. He goes to the
+cupboard and notices one of the shelves is loose, so he grabs a screwdriver to
+fix it. The drawer starts screeching as he opens it. He heads to the garage for
+some WD-40, but the can is empty. He gets into his car to drive to the store,
+only to find the engine won’t start. But when Lois gets home, she sees him
+fixing his car and asks, “Hey, could you change the lightbulb in the kitchen?”
+He answers angrily, “What do you think I’m doing?!”
 
-This happened to me many times, and sometimes a project would be gestated inside
-Lunchbox only to be born as a fully independent package. This happened usually
-when I finished a module and think to myself "hey, this is pretty cool, maybe
-someone would like to use it without Lunchbox".
+This has happened to me many times, and sometimes a project gestates inside
+Lunchbox only to be born as a fully independent package. This typically happens
+when I finish a module and think to myself, “Hey, this is pretty cool; maybe
+someone would want to use it without Lunchbox.”
 
-- **Sass-door** I called it "door" because to me it felt like a threshold in
-  Sass development quality. Using this package was as if you'd "open the door"
-  to work correctly with SCSS modules. Basically it was a schema validator and
-  type checker for Sass. You cold declare variables to be certain types and
-  functions would throw errors if the checking step failed. You could validate
-  complex maps or arrays before generating the final stylesheet. As you have
-  read, I haven't used SCSS in a long time, so that project is as deprecated as
-  they get.
+- **Sass-door**: I called it "door" because it felt like a threshold in Sass
+  development quality. Using this package was like "opening the door" to working
+  correctly with SCSS modules. It was basically a schema validator and type
+  checker for Sass. You could declare variables to ensure they were of certain
+  types, and functions would throw errors if the checks failed. You could
+  validate complex maps or arrays before generating the final stylesheet. As you
+  can guess, I haven’t used SCSS in a long time, so this project is as
+  deprecated as they come.
 
-- GarliCSS This was a small meta-library I thought would be useful but got
-  quickly deprecated. I planned to abstract complex Scss functionality and make
+- **GarliCSS**: This was a small meta-library I thought would be useful but was
+  quickly deprecated. I planned to abstract complex SCSS functionality and make
   it available for anyone to use in their design systems. It was a collection of
-  mixins and functions that made it easier to manage breakpoints and grid
-  systems.
+  mixins and functions to help manage breakpoints and grid systems.
 
-- Teclas One of the APIs I hate the most to interact with is the
-  `KeyboardEventListener`. Not only it is a hassle when a single element has to
-  listen to a number of key combinations but there's also what I like to call
-  "The Meta-Control Inconsistency". This refers to that every time you wish to
-  check if the `ctrl` key has been used, you must also check if you currently
-  are in a MacOS system or not. This library abstracts all of that, making it
-  easier to work with key presses.
+- **Teclas**: One of the APIs I dislike interacting with the most is the
+  `KeyboardEventListener`. Not only is it a hassle when a single element needs
+  to listen for multiple key combinations, but there's also what I call "The
+  Meta-Control Inconsistency." This refers to the need to check if you're on a
+  MacOS system when determining whether the `ctrl` key is used. This library
+  abstracts all of that, making it easier to work with key presses.
 
-- Periodt This library is more of a funny-useless package. During the v2 release
-  the system was at its _most atomic_ ever with around thirty different atoms;
-  and I wanted to show it in the Library's example page. I figured it would be
-  cool to showcase them in something that would look superficially similar to
-  the periodic table. Not to undermine it, I understand it is one of the most
-  perfectly organized graphics out there. Also, I thought that the number of
-  atoms was guaranteed to increase, so manually arranging and grouping the atoms
-  was out of a question. So I created this library that did just that. Creates a
-  arrangement superficially similar to a periodic table of similar elements. I
-  don't think I will ever use it again but It was fun to make.
+- **Periodt**: This library was more of a fun, useless package. During the v2
+  release, the system was at its most atomic, with around thirty different
+  atoms, and I wanted to showcase them on the Library's example page. I thought
+  it would be cool to present them in a layout resembling the periodic table.
+  Not to undermine the periodic table itself—it's one of the most perfectly
+  organized graphics out there—but I knew the number of atoms would keep
+  increasing, so manually arranging and grouping them wasn’t an option. I
+  created this library to automatically arrange them in a manner similar to the
+  periodic table. I doubt I’ll ever use it again, but it was fun to build.
 
 ## The future of Lunchbox
 
