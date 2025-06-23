@@ -14,6 +14,10 @@
 
 ## Version History
 
+### v0.0.85
+
+- Added updates for the `lunchbox` draft.
+
 ### v0.0.84
 
 - Added updates for the `lunchbox` draft.
