@@ -1,5 +1,8 @@
 ---
 stage: Drafting
+snippet:
+  This is the story of how I built a component library that almost broke me—and
+  what I learned about building, breaking, and beginning again.
 ---
 
 # The story behind Lunchbox
@@ -57,7 +60,7 @@ In the height of the episode, as the family gathers and everything feels right,
 the painting falls from the wall and lands on Hal, showing the sheer weight of
 countless layers of paint placed on top of one another.
 
-## Pre v1.0
+## Pre v1.0: TSX and the Art of Component Maintenance
 
 When did I decide to build a component library? Well, it all began when I set
 out to reinvent the wheel (React.js). You've probably heard developers talk
@@ -79,7 +82,7 @@ develop web applications in Node). But then, I betrayed my former ideals and
 embraced the dreaded `.tsx` when the Fresh framework was released. Their
 philosophy on SSR and web standardization resonated with me.
 
-## v1.0
+## v1.0: Portrait of a Developer as Another Web Framework
 
 It began with experimenting with pre-released versions of Deno and Fresh, and I
 quickly realized these technologies were where I could thrive. I felt that the
@@ -233,7 +236,7 @@ client side but not on the server. People with "no script" settings or browsers
 saw a website with no styles at all. How did I find out? Months later, thanks to
 a snarky comment from a Redditor. Classic.
 
-## v2.0
+## v2.0: The Unbearable Lightness of Abstractions
 
 It was late September 2024, and I had been working on Lunchbox on and off for
 months. But calling what had just been released a "major version" would have
@@ -371,7 +374,7 @@ just to suffer from painter’s block immediately afterward. At this point, I wa
 ready to quit, sell my soul to the devil, and embrace a complete and complex UI
 framework that would dominate the frontend stack.
 
-## v3.0
+## v3.0: Good Components Come to Those Who Refactor
 
 Fortunately, real life isn't a TV show, and I have the freedom to decide what I
 want to do. Who knew? Let's begin with a sort of _postmortem_. What had happened
@@ -466,37 +469,46 @@ Lunchbox only to be born as a fully independent package. This typically happens
 when I finish a module and think to myself, “Hey, this is pretty cool; maybe
 someone would want to use it without Lunchbox.”
 
-- **Sass-door**: I called it "door" because it felt like a threshold in Sass
-  development quality. Using this package was like "opening the door" to working
-  correctly with SCSS modules. It was basically a schema validator and type
-  checker for Sass. You could declare variables to ensure they were of certain
-  types, and functions would throw errors if the checks failed. You could
-  validate complex maps or arrays before generating the final stylesheet. As you
-  can guess, I haven’t used SCSS in a long time, so this project is as
-  deprecated as they come.
+### Sass-door: Schematic Sass, closed forever.
 
-- **GarliCSS**: This was a small meta-library I thought would be useful but was
-  quickly deprecated. I planned to abstract complex SCSS functionality and make
-  it available for anyone to use in their design systems. It was a collection of
-  mixins and functions to help manage breakpoints and grid systems.
+I called it "door" because it felt like a threshold in Sass development quality.
+Using this package was like "opening the door" to working correctly with SCSS
+modules. It was basically a schema validator and type checker for Sass. You
+could declare variables to ensure they were of certain types, and functions
+would throw errors if the checks failed. You could validate complex maps or
+arrays before generating the final stylesheet. As you can guess, I haven’t used
+SCSS in a long time, so this project is as deprecated as they come.
 
-- **Teclas**: One of the APIs I dislike interacting with the most is the
-  `KeyboardEventListener`. Not only is it a hassle when a single element needs
-  to listen for multiple key combinations, but there's also what I call "The
-  Meta-Control Inconsistency." This refers to the need to check if you're on a
-  MacOS system when determining whether the `ctrl` key is used. This library
-  abstracts all of that, making it easier to work with key presses.
+### GarliCSS: Useful for five minutes.
 
-- **Periodt**: This library was more of a fun, useless package. During the v2
-  release, the system was at its most atomic, with around thirty different
-  atoms, and I wanted to showcase them on the Library's example page. I thought
-  it would be cool to present them in a layout resembling the periodic table.
-  Not to undermine the periodic table itself—it's one of the most perfectly
-  organized graphics out there—but I knew the number of atoms would keep
-  increasing, so manually arranging and grouping them wasn’t an option. I
-  created this library to automatically arrange them in a manner similar to the
-  periodic table. I doubt I’ll ever use it again, but it was fun to build.
+This was a small meta-library I thought would be useful but was quickly
+deprecated. I planned to abstract complex SCSS functionality and make it
+available for anyone to use in their design systems. It was a collection of
+mixins and functions to help manage breakpoints and grid systems.
+
+### Teclas: And the Curious Case of the Apple Command Key
+
+One of the APIs I dislike interacting with the most is the
+`KeyboardEventListener`. Not only is it a hassle when a single element needs to
+listen for multiple key combinations, but there's also what I call "The
+Meta-Control Inconsistency." This refers to the need to check if you're on a
+MacOS system when determining whether the `ctrl` key is used. This library
+abstracts all of that, making it easier to work with key presses.
+
+### Periodt: Why the Hell Did I Build This?
+
+This library was more of a fun, useless package. During the v2 release, the
+system was at its most atomic, with around thirty different atoms, and I wanted
+to showcase them on the Library's example page. I thought it would be cool to
+present them in a layout resembling the periodic table. Not to undermine the
+periodic table itself—it's one of the most perfectly organized graphics out
+there—but I knew the number of atoms would keep increasing, so manually
+arranging and grouping them wasn’t an option. I created this library to
+automatically arrange them in a manner similar to the periodic table. I doubt
+I’ll ever use it again, but it was fun to build.
 
 ## The future of Lunchbox
 
-- Interactivity
+- Interactivity, more interactive utilities, I don't know which but definetly
+  expect more development towards a cohesive navigation and interactivity.
+- Animations, using the Motion library to make the ux feel more premium.
