@@ -1,11 +1,11 @@
 ---
-stage: Drafting
+title: Lunchbox or (The Discreet Charm of Wheel Reinventors)
+published_at: 26 Jun, 2025
+vignette: wheels
 snippet:
-  This is the story of how I built a component library that almost broke me—and
+  This is the story of how I built a component library that almost broke me and
   what I learned about building, breaking, and beginning again.
 ---
-
-# The story behind Lunchbox
 
 Have you ever seen the European guy who spent a few years around 2016 building a
 new musical instrument from scratch? His artist name is Wintergatan, and he
@@ -23,7 +23,7 @@ his progress videos was always worthwhile; he was constantly fixing things,
 solving problems, making mistakes, and redesigning.
 
 Recently, I've felt that this project and I share a similar dynamic. It has
-taught me so much—from the raw technologies that make up the web to the
+taught me so much, from the raw technologies that make up the web to the
 frameworks that abstract them. But if the Marble Machine, with its endless
 backlog of redesigns, represents one side of the spectrum, what is the other
 side?
@@ -50,7 +50,7 @@ again. He grew frustrated with his inability to recreate the painting in his
 mind.
 
 At the peak of his despair, Hal screams the same complaint he made when working
-his 9-to-5—as if misery stems from any full-time daily activity, regardless of
+his 9-to-5, as if misery stems from any full-time daily activity, regardless of
 the passion, artistry, or significance of the work. The rest of the family tries
 to comfort Hal when he suddenly has an _eureka moment_ and understands exactly
 what's missing from the painting. The family watches in awe as he paints, only
@@ -358,7 +358,7 @@ seem, let's not forget he isn't a real person. He's a character in a show
 created by a talented team of artists. What resonates with me the least is the
 perfectly gradual descent Hal experiences from fulfillment to dread. If I were
 writing the character to reflect how I felt, Hal would experience constant ups
-and downs—highs that would soar and lows that would plummet. He would have
+and downs, highs that would soar and lows that would plummet. He would have
 Eureka moments in the middle of eating breakfast or taking a shower, only to
 interrupt himself and rush to the garage, spilling coffee on his shirt or
 dripping water while wearing a towel, just to act on the idea that suddenly came
@@ -409,10 +409,10 @@ settings?
   mitigated with good practices and order, and it's somewhat tolerable thanks to
   the `@vyn/cn` package, which makes it slightly more readable. The second thing
   I dislike about Tailwind is its color palette and naming system. Few people
-  will creatively and correctly choose from such a vast selection of colors—this
-  is the paradox of choice. Plus, I constantly need to keep track of the colors
-  I’ve selected from the palette. “What was the color for borders again? Was it
-  `slate-200` or `slate-300`?”
+  will creatively and correctly choose from such a vast selection of colors,
+  this is the paradox of choice. Plus, I constantly need to keep track of the
+  colors I’ve selected from the palette. “What was the color for borders again?
+  Was it `slate-200` or `slate-300`?”
 
   DaisyUI, however, excels in this area. It's built entirely with CSS and limits
   the color palette to a functional one with a theming system. You can use
@@ -445,7 +445,7 @@ like Lunchbox to do to improve it.
   simply adding the `.prose` class to the content container, everything renders
   according to the system’s styles.
 
-- **Keyboard Interactivity**: I love using the keyboard—though not as much as
+- **Keyboard Interactivity**: I love using the keyboard, though not as much as
   those vim enthusiasts. I dislike how arrow keys make sites scroll slowly and
   often unresponsively. I’m looking for something snappier that still works by
   focusing elements, where tab order doesn’t matter as much as visual proximity.
@@ -501,14 +501,28 @@ This library was more of a fun, useless package. During the v2 release, the
 system was at its most atomic, with around thirty different atoms, and I wanted
 to showcase them on the Library's example page. I thought it would be cool to
 present them in a layout resembling the periodic table. Not to undermine the
-periodic table itself—it's one of the most perfectly organized graphics out
-there—but I knew the number of atoms would keep increasing, so manually
+periodic table itself (it's one of the most perfectly organized graphics out
+there) but I knew the number of atoms would keep increasing, so manually
 arranging and grouping them wasn’t an option. I created this library to
 automatically arrange them in a manner similar to the periodic table. I doubt
 I’ll ever use it again, but it was fun to build.
 
-## The future of Lunchbox
+## Conclusion
 
-- Interactivity, more interactive utilities, I don't know which but definetly
-  expect more development towards a cohesive navigation and interactivity.
-- Animations, using the Motion library to make the ux feel more premium.
+Looking back, this project became less of a tidy codebase and more of a
+confession booth for my developer neuroses. I kept chasing the perfect
+abstraction, only to rip it out the next morning when it stopped feeling right.
+Somewhere between spilled coffee, midnight refactors and that ridiculous moment
+when a single dot was all I really needed, I discovered that every “failure” was
+just another step toward something unexpectedly useful.
+
+What survives the chaos isn’t the version number or the fancy CLI command you
+might install; it’s the curiosity that refuses to let me settle for “good
+enough.” I learned to embrace the absurdity of reinventing wheels, to laugh at
+my own obsession with unreadable syntax, and to welcome the blank canvas that
+emerges after the paint overload finally collapses.
+
+So here’s the deal: Lunchbox will keep changing, because I will. And that’s the
+real win. If you’ve read this far, take this as an invitation to break your own
+project in half, toss out what weighs you down, and see what tiny spark remains.
+That spark (however small) is where the real fun begins.

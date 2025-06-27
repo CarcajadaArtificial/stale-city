@@ -11,8 +11,15 @@
 - Add a link to the post edit history.
 - Add an error 404 page.
 - Add a project version mention in the footer.
+- Add modal that opens to show an image full width.
+- Add a like button that uses localstorage.
 
 ## Version History
+
+### v0.0.88
+
+- Added the `wheels.png` image.
+- Added the published `lunchbox` article.
 
 ### v0.0.87
 
