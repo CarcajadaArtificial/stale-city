@@ -37,7 +37,14 @@ export default define.page(async function (props) {
             ? "."
             : `, and updated ${
               post.comments[post.comments.length - 1].time_ago
-            }.`}
+            }.`} It is under an <a href="/license">MIT License</a>, here is the
+          {" "}
+          <a
+            href={`https://github.com/CarcajadaArtificial/stale-city/blob/main/data/posts/${props
+              .params.postId!}/post.md`}
+          >
+            source
+          </a>.
         </span>
         <p tabindex={0}>{post.metadata.snippet}</p>
         {post.metadata.vignette

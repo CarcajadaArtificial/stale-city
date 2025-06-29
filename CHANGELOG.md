@@ -13,8 +13,14 @@
 - Add a project version mention in the footer.
 - Add modal that opens to show an image full width.
 - Add a like button that uses localstorage.
+- Add Image vignettes to rss feed.
+- Add /llm.txt route that outputs all posts and comments.
 
 ## Version History
+
+### v0.0.89
+
+- Added the link to edit post and view history.
 
 ### v0.0.88
 

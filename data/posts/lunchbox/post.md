@@ -3,7 +3,7 @@ title: Lunchbox or (The Discreet Charm of Wheel Reinventors)
 published_at: 26 Jun, 2025
 vignette: wheels
 snippet:
-  This is the story of how I built a component library that almost broke me and
+  This is the story of how I built a ui utility library that almost broke me and
   what I learned about building, breaking, and beginning again.
 ---
 
